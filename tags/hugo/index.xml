@@ -7,7 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright>
-        <lastBuildDate>Thu, 26 Mar 2026 12:15:20 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Mar 2026 10:46:01 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Stack主题自定义修改（个人用）</title>
+        <link>https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/</link>
+        <pubDate>Fri, 27 Mar 2026 10:11:23 +0800</pubDate>
+        
+        <guid>https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/</guid>
+        <description>&lt;p&gt;具体修改请看【&lt;a class=&#34;link&#34; href=&#34;https://stack.cai.im/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack主题官方文档&lt;/a&gt;】&lt;/p&gt;
+&lt;h2 id=&#34;字体修改&#34;&gt;字体修改
+&lt;/h2&gt;&lt;p&gt;使用了&lt;a class=&#34;link&#34; href=&#34;https://github.com/lxgw/LxgwWenKai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;霞鹜文楷&lt;/a&gt;（遵循OFL 1.1 开源协议条款）&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>借助Github以及Hugo部署个人博客</title>
         <link>https://qc315056-oss.github.io/p/%E5%80%9F%E5%8A%A9github%E4%BB%A5%E5%8F%8Ahugo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Thu, 26 Mar 2026 12:15:20 +0800</pubDate>
@@ -15,19 +28,19 @@
         <guid>https://qc315056-oss.github.io/p/%E5%80%9F%E5%8A%A9github%E4%BB%A5%E5%8F%8Ahugo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;p&gt;首先感谢b站Up主&lt;u&gt;@Letere-莱特雷&lt;/u&gt;提供的教程及友情链接。&lt;/p&gt;
 &lt;p&gt;2026年3月24日本人突发奇想决定搭建一个个人博客，用于记录个人生活及个人项目。&lt;/p&gt;
-&lt;h1 id=&#34;hugo环境准备&#34;&gt;Hugo环境准备
-&lt;/h1&gt;&lt;ol&gt;
+&lt;h2 id=&#34;hugo环境准备&#34;&gt;Hugo环境准备
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;于&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo Tags&lt;/a&gt;下载，使用了0.159.0版本&lt;/li&gt;
 &lt;li&gt;解压至D盘，在该文件夹中创建了博客的根目录&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;博客搭建&#34;&gt;博客搭建
-&lt;/h1&gt;&lt;h2 id=&#34;博客主题配置&#34;&gt;博客主题配置
-&lt;/h2&gt;&lt;p&gt;于&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;博客搭建&#34;&gt;博客搭建
+&lt;/h2&gt;&lt;h3 id=&#34;博客主题配置&#34;&gt;博客主题配置
+&lt;/h3&gt;&lt;p&gt;于&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Hugo Theme&lt;/a&gt;下载Stack主题，并进行部分修改&lt;/p&gt;
-&lt;h2 id=&#34;github自动化部署&#34;&gt;Github自动化部署
-&lt;/h2&gt;&lt;h3 id=&#34;静态部署&#34;&gt;静态部署
-&lt;/h3&gt;&lt;ol&gt;
+&lt;h3 id=&#34;github自动化部署&#34;&gt;Github自动化部署
+&lt;/h3&gt;&lt;h4 id=&#34;静态部署&#34;&gt;静态部署
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;在github中创建仓库，仓库名称为qc315056-oss.github.io&lt;/p&gt;
 &lt;/li&gt;
@@ -54,8 +67,8 @@
 &lt;/div&gt;&lt;p&gt;在push过程中遭遇网络问题，借助Gemini使用ssh成功上传&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;自动部署&#34;&gt;自动部署
-&lt;/h3&gt;&lt;ol&gt;
+&lt;h4 id=&#34;自动部署&#34;&gt;自动部署
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;创建新的仓库存放Hugo主文件，命名为hugo-main&lt;/p&gt;
 &lt;/li&gt;
