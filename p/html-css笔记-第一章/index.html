@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第1章：HTML5标签和属性 标签标签&lt;h1&gt;~&lt;h6&gt; 1 &lt;hn align =&#34;对齐方式&#34;&gt;文本&lt;/hn&gt; align为可选属性，指定对齐方式，属性值：left、center、right 注意： （1）一个页面中最好只使用一个&lt;h1&gt;标签 （2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签\n段落标签&lt;p&gt; 1 &lt;p align =&#34;对齐方式&#34;&gt;文本&lt;/p&gt; 用&lt;p&gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行\n水平线标签&lt;hr/&gt; 1 &lt;hr 属性=&#34;属性值&#34;/&gt; hr属于单标记\nalign 设置对齐方式 left、right、center(默认) size 设置粗细 以px为单位，默认为2px color 设置颜色 英文名称、十六进制、rgb width 设置宽度 像素值、百分比（默认100%） 换行标签 文本格式化标签 均为双标签\n&lt;strong&gt;&lt;/strong&gt; 加粗 &lt;ins&gt;&lt;/ins&gt; 下划线 &lt;em&gt;&lt;/em&gt; 斜体 &lt;del&gt;&lt;/del&gt; 删除线 &lt;cite&gt;&lt;/cite&gt; 斜体，作品标题专用 &lt;time&gt;&lt;/tiem&gt; 标注时间 &lt;math&gt;&lt;/math&gt; 文本添加底色（默认黄色） 文本样式标签&lt;font&gt; 1 &lt;fonr 属性=“属性值”&gt;文本&lt;/font&gt; face 设置字体 size 设置字号，可以取1~7整数值，无单位 color 设置颜色 特殊字符 空格—\u00a0©—版权字号—© ⁿ—上标—$supn;\n图像标签 1 &lt;img src=&#34;图像url&#34;&gt; 单标记\n">
+<title>HTML&#43;CSS笔记-第一章</title>
+
+<link rel='canonical' href='https://qc315056-oss.github.io/p/html-css%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0/'>
+
+<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="HTML+CSS笔记-第一章">
+<meta property='og:description' content="第1章：HTML5标签和属性 标签标签&lt;h1&gt;~&lt;h6&gt; 1 &lt;hn align =&#34;对齐方式&#34;&gt;文本&lt;/hn&gt; align为可选属性，指定对齐方式，属性值：left、center、right 注意： （1）一个页面中最好只使用一个&lt;h1&gt;标签 （2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签\n段落标签&lt;p&gt; 1 &lt;p align =&#34;对齐方式&#34;&gt;文本&lt;/p&gt; 用&lt;p&gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行\n水平线标签&lt;hr/&gt; 1 &lt;hr 属性=&#34;属性值&#34;/&gt; hr属于单标记\nalign 设置对齐方式 left、right、center(默认) size 设置粗细 以px为单位，默认为2px color 设置颜色 英文名称、十六进制、rgb width 设置宽度 像素值、百分比（默认100%） 换行标签 文本格式化标签 均为双标签\n&lt;strong&gt;&lt;/strong&gt; 加粗 &lt;ins&gt;&lt;/ins&gt; 下划线 &lt;em&gt;&lt;/em&gt; 斜体 &lt;del&gt;&lt;/del&gt; 删除线 &lt;cite&gt;&lt;/cite&gt; 斜体，作品标题专用 &lt;time&gt;&lt;/tiem&gt; 标注时间 &lt;math&gt;&lt;/math&gt; 文本添加底色（默认黄色） 文本样式标签&lt;font&gt; 1 &lt;fonr 属性=“属性值”&gt;文本&lt;/font&gt; face 设置字体 size 设置字号，可以取1~7整数值，无单位 color 设置颜色 特殊字符 空格—\u00a0©—版权字号—© ⁿ—上标—$supn;\n图像标签 1 &lt;img src=&#34;图像url&#34;&gt; 单标记\n">
+<meta property='og:url' content='https://qc315056-oss.github.io/p/html-css%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0/'>
+<meta property='og:site_name' content='清昶-Zakai'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-28T13:24:29&#43;08:00'/><meta property='article:modified_time' content='2026-03-28T15:26:56&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/htmlcss/html.jpg' />
+<meta name="twitter:title" content="HTML+CSS笔记-第一章">
+<meta name="twitter:description" content="第1章：HTML5标签和属性 标签标签&lt;h1&gt;~&lt;h6&gt; 1 &lt;hn align =&#34;对齐方式&#34;&gt;文本&lt;/hn&gt; align为可选属性，指定对齐方式，属性值：left、center、right 注意： （1）一个页面中最好只使用一个&lt;h1&gt;标签 （2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签\n段落标签&lt;p&gt; 1 &lt;p align =&#34;对齐方式&#34;&gt;文本&lt;/p&gt; 用&lt;p&gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行\n水平线标签&lt;hr/&gt; 1 &lt;hr 属性=&#34;属性值&#34;/&gt; hr属于单标记\nalign 设置对齐方式 left、right、center(默认) size 设置粗细 以px为单位，默认为2px color 设置颜色 英文名称、十六进制、rgb width 设置宽度 像素值、百分比（默认100%） 换行标签 文本格式化标签 均为双标签\n&lt;strong&gt;&lt;/strong&gt; 加粗 &lt;ins&gt;&lt;/ins&gt; 下划线 &lt;em&gt;&lt;/em&gt; 斜体 &lt;del&gt;&lt;/del&gt; 删除线 &lt;cite&gt;&lt;/cite&gt; 斜体，作品标题专用 &lt;time&gt;&lt;/tiem&gt; 标注时间 &lt;math&gt;&lt;/math&gt; 文本添加底色（默认黄色） 文本样式标签&lt;font&gt; 1 &lt;fonr 属性=“属性值”&gt;文本&lt;/font&gt; face 设置字体 size 设置字号，可以取1~7整数值，无单位 color 设置颜色 特殊字符 空格—\u00a0©—版权字号—© ⁿ—上标—$supn;\n图像标签 1 &lt;img src=&#34;图像url&#34;&gt; 单标记\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/htmlcss/html.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b6ae69261be2d4ba.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😁</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">清昶-Zakai</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。该博客主要用于记录个人生活及个人项目</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/347480570'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/qc315056-oss'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#标签标签h1h6">标签标签&lt;h1&gt;~&lt;h6&gt;</a></li>
+    <li><a href="#段落标签p">段落标签&lt;p&gt;</a></li>
+    <li><a href="#水平线标签hr">水平线标签&lt;hr/&gt;</a></li>
+    <li><a href="#换行标签">换行标签<br/></a></li>
+    <li><a href="#文本格式化标签">文本格式化标签</a></li>
+    <li><a href="#文本样式标签font">文本样式标签&lt;font&gt;</a></li>
+    <li><a href="#特殊字符">特殊字符</a></li>
+    <li><a href="#图像标签">图像标签</a></li>
+    <li><a href="#相对路径">相对路径</a></li>
+    <li><a href="#无序列表ulliliul">无序列表&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</a></li>
+    <li><a href="#有序列表olliliol">有序列表&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</a></li>
+    <li><a href="#定义列表">定义列表</a></li>
+    <li><a href="#超链接-a">超链接 &lt;a&gt;</a></li>
+    <li><a href="#锚点链接">锚点链接</a></li>
+    <li><a href="#结构标签">结构标签</a></li>
+    <li><a href="#页面交互标签">页面交互标签</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/html-css%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0/">
+                
+                    <img src="/post/img/htmlcss/html.jpg" loading="lazy" alt="Featured image of post HTML&#43;CSS笔记-第一章" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: hsl(4, 60%, 84%); color: hsl(4, 60%, 15%);">
+                笔记
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/html-css%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0/">HTML&#43;CSS笔记-第一章</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-03-28T13:24:29&#43;08:00'>2026-03-28</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <div align="center">第1章：HTML5标签和属性</div>
+<hr>
+<h2 id="标签标签h1h6">标签标签&lt;h1&gt;~&lt;h6&gt;
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hn</span> <span class="na">align </span><span class="o">=</span><span class="s">&#34;对齐方式&#34;</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">hn</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>align为可选属性，指定对齐方式，属性值：left、center、right
+<font color="#92d050">注意：</font>
+（1）一个页面中最好只使用一个&lt;h1&gt;标签
+（2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签</p>
+<h2 id="段落标签p">段落标签&lt;p&gt;
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">align </span><span class="o">=</span><span class="s">&#34;对齐方式&#34;</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>用&lt;p&gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行</p>
+<h2 id="水平线标签hr">水平线标签&lt;hr/&gt;
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hr</span> <span class="na">属性</span><span class="o">=</span><span class="s">&#34;属性值&#34;</span><span class="p">/&gt;</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>hr属于单标记</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>align</th>
+          <th>设置对齐方式</th>
+          <th>left、right、center(默认)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>size</td>
+          <td>设置粗细</td>
+          <td>以px为单位，默认为2px</td>
+      </tr>
+      <tr>
+          <td>color</td>
+          <td>设置颜色</td>
+          <td>英文名称、十六进制、rgb</td>
+      </tr>
+      <tr>
+          <td>width</td>
+          <td>设置宽度</td>
+          <td>像素值、百分比（默认100%）</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="换行标签">换行标签<br/>
+</h2><h2 id="文本格式化标签">文本格式化标签
+</h2><p>均为双标签</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>&lt;strong&gt;&lt;/strong&gt;</th>
+          <th>加粗</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&lt;ins&gt;&lt;/ins&gt;</td>
+          <td>下划线</td>
+      </tr>
+      <tr>
+          <td>&lt;em&gt;&lt;/em&gt;</td>
+          <td>斜体</td>
+      </tr>
+      <tr>
+          <td>&lt;del&gt;&lt;/del&gt;</td>
+          <td>删除线</td>
+      </tr>
+      <tr>
+          <td>&lt;cite&gt;&lt;/cite&gt;</td>
+          <td>斜体，作品标题专用</td>
+      </tr>
+      <tr>
+          <td>&lt;time&gt;&lt;/tiem&gt;</td>
+          <td>标注时间</td>
+      </tr>
+      <tr>
+          <td>&lt;math&gt;&lt;/math&gt;</td>
+          <td>文本添加底色（默认黄色）</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="文本样式标签font">文本样式标签&lt;font&gt;
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">fonr</span> <span class="na">属性</span><span class="o">=</span><span class="s">“属性值”</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>face</th>
+          <th>设置字体</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>size</td>
+          <td>设置字号，可以取1~7整数值，无单位</td>
+      </tr>
+      <tr>
+          <td>color</td>
+          <td>设置颜色</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="特殊字符">特殊字符
+</h2><p>空格—           ©—版权字号—©         ⁿ—上标—$supn;</p>
+<h2 id="图像标签">图像标签<img/>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;图像url&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>单标记</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>alt</th>
+          <th>设置不能显示时的文本</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>title</td>
+          <td>鼠标悬停时显示文本</td>
+      </tr>
+      <tr>
+          <td>width</td>
+          <td>设置宽度</td>
+      </tr>
+      <tr>
+          <td>height</td>
+          <td>设置高度</td>
+      </tr>
+      <tr>
+          <td>align=left、top、middle、bottom</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>top：图像顶端与文本第一行对齐，其他文字位于下方</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>middle：图像中线与文本第一行对齐，其他文字位于下方</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>bottom：图像底部与文本第一行对齐，其他文字位于下方</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="相对路径">相对路径
+</h2><ul>
+<li>位于同一文件夹，只需输入名称</li>
+<li>位于下一级，用/</li>
+<li>位于上一级，用../</li>
+</ul>
+<h2 id="无序列表ulliliul">无序列表&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>disc</th>
+          <th>•</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>circle</td>
+          <td>৹</td>
+      </tr>
+      <tr>
+          <td>square</td>
+          <td>■</td>
+      </tr>
+      <tr>
+          <td>&lt;ul&gt;用于定义无序列表    &lt;li&gt;嵌套在&lt;ul&gt;内‘</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="有序列表olliliol">有序列表&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;
+</h2><p>可以用1、2、3，a、b，A、B，İ、İİ</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>start</th>
+          <th>指定全部起始值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>value</td>
+          <td>指定当前起始值</td>
+      </tr>
+      <tr>
+          <td>reversed</td>
+          <td>指定顺序为降序</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="定义列表">定义列表
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="超链接-a">超链接 &lt;a&gt;
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;跳转目标&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;弹出方式&#34;</span><span class="p">&gt;</span>文本或图像<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>target：</p>
+<ul>
+<li>_self 在原窗口中打开（默认）</li>
+<li>_blank 在新窗口中打开</li>
+</ul>
+<h2 id="锚点链接">锚点链接
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#id&#34;</span><span class="p">&gt;</span>文本<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">标签</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;id&#34;</span><span class="p">&gt;</span>文本/内容<span class="p">&lt;/</span><span class="nt">标签</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="结构标签">结构标签
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>&lt;header&gt;</th>
+          <th>存放logo、标题等</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&lt;nav&gt;</td>
+          <td>菜单</td>
+      </tr>
+      <tr>
+          <td>&lt;footer&gt;</td>
+          <td>存放版权声明等</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="页面交互标签">页面交互标签
+</h2><ol>
+<li>&lt;details&gt;和&lt;summary&gt;标签
+&lt;details&gt;可以让一段内容包含隐藏的信息
+&lt;summary&gt;可以嵌入&lt;details&gt;中，显示隐藏信息</li>
+<li>&lt;progress&gt;标签
+定义进度条，可配合JS实现动画效果
+value——已完成的进度、max——全部进度</li>
+<li>&lt;meter&gt;标签
+value——实际数据
+min——数据的最小值、
+max——数据的最大值
+low——衡量标准的最小值（及格分）
+high——衡量标准的最大值（优秀分）
+optimum——大于high，代表越大越好；小于low，代表越小越好</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-03-28
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0-11/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/js/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/js/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0-10/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/js/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/js/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记 10</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0-09/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/js/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/js/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记 09</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0-08/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/js/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/js/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记 08</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0-07/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/js/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/js/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记 07</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 清昶
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.34.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+  @font-face {
+    font-family: 'LXGW';
+    src: url('https://qc315056-oss.github.io/font/LXGWWenKai-Regular.ttf') format('truetype');
+  }
+
+  :root {
+    --base-font-family: 'LXGW';
+    --code-font-family: 'LXGW';
+  }
+</style>
+<style>
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  initTocHide()
+</script>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<script>
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  initScrollTop();
+</script>
+
+<div id="particles-js"></div>
+
+<script src=https://qc315056-oss.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://qc315056-oss.github.io/background/particlesjs-config.json",
+    function () {
+      console.log('particles.js loaded - callback');
+    });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+  }
+</style>
+
+<style>
+  .highlight {
+     
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .code-show {
+    max-height: none !important;
+  }
+
+  .code-more-box {
+    width: 100%;
+    padding-top: 78px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .code-more-btn {
+    display: block;
+    margin: auto;
+    width: 44px;
+    height: 22px;
+    background: #f0f0f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 6px;
+    cursor: pointer;
+  }
+
+  .code-more-img {
+    cursor: pointer !important;
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 16px;
+  }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://qc315056-oss.github.io/icons/codeMore.svg"
+  
+  codeMoreBtn.appendChild(img);
+  codeMoreBox.appendChild(codeMoreBtn);
+  codeBlock.appendChild(codeMoreBox)
+    })
+  }
+
+  initCodeMoreBox();
+</script>
+    </body>
+</html>

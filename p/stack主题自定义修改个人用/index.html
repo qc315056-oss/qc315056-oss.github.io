@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.465609f6a80204d49b6bbbf383d893216cabffc6418097e5ee66227b18abe48a.css"><meta property='og:title' content="Stack主题自定义修改（个人用）">
+<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="Stack主题自定义修改（个人用）">
 <meta property='og:description' content=" 具体修改请看【Stack官方文档】 所有使用到的矢量图标均来自于【阿里巴巴矢量图标库</>】 字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n将下载好的字体文件放入根目录下assets/font\n在根目录layouts/partials/footer/下创建custom.html,填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 &lt;style&gt; @font-face { font-family: &#39;LXGW&#39;; src: url(&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;) format(&#39;truetype&#39;); } :root { --base-font-family: &#39;LXGW&#39;; --code-font-family: &#39;LXGW&#39;; } &lt;/style&gt; 页脚显示最后更新时间 在hugo.yaml中填入以下代码\n1 2 3 4 5 frontmatter: lastmod: - :git - :fileModTime\tenableGitInfo: true 多列显示 在根目录下assets/scss/custom.scss填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 @media (min-width: 1024px) { .article-list--compact { display: grid; // 目前是两列，如需三列，则后面再加一个1fr，以此类推 grid-template-columns: 1fr 1fr; background: none; box-shadow: none; gap: 1rem; article { background: var(--card-background); border: none; box-shadow: var(--shadow-l2); margin-bottom: 8px; margin-right: 8px; border-radius: 16px; } } } 目录折叠 在根目录下layouts/partials/footer/custom.html填入以下代码\n">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/'>
 <meta property='og:site_name' content='清昶-Zakai'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Stack' /><meta property='article:published_time' content='2026-03-27T10:11:23&#43;08:00'/><meta property='article:modified_time' content='2026-03-28T13:13:09&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/stacktitle/stackcustompost.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-27T10:11:23&#43;08:00'/><meta property='article:modified_time' content='2026-03-28T15:26:56&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/stacktitle/stackcustompost.png' />
 <meta name="twitter:title" content="Stack主题自定义修改（个人用）">
 <meta name="twitter:description" content=" 具体修改请看【Stack官方文档】 所有使用到的矢量图标均来自于【阿里巴巴矢量图标库</>】 字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n将下载好的字体文件放入根目录下assets/font\n在根目录layouts/partials/footer/下创建custom.html,填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 &lt;style&gt; @font-face { font-family: &#39;LXGW&#39;; src: url(&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;) format(&#39;truetype&#39;); } :root { --base-font-family: &#39;LXGW&#39;; --code-font-family: &#39;LXGW&#39;; } &lt;/style&gt; 页脚显示最后更新时间 在hugo.yaml中填入以下代码\n1 2 3 4 5 frontmatter: lastmod: - :git - :fileModTime\tenableGitInfo: true 多列显示 在根目录下assets/scss/custom.scss填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 @media (min-width: 1024px) { .article-list--compact { display: grid; // 目前是两列，如需三列，则后面再加一个1fr，以此类推 grid-template-columns: 1fr 1fr; background: none; box-shadow: none; gap: 1rem; article { background: var(--card-background); border: none; box-shadow: var(--shadow-l2); margin-bottom: 8px; margin-right: 8px; border-radius: 16px; } } } 目录折叠 在根目录下layouts/partials/footer/custom.html填入以下代码\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/stacktitle/stackcustompost.png' />
@@ -266,6 +266,24 @@
     
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/hugo/" style="background-color: hsl(244, 60%, 84%); color: hsl(244, 60%, 15%);">
+                Hugo
+            </a>
+        
+            
+            
+            
+            <a href="/categories/stack/" style="background-color: hsl(167, 60%, 84%); color: hsl(167, 60%, 15%);">
+                Stack
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
@@ -700,14 +718,6 @@
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/hugo/">Hugo</a>
-        
-            <a href="/tags/stack/">Stack</a>
-        
-    </section>
-
 
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -730,6 +740,28 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E5%80%9F%E5%8A%A9github%E4%BB%A5%E5%8F%8Ahugo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">借助Github以及Hugo部署个人博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
