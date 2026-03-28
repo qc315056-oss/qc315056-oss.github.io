@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="具体修改请看【Stack主题官方文档】\n字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 具体修改请看【Stack官方文档】 所有使用到的矢量图标均来自于【阿里巴巴矢量图标库</>】 字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n将下载好的字体文件放入根目录下assets/font\n在根目录layouts/partials/footer/下创建custom.html,填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 &lt;style&gt; @font-face { font-family: &#39;LXGW&#39;; src: url(&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;) format(&#39;truetype&#39;); } :root { --base-font-family: &#39;LXGW&#39;; --code-font-family: &#39;LXGW&#39;; } &lt;/style&gt; 页脚显示最后更新时间 在hugo.yaml中填入以下代码\n1 2 3 4 5 frontmatter: lastmod: - :git - :fileModTime\tenableGitInfo: true 多列显示 在根目录下assets/scss/custom.scss填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 @media (min-width: 1024px) { .article-list--compact { display: grid; // 目前是两列，如需三列，则后面再加一个1fr，以此类推 grid-template-columns: 1fr 1fr; background: none; box-shadow: none; gap: 1rem; article { background: var(--card-background); border: none; box-shadow: var(--shadow-l2); margin-bottom: 8px; margin-right: 8px; border-radius: 16px; } } } 目录折叠 在根目录下layouts/partials/footer/custom.html填入以下代码\n">
 <title>Stack主题自定义修改（个人用）</title>
 
 <link rel='canonical' href='https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.7729fbd9fc29df1a032dae4629b28ec3088263e655615aa8292217cda0adef8e.css"><meta property='og:title' content="Stack主题自定义修改（个人用）">
-<meta property='og:description' content="具体修改请看【Stack主题官方文档】\n字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n">
+<link rel="stylesheet" href="/scss/style.min.465609f6a80204d49b6bbbf383d893216cabffc6418097e5ee66227b18abe48a.css"><meta property='og:title' content="Stack主题自定义修改（个人用）">
+<meta property='og:description' content=" 具体修改请看【Stack官方文档】 所有使用到的矢量图标均来自于【阿里巴巴矢量图标库</>】 字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n将下载好的字体文件放入根目录下assets/font\n在根目录layouts/partials/footer/下创建custom.html,填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 &lt;style&gt; @font-face { font-family: &#39;LXGW&#39;; src: url(&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;) format(&#39;truetype&#39;); } :root { --base-font-family: &#39;LXGW&#39;; --code-font-family: &#39;LXGW&#39;; } &lt;/style&gt; 页脚显示最后更新时间 在hugo.yaml中填入以下代码\n1 2 3 4 5 frontmatter: lastmod: - :git - :fileModTime\tenableGitInfo: true 多列显示 在根目录下assets/scss/custom.scss填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 @media (min-width: 1024px) { .article-list--compact { display: grid; // 目前是两列，如需三列，则后面再加一个1fr，以此类推 grid-template-columns: 1fr 1fr; background: none; box-shadow: none; gap: 1rem; article { background: var(--card-background); border: none; box-shadow: var(--shadow-l2); margin-bottom: 8px; margin-right: 8px; border-radius: 16px; } } } 目录折叠 在根目录下layouts/partials/footer/custom.html填入以下代码\n">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/'>
 <meta property='og:site_name' content='清昶-Zakai'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Stack' /><meta property='article:tag' content='scss' /><meta property='article:published_time' content='2026-03-27T10:11:23&#43;08:00'/><meta property='article:modified_time' content='2026-03-27T10:46:01&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Stack' /><meta property='article:published_time' content='2026-03-27T10:11:23&#43;08:00'/><meta property='article:modified_time' content='2026-03-28T13:13:09&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/stacktitle/stackcustompost.png' />
 <meta name="twitter:title" content="Stack主题自定义修改（个人用）">
-<meta name="twitter:description" content="具体修改请看【Stack主题官方文档】\n字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n">
+<meta name="twitter:description" content=" 具体修改请看【Stack官方文档】 所有使用到的矢量图标均来自于【阿里巴巴矢量图标库</>】 字体修改 使用了霞鹜文楷（遵循OFL 1.1 开源协议条款）\n将下载好的字体文件放入根目录下assets/font\n在根目录layouts/partials/footer/下创建custom.html,填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 &lt;style&gt; @font-face { font-family: &#39;LXGW&#39;; src: url(&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;) format(&#39;truetype&#39;); } :root { --base-font-family: &#39;LXGW&#39;; --code-font-family: &#39;LXGW&#39;; } &lt;/style&gt; 页脚显示最后更新时间 在hugo.yaml中填入以下代码\n1 2 3 4 5 frontmatter: lastmod: - :git - :fileModTime\tenableGitInfo: true 多列显示 在根目录下assets/scss/custom.scss填入以下代码\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 @media (min-width: 1024px) { .article-list--compact { display: grid; // 目前是两列，如需三列，则后面再加一个1fr，以此类推 grid-template-columns: 1fr 1fr; background: none; box-shadow: none; gap: 1rem; article { background: var(--card-background); border: none; box-shadow: var(--shadow-l2); margin-bottom: 8px; margin-right: 8px; border-radius: 16px; } } } 目录折叠 在根目录下layouts/partials/footer/custom.html填入以下代码\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/stacktitle/stackcustompost.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -237,6 +238,11 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#字体修改">字体修改</a></li>
+    <li><a href="#页脚显示最后更新时间">页脚显示最后更新时间</a></li>
+    <li><a href="#多列显示">多列显示</a></li>
+    <li><a href="#目录折叠">目录折叠</a></li>
+    <li><a href="#返回顶部功能">返回顶部功能</a></li>
+    <li><a href="#动态背景">动态背景</a></li>
   </ol>
 </nav>
         </div>
@@ -250,6 +256,14 @@
             <main class="main full-width">
     <article class="main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/stack%E4%B8%BB%E9%A2%98%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E7%94%A8/">
+                
+                    <img src="/post/img/stacktitle/stackcustompost.png" loading="lazy" alt="Featured image of post Stack主题自定义修改（个人用）" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -294,12 +308,393 @@
     <section class="article-content">
     
     
-    <p>具体修改请看【<a class="link" href="https://stack.cai.im/"  target="_blank" rel="noopener"
-    >Stack主题官方文档</a>】</p>
+    <div align="center">
+具体修改请看【<a href="https://stack.cai.im/" clsss="_target">Stack官方文档</a>】</br>
+所有使用到的矢量图标均来自于【<a href="https://www.iconfont.cn">阿里巴巴矢量图标库</>】
+</div>
+<hr>
 <h2 id="字体修改">字体修改
-</h2><p>使用了<a class="link" href="https://github.com/lxgw/LxgwWenKai"  target="_blank" rel="noopener"
+</h2><ol>
+<li>
+<p>使用了<a class="link" href="https://github.com/lxgw/LxgwWenKai"  target="_blank" rel="noopener"
     >霞鹜文楷</a>（遵循OFL 1.1 开源协议条款）</p>
-
+</li>
+<li>
+<p>将下载好的字体文件放入根目录下<code>assets/font</code></p>
+</li>
+<li>
+<p>在根目录<code>layouts/partials/footer/</code>下创建<code>custom.html</code>,填入以下代码</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;LXGW&#39;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;{{ (resources.Get &#34;font/LXGWZhenKai-Regular.ttf&#34;).Permalink }}&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--base-font-family</span><span class="p">:</span> <span class="s1">&#39;LXGW&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">--code-font-family</span><span class="p">:</span> <span class="s1">&#39;LXGW&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="页脚显示最后更新时间">页脚显示最后更新时间
+</h2><p>在<b>hugo.yaml</b>中填入以下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">git</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">:</span><span class="l">fileModTime	</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">enableGitInfo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="多列显示">多列显示
+</h2><p>在根目录下<code>assets/scss/custom.scss</code>填入以下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1024px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">article-list--compact</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">//</span> <span class="err">目前是两列，如需三列，则后面再加一个1fr，以此类推</span>
+</span></span><span class="line"><span class="cl">    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">gap</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">article</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card</span><span class="o">-</span><span class="n">background</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">box-shadow</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow</span><span class="o">-</span><span class="n">l2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">margin-right</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">border-radius</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="目录折叠">目录折叠
+</h2><p>在根目录下<code>layouts/partials/footer/custom.html</code>填入以下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">#</span><span class="nn">TableOfContents</span><span class="o">&gt;</span><span class="nt">ul</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">ol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">ul,</span>
+</span></span><span class="line"><span class="cl">    <span class="err">ol</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">open</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">initTocHide</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 判断是否存在文章目录
+</span></span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">toc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.widget--toc&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">toc</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 监听滚动
+</span></span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//清除class值
+</span></span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">openUl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&#34;.open&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">openUl</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">openUl</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">ul</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">ul</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&#34;open&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 获取active-class
+</span></span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">currentLi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.active-class&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">currentLi</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 展示子ul
+</span></span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">currentLi</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">currentLi</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;open&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 展示父ul
+</span></span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">ul</span> <span class="o">=</span> <span class="nx">currentLi</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">ul</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&#34;open&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">ul</span> <span class="o">=</span> <span class="nx">ul</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">parentElement</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">ul</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">ul</span><span class="p">.</span><span class="nx">localName</span> <span class="o">===</span> <span class="s1">&#39;ul&#39;</span> <span class="o">||</span> <span class="nx">ul</span><span class="p">.</span><span class="nx">localName</span> <span class="o">===</span> <span class="s1">&#39;ol&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">initTocHide</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="返回顶部功能">返回顶部功能
+</h2><p>在根目录下<code>layouts/partials/footer/custom.html</code>填入以下代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">#</span><span class="nn">backTopBtn</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">bottom</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">z-index</span><span class="p">:</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;{{ (resources.Get &#34;icons/backTop.svg&#34;).Permalink}}&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">#</span><span class="nn">backTopBtn</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">bottom</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">z-index</span><span class="p">:</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;{{ (resources.Get &#34;icons/backTop.svg&#34;).Permalink }}&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//滚动回顶部初始化
+</span></span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">initScrollTop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">rightSideBar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;.right-sidebar&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">rightSideBar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 添加返回顶部按钮到右侧边栏
+</span></span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">btn</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s2">&#34;backTopBtn&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">backToTop</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">rightSideBar</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">btn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 滚动监听
+</span></span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 当网页向下滑动 20px 出现&#34;返回顶部&#34; 按钮
+</span></span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">btn</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;block&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">btn</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//返回顶部
+</span></span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">backToTop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">({</span> <span class="nx">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">behavior</span><span class="o">:</span> <span class="s2">&#34;smooth&#34;</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">initScrollTop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="动态背景">动态背景
+</h2><ol>
+<li>使用<a class="link" href="https://vincentgarreau.com/particles.js/"  target="_blank" rel="noopener"
+    >particles</a>搭建，下载好的文档放入<code>assets/background</code>下</li>
+<li>在根目录下<code>layouts/partials/footer/custom.html</code>填入以下代码</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;particles-js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">{{</span> <span class="err">(</span><span class="na">resources</span><span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">background</span><span class="err">/</span><span class="na">particles</span><span class="err">.</span><span class="na">min</span><span class="err">.</span><span class="na">js</span><span class="err">&#34;</span> <span class="err">).</span><span class="na">Permalink</span> <span class="err">}}</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">particlesJS</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;particles-js&#39;</span><span class="p">,</span> <span class="p">{{</span> <span class="p">(</span><span class="nx">resources</span><span class="p">.</span><span class="nx">Get</span> <span class="s2">&#34;background/particlesjs-config.json&#34;</span><span class="p">).</span><span class="nx">Permalink</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;particles.js loaded - callback&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">#</span><span class="nn">particles-js</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">z-index</span><span class="p">:</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -310,8 +705,6 @@
             <a href="/tags/hugo/">Hugo</a>
         
             <a href="/tags/stack/">Stack</a>
-        
-            <a href="/tags/scss/">Scss</a>
         
     </section>
 
@@ -326,7 +719,7 @@
 
 
         <span>
-            最后更新于 2026-03-27
+            最后更新于 2026-03-28
         </span>
     </section></footer>
 
@@ -457,7 +850,7 @@
 <style>
   @font-face {
     font-family: 'LXGW';
-    src: url('https://qc315056-oss.github.io/font/LXGWZhenKaiGB-Regular.ttf') format('truetype');
+    src: url('https://qc315056-oss.github.io/font/LXGWWenKai-Regular.ttf') format('truetype');
   }
 
   :root {
@@ -541,7 +934,6 @@
 </style>
 <script>
   
-
   function initScrollTop() {
     let rightSideBar = document.querySelector(".right-sidebar");
     if (!rightSideBar) {
@@ -564,13 +956,13 @@
   }
 
   
-
   function backToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   initScrollTop();
 </script>
+
 <div id="particles-js"></div>
 
 <script src=https://qc315056-oss.github.io/background/particles.min.js></script>
@@ -591,5 +983,86 @@
     height: 100vh;
   }
 </style>
+
+<style>
+  .highlight {
+     
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .code-show {
+    max-height: none !important;
+  }
+
+  .code-more-box {
+    width: 100%;
+    padding-top: 78px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .code-more-btn {
+    display: block;
+    margin: auto;
+    width: 44px;
+    height: 22px;
+    background: #f0f0f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 6px;
+    cursor: pointer;
+  }
+
+  .code-more-img {
+    cursor: pointer !important;
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 16px;
+  }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://qc315056-oss.github.io/icons/codeMore.svg"
+  
+  codeMoreBtn.appendChild(img);
+  codeMoreBox.appendChild(codeMoreBtn);
+  codeBlock.appendChild(codeMoreBox)
+    })
+  }
+
+  initCodeMoreBox();
+</script>
     </body>
 </html>
