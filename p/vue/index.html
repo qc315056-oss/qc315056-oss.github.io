@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="实例创建 前言 在使用Vue3框架的页面程序中，至少要创建一个Vue实例，语法为Vue.createApp().mount()，这个Vue实例就相当于MVVM模式中的ViewModel。 在创建Vue实例时，需要传递一个选项对象。 Vue 开发可以按两种不同的风格书写：选项式 API\u00a0和组合式 API（初学使用选项式，开发大型项目使用组合式） Vue实例01 格式 1 2 3 4 5 6 7 8 9 10 11 &lt;script&gt; const app** = Vue.createApp({ data() { return { message: &#34;Hello, Vue 3!&#34; } } }) const vm = app**.mount**(&#39;#app&#39;)\u00a0// 调用实例的mount() 方法将Vue应用挂载到对应id的元素上 注意：在实际开发中并不要求一定要将Vue实例赋值给某个变量，这样写是为了更方便使用实例属性 &lt;script&gt; mount()方法的参数是一个指向网页中特定区域的标识（是DOM\u00a0元素或 CSS 选择器），Vue应用会在这个特定区域内渲染并展示内容，就像把照片放在相框里一样。 定义了Vue实例之后，就可以通过插值来进行数据绑定了 插值 01 格式：{{ }}，双花括号中的内容会被替换为Vue实例中数据对象上属性的值。 注意：只要绑定的数据对象上属性发生了改变，插值处的内容就会被更新。\n">
+<title>Vue</title>
+
+<link rel='canonical' href='https://qc315056-oss.github.io/p/vue/'>
+
+<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="Vue">
+<meta property='og:description' content="实例创建 前言 在使用Vue3框架的页面程序中，至少要创建一个Vue实例，语法为Vue.createApp().mount()，这个Vue实例就相当于MVVM模式中的ViewModel。 在创建Vue实例时，需要传递一个选项对象。 Vue 开发可以按两种不同的风格书写：选项式 API\u00a0和组合式 API（初学使用选项式，开发大型项目使用组合式） Vue实例01 格式 1 2 3 4 5 6 7 8 9 10 11 &lt;script&gt; const app** = Vue.createApp({ data() { return { message: &#34;Hello, Vue 3!&#34; } } }) const vm = app**.mount**(&#39;#app&#39;)\u00a0// 调用实例的mount() 方法将Vue应用挂载到对应id的元素上 注意：在实际开发中并不要求一定要将Vue实例赋值给某个变量，这样写是为了更方便使用实例属性 &lt;script&gt; mount()方法的参数是一个指向网页中特定区域的标识（是DOM\u00a0元素或 CSS 选择器），Vue应用会在这个特定区域内渲染并展示内容，就像把照片放在相框里一样。 定义了Vue实例之后，就可以通过插值来进行数据绑定了 插值 01 格式：{{ }}，双花括号中的内容会被替换为Vue实例中数据对象上属性的值。 注意：只要绑定的数据对象上属性发生了改变，插值处的内容就会被更新。\n">
+<meta property='og:url' content='https://qc315056-oss.github.io/p/vue/'>
+<meta property='og:site_name' content='清昶-Zakai'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T09:56:18&#43;08:00'/><meta property='article:modified_time' content='2026-03-29T10:15:18&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/vue.jpg' />
+<meta name="twitter:title" content="Vue">
+<meta name="twitter:description" content="实例创建 前言 在使用Vue3框架的页面程序中，至少要创建一个Vue实例，语法为Vue.createApp().mount()，这个Vue实例就相当于MVVM模式中的ViewModel。 在创建Vue实例时，需要传递一个选项对象。 Vue 开发可以按两种不同的风格书写：选项式 API\u00a0和组合式 API（初学使用选项式，开发大型项目使用组合式） Vue实例01 格式 1 2 3 4 5 6 7 8 9 10 11 &lt;script&gt; const app** = Vue.createApp({ data() { return { message: &#34;Hello, Vue 3!&#34; } } }) const vm = app**.mount**(&#39;#app&#39;)\u00a0// 调用实例的mount() 方法将Vue应用挂载到对应id的元素上 注意：在实际开发中并不要求一定要将Vue实例赋值给某个变量，这样写是为了更方便使用实例属性 &lt;script&gt; mount()方法的参数是一个指向网页中特定区域的标识（是DOM\u00a0元素或 CSS 选择器），Vue应用会在这个特定区域内渲染并展示内容，就像把照片放在相框里一样。 定义了Vue实例之后，就可以通过插值来进行数据绑定了 插值 01 格式：{{ }}，双花括号中的内容会被替换为Vue实例中数据对象上属性的值。 注意：只要绑定的数据对象上属性发生了改变，插值处的内容就会被更新。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/vue.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b6ae69261be2d4ba.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😁</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">清昶-Zakai</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。该博客主要用于记录个人生活及个人项目</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/347480570'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/qc315056-oss'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#实例创建">实例创建</a>
+      <ol>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#vue实例01">Vue实例01</a></li>
+        <li><a href="#插值-01">插值 01</a></li>
+        <li><a href="#vue实例配置对象">Vue实例配置对象</a></li>
+        <li><a href="#methods定义方法02">methods定义方法：02</a></li>
+        <li><a href="#computed计算属性03">computed计算属性：03</a></li>
+        <li><a href="#watch状态监听04">watch状态监听：04</a></li>
+      </ol>
+    </li>
+    <li><a href="#指令">指令</a>
+      <ol>
+        <li><a href="#vue30内置指令总表">Vue3.0内置指令总表</a></li>
+        <li><a href="#vue数据绑定">Vue数据绑定</a>
+          <ol>
+            <li><a href="#绑定样式">绑定样式</a></li>
+          </ol>
+        </li>
+        <li><a href="#数组变动更新检测">数组变动更新检测</a></li>
+      </ol>
+    </li>
+    <li><a href="#修饰符">修饰符</a>
+      <ol>
+        <li><a href="#v-on事件修饰符">v-on事件修饰符</a></li>
+        <li><a href="#v-on键盘按键修饰符06">v-on键盘按键修饰符06</a></li>
+        <li><a href="#v-on系统修饰键07">v-on系统修饰键07</a></li>
+        <li><a href="#v-on鼠标按键修饰符08">v-on鼠标按键修饰符08</a></li>
+        <li><a href="#v-model修饰符">v-model修饰符</a></li>
+      </ol>
+    </li>
+    <li><a href="#自定义指令">自定义指令</a>
+      <ol>
+        <li><a href="#vue提供了两种注册方式全局注册和局部注册">Vue提供了两种注册方式：全局注册和局部注册</a>
+          <ol>
+            <li><a href="#全局注册-01-1">全局注册： 01-1</a></li>
+            <li><a href="#局部注册-01-2">局部注册： 01-2</a></li>
+          </ol>
+        </li>
+        <li><a href="#钩子函数-02">钩子函数  02             </a></li>
+        <li><a href="#钩子函数可以携带的参数-03">钩子函数可以携带的参数：  03</a></li>
+        <li><a href="#动态指令参数-04">动态指令参数  04</a></li>
+      </ol>
+    </li>
+    <li><a href="#组件">组件</a>
+      <ol>
+        <li><a href="#vue组件的基本概念">Vue组件的基本概念</a></li>
+        <li><a href="#全局注册-01">全局注册： 01</a></li>
+        <li><a href="#局部注册-02">局部注册： 02</a></li>
+        <li><a href="#template模板-03">template模板  03</a></li>
+        <li><a href="#组件之间的数据传递">组件之间的数据传递</a></li>
+        <li><a href="#在组件中使用prop传递数据">在组件中使用prop传递数据</a>
+          <ol>
+            <li><a href="#单向数据流">单向数据流</a></li>
+            <li><a href="#prop-验证">prop 验证</a></li>
+            <li><a href="#非prop的属性-04-8">非prop的属性  04-8</a></li>
+          </ol>
+        </li>
+        <li><a href="#在组件中使用其他方法传递数据">在组件中使用其他方法传递数据</a>
+          <ol>
+            <li><a href="#监听子组件事件">监听子组件事件</a></li>
+            <li><a href="#原生组件绑定到组件">原生组件绑定到组件</a></li>
+          </ol>
+        </li>
+        <li><a href="#使用插槽分布内容">使用插槽分布内容</a>
+          <ol>
+            <li><a href="#编译作用域-01">编译作用域  01</a></li>
+            <li><a href="#默认内容-02">默认内容  02</a></li>
+            <li><a href="#命名插槽-03">命名插槽  03</a></li>
+            <li><a href="#作用域插槽-04">作用域插槽  04</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#动态组件和异步组件">动态组件和异步组件</a>
+      <ol>
+        <li><a href="#动态组件">动态组件</a></li>
+        <li><a href="#is特性的应用场景">is特性的应用场景</a>
+          <ol>
+            <li><a href="#动态组件-01">动态组件  01</a></li>
+            <li><a href="#-keep-alive-元素-02">&lt; keep-alive &gt;元素  02</a></li>
+          </ol>
+        </li>
+        <li><a href="#异步组件vite演示实操">异步组件(vite演示+实操)</a>
+          <ol>
+            <li><a href="#单文件全局注册">单文件&ndash;全局注册</a></li>
+            <li><a href="#单文件局部注册">单文件&ndash;局部注册</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#自定义组件的v-model">自定义组件的v-model</a>
+      <ol>
+        <li><a href="#自定义组件中的v-model-01">自定义组件中的v-model   01</a></li>
+        <li><a href="#updatemodelvalue-02">update:modelValue    02</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/vue/">
+                
+                    <img src="/post/img/vue.jpg" loading="lazy" alt="Featured image of post Vue" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: hsl(4, 60%, 84%); color: hsl(4, 60%, 15%);">
+                笔记
+            </a>
+        
+            
+            
+            
+            <a href="/categories/vue/" style="background-color: hsl(107, 60%, 84%); color: hsl(107, 60%, 15%);">
+                Vue
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vue/">Vue</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-03-29T09:56:18&#43;08:00'>2026-03-29</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="实例创建">实例创建
+</h2><h3 id="前言">前言
+</h3><ul>
+<li>在使用Vue3框架的页面程序中，<strong>至少要创建一个Vue实例，语法为Vue.createApp().mount()</strong>，这个Vue实例就相当于MVVM模式中的ViewModel。</li>
+<li>在创建Vue实例时，需要传递一个选项对象。</li>
+<li>Vue 开发可以按两种不同的风格书写：选项式 API 和组合式 API（初学使用选项式，开发大型项目使用组合式）</li>
+</ul>
+<h3 id="vue实例01">Vue实例01
+</h3><ul>
+<li>格式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">const app** = Vue.createApp({
+</span></span><span class="line"><span class="cl">data() {
+</span></span><span class="line"><span class="cl">return {
+</span></span><span class="line"><span class="cl">message: &#34;Hello, Vue 3!&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">})
+</span></span><span class="line"><span class="cl">const vm = app**.mount**(&#39;#app&#39;)    // 调用实例的mount() 方法将Vue应用挂载到对应id的元素上
+</span></span><span class="line"><span class="cl">注意：在实际开发中并不要求一定要将Vue实例赋值给某个变量，这样写是为了更方便使用实例属性
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>mount()方法的参数是一个指向网页中特定区域的标识（是<a class="link" href="https://so.csdn.net/so/search?q=DOM&amp;spm=1001.2101.3001.7020"  target="_blank" rel="noopener"
+    >DOM</a> 元素或 CSS 选择器），Vue应用会在这个特定区域内渲染并展示内容，就像把照片放在相框里一样。
+定义了Vue实例之后，就可以通过插值来进行数据绑定了</li>
+</ul>
+<h3 id="插值-01">插值 01
+</h3><p>格式：{{ }}，双花括号中的内容会被替换为Vue实例中数据对象上属性的值。
+注意：只要绑定的数据对象上属性发生了改变，插值处的内容就会被更新。</p>
+<h3 id="vue实例配置对象">Vue实例配置对象
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>选项</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>el</td>
+          <td>指定挂载的元素。可以是 CSS 选择器的字符串形式，也可以是一个直接的DOM元素</td>
+      </tr>
+      <tr>
+          <td>data</td>
+          <td>Vue实例数据对象</td>
+      </tr>
+      <tr>
+          <td>methods</td>
+          <td>包含Vue实例中使用的所有方法</td>
+      </tr>
+      <tr>
+          <td>computed</td>
+          <td>计算属性</td>
+      </tr>
+      <tr>
+          <td>watch</td>
+          <td>监听数据变化</td>
+      </tr>
+      <tr>
+          <td>components</td>
+          <td>定义子组件</td>
+      </tr>
+      <tr>
+          <td><strong>el指定挂载元素：01</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>格式： createApp(App).mount(&rsquo;#app&rsquo;)（尽量使用id选择器将页面结构与Vue实例对象绑定）</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>data实例初始数据：01</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>格式：</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">data</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">	  <span class="nx">实例属性</span><span class="o">:</span> <span class="nx">属性值</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：
+Vue经典面试题：为什么Vue2中的data既可以是对象也可以是函数，而Vue3中的data必须是函数？</p>
+<ul>
+<li>在vue中一个组件可能会被其他的组件引用，为了防止多个组件实例对象之间共用一个data，产生数据污染，于是将data定义成一个函数，使用return包裹，这样数据只在当前组件中生效，每个实例相互独立，组件之间不会相互影响。</li>
+<li>Vue实例创建之后，可以通过vm.$data访问原始数据对象（实例属性），所以访问vm.name相当于访问vm.$data.name。</li>
+</ul>
+<h3 id="methods定义方法02">methods定义方法：02
+</h3><p>格式：methods: { 方法名( ){ } }，Vue实例可以直接访问这些方法。
+注意：（1）在方法中，this指向Vue实例本身
+(2）定义在methods属性中的方法可以作为页面中的事件处理方法使用</p>
+<h3 id="computed计算属性03">computed计算属性：03
+</h3><p>格式：computed: { 方法名( ){ } }，计算属性是以函数形式定义的。
+应用场景：有些数据需要随着其他数据变动而变动
+注意：在事件处理方法中，this指向的Vue实例的计算属性结果会被缓存起来，只有依赖的响应式属性变化时，才会重新计算
+<strong>前提：</strong> 当表达式的逻辑过于复杂，计算困难的时候，模板就会难以维护，应当考虑使用计算属性——computed。
+<strong>例：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ msg.split(&#39; &#39;).reverse.join() }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  // 实现字符串的反转要用3个相关方法
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>计算属性的基本使用 01</strong>
+<strong>定义：</strong> 计算属性是以函数形式，在Vue实例的选项对象的computed选项中定义。
+<strong>计算属性的get和set  02</strong>
+<strong>使用场景</strong>
+get 和 set 的组合通常用于需要对计算属性进行双向绑定的场景。例如，当需要通过用户输入来更新依赖于多个数据源的计算属性时，set 方法可以用于解析用户的输入，并更新底层的数据状态。
+<strong>注意事项</strong>
+get 方法必须返回一个值，该值将成为计算属性的当前值。
+set 方法接收一个参数，即新的值，可以在该方法中执行任何逻辑来更新相关的数据状态。
+如果没有提供 set 方法，计算属性将被视为只读，尝试对其进行赋值不会生效。
+因此在 computed 中可以分成 getter（读取） 和 setter（设值）。<strong>Vue</strong> 计算属性默认只有 getter**，常常省略不写。
+<strong>setter</strong>：设置值时触发
+<strong>getter</strong>：获取值时触发
+当依赖的属性值发生变化时，计算属性的值会自动更新。不能通过getter直接修改计算属性，可以使用setter来执行。
+<strong>应用：v-for和v-if一起使用的替代方案   03</strong>
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span>    <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;(item,index) in MsgList&#34;</span>    <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.id&#34;</span>     <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;index &lt; 2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同时使用v-if和v-for，那么会根据整个数组生成所有组件，挂载完毕后才判断v-if，非常消耗资源。
+在Vue3中，建议尽量避免在同一个元素上同时使用v-for和v-if，v-for 具有比 v-if 更高的优先级，这意味着 v-if 将分别重复运行于每个 v-for 循环中，将会影响运行性能，尤其是需要按需渲染的时候，所以不推荐v-if和v-for同时使用。如果确实需要根据条件过滤列表项并渲染，可以使用计算属性或方法来预处理数据。</p>
+<h3 id="watch状态监听04">watch状态监听：04
+</h3><p>背景：Vue中的事件处理方法是根据用户所需自行定义的，不能自动监听当前Vue对象的状态变化。
+定义：监听当前Vue实例中的数据变化，就会调用当前数据所绑定的事件处理方法。
+参数：（newVal oldVal），监听的过程中可以拿到变化后的值和变化前的值
+<strong>前提：</strong> Vue为了观察和响应Vue实例上的数据变动，提供了更通用的方式来监听属性——watch。
+<strong>例：01</strong>
+注意：监听器函数不能使用箭头函数定义（一旦使用箭头函数，使用this得到的值都是undefined）
+<strong>应用场景：</strong> 在数据变化时执行异步或执行耗能很大的操作时。
+<strong>监听器的形式：</strong>
+（1）深度监听：监听一个对象的属性变化
+<strong>第一种：监听整个对象，对象里的每个属性值的变化都会执行handler   02</strong>
+<strong>语法：</strong>
+ watch: {
+    user: {
+      handler(val){  // <strong>注意：参数不再分newVal和oldVal，只能取到最新的值</strong>
+        console.log(val);
+      },
+      deep: true
+    }
+  }
+<strong>handler</strong>用于定义当数据变化时调用的监听器函数
+<strong>deep</strong>用于监听对象属性变化，选项值为true，表示无论对象的属性在对象中层级有多深，只要属性值发生变化，都会被监听到。
+<strong>注意：</strong>
+<strong>handler:</strong> <strong>固定方法触发。侦听函数必须叫handler(必写)</strong>
+<strong>deep:</strong> <strong>开启深度侦听(必写)</strong>
+<strong>第二种：监听对象的某个属性，被监听的属性值发生变化就会执行函数   03</strong>
+当对象属性过多时，使用deep属性进行深度监听会给所有的属性加上监听器, 如果只是想对其中一个属性进行监听，
+那么可以直接使用字符串形式的监听。
+<strong>语法：</strong>
+watch: {
+    &lsquo;user.name&rsquo;: function( newVal, oldVal ){
+console.log(newVal, oldVal);   <strong>//</strong> <strong>注意：函数执行后，获取的 newVal 值和 oldVal 值不一样</strong>
+}
+}
+（2）即时监听  04
+watch 默认是懒执行（仅当数据源变化时才会执行），所以在初始渲染时并不会被调用，只有在后续监听的属性发生
+变化时才会被调用，如果要让监听器函数在监听开始后立即执行，可以使用<strong>immediate</strong> : true选项。
+（3）一次性监听  05
+希望回调只在源变化时触发一次，请使用 once: true 选项。</p>
+<h2 id="指令">指令
+</h2><h3 id="vue30内置指令总表">Vue3.0内置指令总表
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>指令</th>
+          <th><strong>说明</strong></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>v-text</td>
+          <td>**定义：**更新元素的文本内容<br><strong>案例：01</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-html</td>
+          <td>**定义：**更新元素的innerHTML（元素内容会被渲染成DOM节点）<br><strong>案例：02</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-model</td>
+          <td>**定义：**双向数据绑定，一般用于表单控件的数据更新。由于表单控件类型不同，所以在不同的表单控件上应用也会有差异。<br><strong>案例：03</strong><br>**注意：**指令会忽略所有表单元素的value、checked、selected属性的初始值，而总是将Vue实例的数据属性作为数据来源<br><strong>修饰符：</strong><br>trim：自动过滤输入数据首尾的空白字符<br>lazy：将同步事件转变为使用change事件进行同步<br>number：自动将用户的输入数据转为数值类型</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-on</td>
+          <td>**定义：**监听DOM事件，并在触发时运行一些JS代码（可以时表达式/方法名 等）<br><strong>缩写表示：</strong> @<br><strong>案例：04</strong><br><strong>注意：</strong><br>（1）方法是在选项对象的methods属性中定义的，但是不能使用箭头函数定义method方法，因为涉及到this指向的问题。<br>（2）当Vue实例销毁时，所有的事件处理器都会被自动删除，所以无需担心清理问题。<br><strong>高级：</strong><br>如果在事件绑定的方法中需要访问原始的DOM事件，可以使用特殊变量$event把它传入方法。<br>例：&lt;\a v-on:click=&ldquo;login($event)&quot;&gt;登录&lt;/a&gt;<br>login(event){<br>   event.preventDefault();<br>}<br>或<br>&lt;\a v-on:click.prevent=&ldquo;login&rdquo;&gt;登录&lt;/a&gt;<br>&lt;a @click.prevent=&ldquo;login&rdquo;&gt;登录&lt;/a&gt;<br><strong>这里涉及到事件修饰符的学习</strong>。</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-bind</td>
+          <td>**定义：**单向数据绑定，用于响应更新HTML元素的属性。<br><strong>缩写表示：</strong>:<br><strong>案例：05</strong><br>绑定一个属性： v-bind:src=&ldquo;imgSrc&rdquo;<br>绑定动态属性名：v-bind:[attrname]=&ldquo;url&rdquo;<br>内联字符串拼接：v-bind:src=&rdquo; &lsquo;images/&rsquo;+fileName &ldquo;<br>绑定有属性的对象：v-bind=&ldquo;formObj&rdquo;<br>formObj:{<br>method : &lsquo;get&rsquo;,<br>action : &lsquo;#&rsquo;<br>}<br>**应用：**通过v-bind绑定内联样式v-bind:style及样式类v-bind:class</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-for</td>
+          <td>**定义：**通过循环方式渲染列表，循环的对象可以是数组或是对象，<br>**语法形式：**item in items，items是源数据数组，item是循环过程中的成员<br><strong>注意：</strong> 也可以用of替代in作为分隔符<br>v-for循环遍历数组时推荐使用of，语法格式为(item，index)<br>  item:迭代时不同的数组元素的值<br>  index:当前元素的索引<br>v-for循环遍历对象时推荐使用in，语法格式为(item,name,index)<br>  item:迭代时对象的键名键值<br>  name:迭代时对象的键名<br>  index:当前元素的索引<br><strong>高级：</strong>:key<br>作用：给相同的元素添加一个具有唯一性的key属性，在渲染过程中告知Vue“元素完全独立不可复用”。<strong>案例：06</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-if</td>
+          <td>**定义：**条件渲染指令。根据表达式的值的真假，控制一个元素生成或删除，达到选择性渲染的目的。<br><strong>案例：07</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-else-if</td>
+          <td>**定义：**条件渲染指令。这两个指令配合与v-if一起使用，可以实现互斥的条件判断。<br>**注意：**当满足v-if的条件判断时，后续的条件都不会再判断。使用时，v-else-if紧跟v-if，v-else紧跟v-else-if。<br><strong>案例：08</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-else</td>
+          <td>同上</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-show</td>
+          <td>**定义：**根据表达式的值的真假，控制元素的display属性，决定显示或隐藏HTML元素。<br>**比较：**v-if 更适合条件不经常改变的场景，因为它切换开销相对较大，而 v-show 适用于频繁切换条件。<br><strong>案例：09</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-pre</td>
+          <td>**定义：**用于跳过这个元素和它的子元素的编译过程，使用该指令不需要表达式。跳过渲染<br><strong>案例：10</strong></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>v-cloak</td>
+          <td>**定义：**保持在元素上直到关联实例编译结束，编译结束后该指令被移除。<br>**注意：**当和CSS一起使用时（例：[v-cloak]{ display:none } ），会隐藏未编译的标签直到实例准备完毕。<br><strong>案例：11</strong></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="vue数据绑定">Vue数据绑定
+</h3><h4 id="绑定样式">绑定样式
+</h4><p>class 与 style 是 HTML 元素的属性，用于设置元素的样式，我们可以用 v-bind 来设置样式属性。
+<strong>（1）绑定内联样式  v-bind:style</strong>
+注意：使用v-bind绑定样式，Vue做了增强，表达式结果的类型除了字符串之外，还可以是数组或对象
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 内联使用字符串类型绑定样式 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:style</span><span class="o">=</span><span class="s">&#34;{width: neilian.width + &#39;px&#39; ,height: neilian.height + &#39;px&#39; }&#34;</span><span class="p">&gt;</span>内联样式<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 内联直接绑定到样式对象 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:style</span><span class="o">=</span><span class="s">&#34;neilian2&#34;</span><span class="p">&gt;</span>内联直接绑定到样式对象<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 内联使用数组将多个样式对象绑定到一个元素上 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:style</span><span class="o">=</span><span class="s">&#34;[neilian2,neilian3]&#34;</span><span class="p">&gt;</span>内联使用数组将多个样式对象绑定到一个元素上<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>（2）绑定样式类  v-bind:class</strong>
+样式类即以类名定义元素的样式
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- class 存在与否将取决于 isActive的值 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;{ activeA : isActive }&#34;</span><span class="p">&gt;</span>绑定类<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- v-bind:class 指令也可以与普通的 class 属性共存 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;{ active: isActive, &#39;text-danger&#39;: hasError }&#34;</span><span class="p">&gt;</span>与普通class属性共存<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 绑定数据对象 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;classObject&#34;</span><span class="p">&gt;</span>绑定数据对象<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>   
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 数组语法 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;[arrayStyle1,arrayStyle2]&#34;</span><span class="p">&gt;</span>数组语法<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 绑定计算属性 这是一个常用且强大的模式--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;computer&#34;</span><span class="p">&gt;</span>绑定计算属性<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">computed: {
+</span></span><span class="line"><span class="cl">  computer: function () {
+</span></span><span class="line"><span class="cl">    return {
+</span></span><span class="line"><span class="cl">      active: this.isActive <span class="err">&amp;&amp;</span> !this.error,
+</span></span><span class="line"><span class="cl">      &#39;text-danger&#39;: this.error <span class="err">&amp;&amp;</span> this.error.type === &#39;fatal&#39;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 使用三元表达式切换属性 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;[arrayStyle1, isActive?arrayStyle3:&#39;&#39;]&#34;</span><span class="p">&gt;</span>使用三元表达式切换属性<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 当有多个条件 class 时可以在数组语法中使用对象语法 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-bind:class</span><span class="o">=</span><span class="s">&#34;[{ active: isActive }, errorClass]&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="数组变动更新检测">数组变动更新检测
+</h3><p>对于数组，Vue 3.0 提供了一些特殊的变更方法，这些方法会确保视图在数组内容发生变化时得到更新。这些变更方法包括：
+<strong>数组的变异方法：（操作数组改变原数组）</strong>
+push（）往数组最后面添加一个元素，成功返回当前数组的长度<br>
+pop（）删除数组的最后一个元素，成功返回删除元素的值<br>
+shift（）删除数组的第一个元素，返回该元素。<br>
+unshift（）在数组的开头添加一个或者多个元素，返回原数组的长度，改变原来的数组<br>
+splice（）有三个参数，第一个是删除index位置的元素（必选），第二个是想要删除的个数（必选），第三个是删除后想要在原位置替换的值（可选）<br>
+sort（）使数组按照字符编码默认从小到大排序,成功返回排序后的数组<br>
+reverse（） 将数组倒序，成功返回倒序后的数组
+<strong>数组的非变异方法：（操作数组不改变原数组，生成新数组）</strong>
+filter（）可以对数组元素进行过滤
+concat（）将一个或多个数组组合到原数组中，组成新的数组返回
+slice（startindex，endindex）从startindex下标开始向后截取到endindex位置（不包含）的元素，截取的这些元素组成新的数组返回，原数组不变
+总结：
+vue能不能检测到数组的变化并更新，取决于原生js的数组方法。
+如果原生js方法能够修改原数组（vue变异方法），那么vue就可以检测到变化并更新
+如果原生js方法不能够修改原数组（vue非变异方法），而是返回一个新数组，那么vue也可以检测到变化并更新，前提是使用这些方法时要把返回的新数组替换掉旧数组。</p>
+<h2 id="修饰符">修饰符
+</h2><h3 id="v-on事件修饰符">v-on事件修饰符
+</h3><p>在指令后通过点( . )来调用修饰符
+<strong>.stop</strong> <strong>01</strong> 是阻止冒泡行为event.stopPropagation()，不让当前元素的事件继续向外触发
+例：&lt;/a v-on:click.stop=&ldquo;doThis&rdquo;&gt;&lt;//a&gt;
+<strong>.prevent</strong>  <strong>02</strong>  是阻止事件默认的行为event.preventDefault()
+例：&lt;/form v-on:submit.prevent=&ldquo;onSubmit&rdquo;&gt;&lt;//form&gt;
+注意：修饰符可以串联，&lt;a v-on:click**.stop.prevent**=&ldquo;doThat&rdquo;&gt;</a>
+<strong>.capture  03</strong>  添加事件监听器时使用事件捕获模式，即外部元素触发的事件先在此处理，然后才交由内部元素进行处理。
+例：&lt;/div v-on:click.capture=&ldquo;doThis&rdquo;&gt;&hellip;&lt;//div&gt;
+<strong>.self  04</strong>  当 event.target 是当前元素自身时触发处理函数
+例：&lt;/div v-on:click.self=&ldquo;doThat&rdquo;&gt;&hellip;&lt;//div&gt;
+<strong>.once  05</strong>  将事件设置为只执行一次
+例：&lt;/div v-on:click.once=&ldquo;doThat&rdquo;&gt;&hellip;&lt;//div&gt;</p>
+<h3 id="v-on键盘按键修饰符06">v-on键盘按键修饰符06
+</h3><p>前提：元素需要获得焦点，按键修饰符才会生效
+用法：
+@keyup.按键修饰符=&ldquo;事件处理函数&rdquo;               当按键抬起时触发
+@keydown.按键修饰符=&ldquo;事件处理函数&rdquo;          当按键按下时触发
+例：
+@keyup=&ldquo;事件处理函数&rdquo;                                  任何键抬起触发
+@keyup.enter=&ldquo;事件处理函数&rdquo;                        回车键抬起时触发
+@keydown.enter=&ldquo;事件处理函数&rdquo;                   回车键按下时触发
+@keyup.enter.space=&ldquo;事件处理函数&rdquo;              回车键或空格键抬起时触发
+<strong>.enter</strong>  Enter键   例：&lt;/input v-on:keyup.enter=&ldquo;submit&rdquo;&gt;
+<strong>.tab</strong>  Tab键
+<strong>.delete</strong>   Delete键、Backspace键
+<strong>.esc</strong>  Esc键
+<strong>.space</strong>  空格键
+<strong>.up</strong>  方向键（上）
+<strong>.down</strong>  方向键（下）
+<strong>.left</strong>  方向键（左）
+<strong>.right</strong>  方向键（右）</p>
+<h3 id="v-on系统修饰键07">v-on系统修饰键07
+</h3><p>.ctrl                  .alt                    .shift                .meta  徽标键
+<strong>注意：</strong> 修饰键与常规按键不同，在和 <code>keyup</code> 事件一起用时，事件触发时修饰键必须处于按下状态。只有在按住 <code>ctrl</code> 的情况下释放其它按键，才能触发 <code>keyup.ctrl</code>。</p>
+<h3 id="v-on鼠标按键修饰符08">v-on鼠标按键修饰符08
+</h3><p><strong>.left</strong>  左键事件                 <strong>.right</strong>  右键事件              <strong>.middle</strong>  中间滚轮事件
+例：&lt;/input v-on:click.right=&ldquo;dosomething&rdquo;&gt;
+另：</p>
+<h3 id="v-model修饰符">v-model修饰符
+</h3><p><strong>.trim  09</strong>  去除文本框两端的空格，中间的不会去除
+<strong>.lazy  10</strong>  文本框失去焦点的时候再同步数据
+<strong>.number  11</strong>  将输入内容转换为数值形式</p>
+<h2 id="自定义指令">自定义指令
+</h2><p><strong>前提：</strong> 内置指令可以满足大多业务需求，但如果我们需要对普通DOM元素进行底层操作，要用到自定义指令。
+<strong>提示：</strong> 自定义指令需要注册后才能使用</p>
+<h3 id="vue提供了两种注册方式全局注册和局部注册">Vue提供了两种注册方式：全局注册和局部注册
+</h3><h4 id="全局注册-01-1">全局注册： 01-1
+</h4><p><strong>格式：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({}).</span><span class="nx">directive</span><span class="p">(</span> <span class="s2">&#34;指令名称&#34;</span> <span class="p">,{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">实现指令功能的函数</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">mount</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：全局指令可以在任何Vue实例的视图中使用。</strong></p>
+<h4 id="局部注册-01-2">局部注册： 01-2
+</h4><p><strong>格式：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">指令名称</span><span class="o">:</span><span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">mount</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：局部注册的自定义指令只能在该实例绑定的视图中使用。</p>
+<h3 id="钩子函数-02">钩子函数  02             
+</h3><p>自定义指令的功能（第二个参数）由钩子函数组成，<strong>Vue为我们提供了自定义指令的钩子函数：</strong>
+<strong>beforeMount</strong>：指令绑定元素-挂载前
+<strong>mounted</strong>：指令绑定元素-挂载后 
+<strong>beforeUpdate</strong>：指令绑定元素数据修改-触发修改前
+<strong>updated</strong>：指令绑定元素数据修改-触发修改后
+<strong>beforeUnmount</strong>：指令绑定元素-销毁前
+<strong>unmounted</strong>：指令绑定元素-销毁后</p>
+<h3 id="钩子函数可以携带的参数-03">钩子函数可以携带的参数：  03
+</h3><p>（1）<strong>el</strong>：指令绑定的元素。这可以用于直接操作 DOM。
+（2）<strong>binding</strong>：一个对象，包含以下 键值对：
+value：指令的绑定值，例：v-dir=&ldquo;1 + 1&quot;中，绑定值为 2
+oldValue：指令绑定的前一个值，仅在 beforeUpdate 和 updated 钩子中可用。无论值是否改变都可用。
+arg：传给指令的参数 (如果有的话)。例：v-dir: foo中，参数是 &ldquo;foo&rdquo;
+modifiers：一个包含修饰符的对象 (如果有的话)。 例：v-dir.abc.abd中，修饰符对象为 { abc: true, abd:true }
+instance：使用该指令的组件实例。
+dir：指令的定义对象。
+（3）<strong>vnode</strong>：代表绑定元素的底层虚拟节点
+（4）<strong>preVnode</strong>：代表之前的渲染中指令所绑定元素的虚拟节点，仅在beforeUpdate 和 updated钩子中使用。
+注意：除了el之外，其他参数就是只读参数，不能修改。</p>
+<h3 id="动态指令参数-04">动态指令参数  04
+</h3><p>==vue3中任何动态的都要用方括号表示==
+格式：自定义指令[argument]=&lsquo;value&rsquo;
+<strong>函数简写</strong>
+自定义指令在mounted 和 updated钩子函数上实现相同行为，且只需要用到这两个函数，那么可以直接用一个函数来定义指令
+例：
+Vue.createApp({}).directive(&lsquo;color&rsquo;, (el, binding) =&gt; {
+    el.style.color= binding.value;  // 这在 &lsquo;mounted&rsquo; 和 &lsquo;updated&rsquo; 时都调用
+})
+<strong>对象字面量</strong>
+如果指令需要多个值，可以传入一个JS对象字面量。
+注意：指令可以接收所有合法的JS表达式。
+例：</p>
+<div v-demo="{ color : 'white', text : 'hello!' }"></div>
+Vue.createApp({}).directive('demo', (el, binding) => {
+    console.log(binding.value.color)  //white
+console.log(binding.value.text)   //hello
+})
+<h2 id="组件">组件
+</h2><h3 id="vue组件的基本概念">Vue组件的基本概念
+</h3><p>Vue有一个非常重要的特性：组件化开发，在开发过程中使用非常频繁而灵活。
+<strong>定义：</strong> 组件是构成页面的独立结构单元。我们只需按照Vue规范定义组件，将组件渲染到页面，善用组件能够实现复杂的页面结构，降低代码之间的耦合程度，提高代码的可复用性。
+<strong>组件名大小写</strong>
+<strong>定义组件名的方式有两种：</strong>
+如果组件是在本页面注册且直接使用时，只能使用 kebab-case (短横线分隔命名)
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({...}).</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;my-component-name&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>特点：字母全小写且必须包含一个连字符
+如果组件通过导入形式在页面中使用时，使用 PascalCase (驼峰式命名)
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({...}).</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;MyComponentName&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>特点：每个单词的首字母必须大写
+<strong>Vue提供了两种注册方式：全局注册与局部注册</strong></p>
+<h3 id="全局注册-01">全局注册： 01
+</h3><p>格式：
+<strong>Vue.createApp({&hellip;}).component (</strong> <strong>组件名, [组件的初始数据所对应函数] )</strong>
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">..</span><span class="nx">createApp</span><span class="p">({...}).</span><span class="nx">component</span><span class="p">(</span> <span class="s1">&#39;my-component-name&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">data</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{...}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="局部注册-02">局部注册： 02
+</h3><p>格式：
+<strong>components : {</strong>
+<strong>组件名: 模板名称</strong>
+<strong>}</strong>
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">ComA</span> <span class="o">=</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="s1">&#39;mycomponent&#39;</span><span class="o">:</span> <span class="nx">comA</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：首先得在components属性中注册组件，然后才能在页面代码部分引用组件。
+<strong>总结：</strong> 项目中引入的组件库，例如Element-UI，因为在各个页面中经常需要调用，所以建议采用全局注册的方式；而我们自己开发的组件，通用性往往没有那么强，所以建议使用局部注册的方式。</p>
+<h3 id="template模板-03">template模板  03
+</h3><p>&lt; template &gt; 是HTML5提供的新标签，标签里的内容不可见，默认设置了display：none
+<strong>定义：</strong> 在Vue中，可以使用&lt; template &gt;定义结构的模板，在标签中书写HTML代码，然后通过id值绑定到组件内的template属性上。
+注意：组件内部具有自己的独立作用域，不能直接被外部访问</p>
+<h3 id="组件之间的数据传递">组件之间的数据传递
+</h3><p>由于组件具有自己的局部作用域，所以组件之间的数据传递需要借助一些工具来实现。
+父组件与子组件之间的依赖关系：
+父组件向子组件传递是数据从外部向内部传递（父组件通过props向下传递数据给子组件）
+子组件向父组件传递是数据从内部向外部传递（子组件通过events给父组件发送消息）</p>
+<h3 id="在组件中使用prop传递数据">在组件中使用prop传递数据
+</h3><p>在Vue中，数据传递主要通过<strong>props</strong>属性和 <strong>$emit</strong>方式来实现
+<strong>props(</strong> <strong>父组件&ndash;&gt;子组件 )</strong>
+在组件中，props用来声明需要从父级接收的数据
+利用props属性传值：array(数组)  object(对象)<strong>（04-5见， 04-7讲解）</strong>
+注意：
+（1）组件之间常用的传值类型：数组  <strong>04-1</strong>
+（2）由于HTML特性不区分大小写，在DOM中使用时，<strong>驼峰命名</strong>的props名称要转为<strong>短横分隔命名 04-2</strong>
+（3）有时候，传递的数据并不是直接静态的，而是来自父级的动态数据。这时可以使用指令v-bind来动态绑定 props 值，当父组件的数据变化时，也会传递给子组件。  <strong>04-3</strong>
+（4）如果你要直接传递数字、布尔值、数组、对象而不使用v-bind，那么传递的内容是单纯的字符串  <strong>04-4</strong></p>
+<h4 id="单向数据流">单向数据流
+</h4><p>数据从父级组件传递给子组件，只能单向绑定。子组件内部不能直接修改从父级传递过来的数据。
+我们经常会遇到两种需要改变prop的情况：
+（场景1）父组件传递初始值进来，子组件将它作为初始值保存起来，在自己的作用域下可以随意使用和修改。
+解决方法：在组件 data 再声明一个数据，引用父组件的 prop  <strong>04-5</strong>
+（场景2）prop 作为需要被改变（传递的原始值不能直接使用，需要有改动）的原始值传入
+解决方法：计算属性  <strong>04-6</strong></p>
+<h4 id="prop-验证">prop 验证
+</h4><p>当prop需要验证时，就需要传递对象类型的值  <strong>04-7</strong>
+（场景）一般在用户使用组件的时候，需要进行数据验证。比如：要求某个数据必须是Number类型，如果传入String类型，就会在控制台弹出警告。
+以下是几个 prop 示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({}).</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;my-component&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 要求值是某个类型 (`null` 和 `undefined` 会通过任何类型验证)
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propA</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 值可以是多个类型
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propB</span><span class="o">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">,</span> <span class="nb">Number</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 可以在规定值类型的同时，可以使用**required**选项来声明这个参数是否必须传入。
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propC</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 可以在规定值类型的同时，可以使用**default**选项来声明这个参数是否有默认值。
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propD</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="k">default</span><span class="o">:</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 带有默认值的对象
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propE</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span><span class="o">:</span> <span class="nb">Object</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 对象或数组默认值必须从一个工厂函数获取
+</span></span></span><span class="line"><span class="cl">      <span class="k">default</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span> <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 自定义验证函数
+</span></span></span><span class="line"><span class="cl">    <span class="nx">propF</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">validator</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 这个值必须匹配下列字符串中的一个
+</span></span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="s1">&#39;warning&#39;</span><span class="p">,</span> <span class="s1">&#39;danger&#39;</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>验证的 type 类型可以是：</strong> String、Number、Boolean、Date、Object、Array、Function、Symbol
+此外，type还可以是一个自定义的构造函数
+<strong>注意：</strong> prop 验证失败时，在开发版本下会在控制台抛出警告</p>
+<h4 id="非prop的属性-04-8">非prop的属性  04-8
+</h4><p>当我们向组件传递未定义prop的属性值，这些外部设置的属性会被添加到这个组件的根元素上。</p>
+<h3 id="在组件中使用其他方法传递数据">在组件中使用其他方法传递数据
+</h3><h4 id="监听子组件事件">监听子组件事件
+</h4><p><strong>$emit(</strong> <strong>子组件&ndash;&gt;父组件 )</strong>
+需要通过自定义事件来实现，子组件使用$emit()方法触发事件，父组件使用v-on指令监听子组件的自定义事件。
+语法：$emit( eventName, [&hellip;args])
+参数：
+eventName: 事件名
+args：附加参数，传递给监听器的回调函数。（如果子组件需要向父组件传递数据，就可以通过第二个参数来传递）
+<strong>例：05</strong></p>
+<h4 id="原生组件绑定到组件">原生组件绑定到组件
+</h4><p><strong>例：06-1</strong>
+但某些情况下，将某些事件绑定在根标签而非目标标签时，是无法触发事件的。 例：06-2
+解决方案：使用$emit分发事件  例：06-3</p>
+<h3 id="使用插槽分布内容">使用插槽分布内容
+</h3><p>Vue中可以通过&lt; slot &gt;元素解决内容的传递问题。
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 这是一个自定义组件
+</span></span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">component</span><span class="p">(</span> <span class="s1">&#39;greeting&#39;</span> <span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;div&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;&#39;</span>  <span class="c1">//这个元素可以理解为占位符
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 组件使用代码
+</span></span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">greeting</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">js</span><span class="o">&lt;</span><span class="sr">/greeting&gt;  /</span><span class="o">/</span><span class="nx">组件的内容在渲染时会置换组件内部的</span><span class="o">&lt;</span><span class="nx">slot</span><span class="o">&gt;</span><span class="nx">元素</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 渲染结果
+</span></span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">js</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="编译作用域-01">编译作用域  01
+</h4><p>通过插槽向组件传递动态数据可以使用插值的形式  例：<greeting>Hello, {{ name }}</greeting>
+注意：name是在父组件的作用域下解析的，而不是greeting组件的作用域。
+总结：父组件模板中的所有内容在父级作用域内编译；子组件模板中的所有内容在子级作用域内编译。</p>
+<h4 id="默认内容-02">默认内容  02
+</h4><p>定义：在组件内容使用&lt; slot &gt;时，需要指定一个内容，以防止组件的使用者没有给组件传递内容。</p>
+<h4 id="命名插槽-03">命名插槽  03
+</h4><p>开发组件可能会用到多个插槽，可以通过给插槽命名的方式来区分插槽。
+方式：&lt; slot &gt;的name属性
+注意：
+（1）没有使用name属性的&lt; slot &gt;元素具有隐含名称<strong>default</strong>。叫做默认插槽，作为找不到匹配的内容
+片段的备用插槽。如果没有默认插槽，这些找不到匹配的内容片段将被抛弃。
+（2）在向命名插槽提供内容的时候，在元素上使用<strong>v-slot</strong>指令（缩写形式：<strong>#</strong>），并以 <strong>:参数</strong>的形式指定插槽的名称。
+v-slot指令只能在&lt; template &gt;元素或组件元素上使用
+（多个插槽命名形式要保持一致，要么使用v-slot：要么使用缩写 # 。不能混合使用。）
+（3）对于默认插槽的内容传递，也可以利用默认插槽的隐含名字<strong>default</strong>来进行内容传递。</p>
+<h4 id="作用域插槽-04">作用域插槽  04
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><center>特性&lt;/center</th>
+          <th><center>普通插槽</center></th>
+          <th><center>作用域插槽</center></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><center>数据流向</center></td>
+          <td><center>父组件-&gt;子组件</center></td>
+          <td><center>子组件-&gt;父组件（插槽内）</center></td>
+      </tr>
+      <tr>
+          <td><center>父组件访问子组件数据</center></td>
+          <td><center>不可</center></td>
+          <td><center>可（通过插槽prop接收）</center></td>
+      </tr>
+      <tr>
+          <td><center>典型场景</center></td>
+          <td><center>固定结构传递</center></td>
+          <td><center>动态结构渲染</center></td>
+      </tr>
+      <tr>
+          <td><strong>解决方式</strong>：</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>可以在子组件的&lt; slot &gt;元素上使用v-bind指令绑定一个prop。</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>写法</strong>： </td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>子组件：使用v-bind : 属性名=&ldquo;数据&rdquo;（简写:属性名=&ldquo;数据&rdquo;）为插槽绑定&quot;插槽 Prop&rdquo;</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>父组件：使用v-slot : 插槽名=&ldquo;接收变量&rdquo;（简写#插槽名=&ldquo;接收变量&rdquo;）接收数据slotProps</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><strong>注意</strong>：</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>如果只是给<strong>默认</strong>插槽提供内容，那么可以省略&lt; template &gt;元素，把v-slot指令用在组件的元素标签上，还可以省略default参数。</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="动态组件和异步组件">动态组件和异步组件
+</h2><h3 id="动态组件">动态组件
+</h3><p><strong>参照：</strong> 标签页——当前只能显示一个组件，点击实现组件动态切换
+<img src="data:image/png;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U&#43;Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCABkAPADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4&#43;Tl5ufo6erx8vP09fb3&#43;Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3&#43;Pn6/9oADAMBAAIRAxEAPwDtvCfhPw/c&#43;DtFmn0LS5ZZLCB3kezjZmYxqSSSOST3rW/4Qzw1/wBC9pH/AIBRf/E0eDP&#43;RH0H/sHW/wD6LWtqgDF/4Qzw1/0L2kf&#43;AUX/AMTR/wAIZ4a/6F7SP/AKL/4mtknAyelJ5ibN&#43;5dmM7s8UAY//CGeGv8AoXtI/wDAKL/4mj/hDPDX/QvaR/4BRf8AxNbIIIBByDS0AYv/AAhnhr/oXtI/8Aov/iaP&#43;EM8Nf8AQvaR/wCAUX/xNbVFAGL/AMIZ4a/6F7SP/AKL/wCJqOXwd4bG3Hh7SB83/PlF6f7tb1RTfwf739DQBi/8Id4b/wChf0n/AMAo/wD4mj/hDvDf/Qv6T/4BR/8AxNbFFMRj/wDCHeG/&#43;hf0n/wCj/8AiaP&#43;EO8N/wDQv6T/AOAUf/xNbBIUEkgAdSaakscoJjkR8ddrA0AZP/CHeG/&#43;hf0n/wAAo/8A4mj/AIQ7w3/0L&#43;k/&#43;AUf/wATWxRQBj/8Id4b/wChf0n/AMAo/wD4mj/hDvDf/Qv6T/4BR/8AxNacl3bxSeXJNGr43bS3OPWpFZXUMpBUjII70AZH/CHeG/8AoX9J/wDAKP8A&#43;Jo/4Q7w3/0L&#43;k/&#43;AUf/AMTWxRQBj/8ACHeG/wDoX9J/8Ao//iaP&#43;EO8N/8AQv6T/wCAUf8A8TWxRQBj/wDCHeG/&#43;hf0n/wCj/8AiaP&#43;EO8N/wDQv6T/AOAUf/xNbFFAGP8A8Id4b/6F/Sf/AACj/wDiaP8AhDvDf/Qv6T/4BR//ABNaqzxO21JY2b0Dgmn0AY//AAh3hv8A6F/Sf/AKP/4mj/hDvDf/AEL&#43;k/8AgFH/APE1rhgSQCCR1APSloAx/wDhDvDf/Qv6T/4BR/8AxNZPivwpoFv4Q1maDQ9LiljsZ3R0tI1ZWEbEEEDgg111Y/jH/kSdd/7B9x/6LagCXwZ/yI&#43;g/wDYOt//AEWtbVYvgz/kR9B/7B1v/wCi1rapDIrr/j0m/wBxv5Vigg&#43;CD0x9mNb3Uc1mHw9ZliMz&#43;SW3eR5p8vP0relOMVaXdMxqwk3ePZooz3l5biEea9tbLAhSRYPMUnHO70FLdarcy3rQ28siJHGrb4IPN3kjP4CtK50eC6ldy80e9QrrHIVDAeoom0e3kZWjaWBlTy8wuVyvYGtVVpaNrX0M3TqapP8AEoRXmo3t3awiT7IXgMkgMYJyGxxnpmt2qsOnQW88csYYNHF5S5bPGc/nVusKs4ya5VZG1OMor3mFRTfwf739DUtRTfwf739DWRoNooopiMzVwJrixt5f9RLKd47NgZANOmtbPT5vtUSrDIkbYjTCiQAdx3xVu6tYryExTruXORg4IPqD2NQ2&#43;lW9vKZMyyyFdu6Zy5A9BTApJd3sMVndTTrLHcuqtEEACbumD1qEXt&#43;lkL1rlWRZzGYvLGGG7HX1rRh0i2gljdTKwjOY0dyVQ&#43;wp50y3Nn9lIfyt&#43;/73Oc56/WgDKEUsd7q8rTh9idGjXn5Tj8v1qe2nu7yUQwTLbrDAjHEYO8kZ/AfStE2MLG5JDZuQBJz7Y49KoXunsJozDaPKqxhA0c/lsQOzeooAtaPcy3emxyzsGkJYEgccGrtVNKtHstOihk27xkkL0GTnFW6ACiiikAUyb/USf7h/lT6RlDqVPQjBoA5WBEltNPgisvIuJGBS5OADg5OCOenatB729ktLnUI51SOF2AgKAhgDg5PXNaDabbtZw22HCQkFCG&#43;ZSPemSaNaySOxMoV23PGHIRj6kUwM1797V9RnhX55JIlXjOMr6d6uabdXT3bRTedJFs3CSWHyyD6e9Wn022kFwHUkTkF&#43;e46Y9KW2sI7aRpBJNI5G3dK&#43;7A9BQBZrH8Y/8iTrv/YPuP8A0W1bFY/jH/kSdd/7B9x/6LakBL4M/wCRH0H/ALB1v/6LWtqsXwZ/yI&#43;g/wDYOt//AEWtbVIYUUUUAFFFFABRRRQAVFN/B/vf0NS010DgZzwc8UARUU/yh/eajyh/eancQyin&#43;UP7zUeUP7zUXAZRT/KH95qPKH95qLgMop/lD&#43;81HlD&#43;81FwGUU/yh/eajyh/eai4DKKf5Q/vNR5Q/vNRcBlFP8AKH95qPKH95qLgMop/lD&#43;81HlD&#43;81FwGUU/yh/eajyh/eai4DKx/GP/Ik67/2D7j/ANFtW35Q/vNWN4yiA8Ea6dzf8g64/wDRbUDH&#43;DP&#43;RH0H/sHW/wD6LWtqsXwZ/wAiPoP/AGDrf/0WtbVIAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKxfGf/ACI&#43;vf8AYOuP/RbVtVi&#43;M/8AkR9e/wCwdcf&#43;i2oAPBn/ACI&#43;g/8AYOt//Ra1tVi&#43;DP8AkR9B/wCwdb/&#43;i1raoAxrZ2PjC&#43;QsdotIiBngfM1RSXTW3ii/kId0i09ZNi85wzdB61Lf6dfx6sNS0p7cyPEIpobjIV1BJBDDJBGT2pLDS79bi8vr24hW&#43;uIxFGIVJjhUZx15Y5OTQAzRdZvdR8ueWOya0lj37refc0PcBwev4d6oHxhKIvt&#43;2x/s7djZ9o/0jbnG/b099vXFT2egXbaxb3t3Dp9u0SMsjWm4NckjHzDAAHfvzUNv4Yu7ONLSG30hoEf5bqSDdMEznBXGC3bOaANCLVdQu9dubO2trf7NbOnmTO5yVZc8Ad626z7HT5LXU9RuWZCl06MgHUbVxzWhQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFYvjP/kR9e/7B1x/6LatqsXxn/wAiPr3/AGDrj/0W1AB4M/5EfQf&#43;wdb/APota2qxfBn/ACI&#43;g/8AYOt//Ra1tUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWL4z/5EfXv&#43;wdcf&#43;i2rarF8Z/8AIj69/wBg64/9FtQB4bpvxo8RaVpdpYW9vpphtYUgQvE5YqqhRn5&#43;uBVn/he/if8A59tK/wC/L/8AxdFFMQf8L38T/wDPtpX/AH5f/wCLo/4Xv4n/AOfbSv8Avy//AMXRRQAf8L38T/8APtpX/fl//i6P&#43;F7&#43;J/8An20r/vy//wAXRRQAf8L38T/8&#43;2lf9&#43;X/APi6P&#43;F7&#43;J/&#43;fbSv&#43;/L/APxdFFAB/wAL38T/APPtpX/fl/8A4uj/AIXv4n/59tK/78v/APF0UUAH/C9/E/8Az7aV/wB&#43;X/8Ai6P&#43;F7&#43;J/wDn20r/AL8v/wDF0UUAH/C9/E//AD7aV/35f/4uj/he/if/AJ9tK/78v/8AF0UUAH/C9/E//PtpX/fl/wD4uj/he/if/n20r/vy/wD8XRRQAf8AC9/E/wDz7aV/35f/AOLo/wCF7&#43;J/&#43;fbSv&#43;/L/wDxdFFAB/wvfxP/AM&#43;2lf8Afl//AIuj/he/if8A59tK/wC/L/8AxdFFAB/wvfxP/wA&#43;2lf9&#43;X/&#43;Lo/4Xv4n/wCfbSv&#43;/L//ABdFFAB/wvfxP/z7aV/35f8A&#43;Lo/4Xv4n/59tK/78v8A/F0UUAH/AAvfxP8A8&#43;2lf9&#43;X/wDi6P8Ahe/if/n20r/vy/8A8XRRQAf8L38T/wDPtpX/AH5f/wCLo/4Xv4n/AOfbSv8Avy//AMXRRQAf8L38T/8APtpX/fl//i6ral8aPEWq6Xd2Fxb6aIbqF4HKROGCspU4&#43;frg0UUAf//Z"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+<strong>如何利用Vue实现动态切换？</strong>
+通过在&lt; component &gt;元素上使用is属性来实现</p>
+<h3 id="is特性的应用场景">is特性的应用场景
+</h3><h4 id="动态组件-01">动态组件  01
+</h4><p>平时使用vue的时候，大多都是直接定义一个固定的模板。为了让Vue更加通用，提供了动态模板，可以在任意模板中切换，那就是在&lt; component &gt;标签上用 :is来挂载不同的组件。
+&lt; component &gt;是用于渲染动态组件或元素的“元组件”，格式：<component :is="标签名 / 组件名" /></p>
+<h4 id="-keep-alive-元素-02">&lt; keep-alive &gt;元素  02
+</h4><p>keep-alive可以在组件切换时，保存其包裹的组件的状态，使其不被销毁，防止多次渲染。</p>
+<h3 id="异步组件vite演示实操">异步组件(vite演示+实操)
+</h3><p>在大型应用中，我们可能需要将应用分割成小一些的代码块，并且只在需要的时候才从服务器加载组件。
+所谓的异步组件就是通过import或者require导入的vue组件。
+例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">componentA</span> <span class="o">=</span> <span class="kr">import</span><span class="p">(</span><span class="err">’@</span><span class="o">/</span><span class="nx">components</span><span class="o">/</span><span class="nx">componentA</span><span class="p">.</span><span class="nx">vue</span><span class="err">’</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">LogoImg</span> <span class="nx">from</span> <span class="s1">&#39;./components/LogoImg.vue&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">componentA</span> <span class="o">=</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="err">’@</span><span class="o">/</span><span class="nx">components</span><span class="o">/</span><span class="nx">componentA</span><span class="p">.</span><span class="nx">vue</span><span class="err">’</span><span class="p">);](</span><span class="nx">mailto</span><span class="o">:</span><span class="nx">require</span><span class="err">\</span><span class="p">(</span><span class="err">’@</span><span class="o">/</span><span class="nx">components</span><span class="o">/</span><span class="nx">componentA</span><span class="p">.</span><span class="nx">vue</span><span class="err">’\</span><span class="p">);)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">require</span> <span class="nx">LogoImg</span> <span class="nx">from</span> <span class="s1">&#39;./components/LogoImg.vue&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注： @/ 的意思是返回到根路径，例如：使用vite创建的项目，使用@/则返回到src目录下
+Vue 给出了一个defineAsyncComponent()方法，该方法接受一个返回Promise的函数，当从服务器检索到组件定义时，调用Promise的resolve回调函数。</p>
+<h4 id="单文件全局注册">单文件&ndash;全局注册
+</h4><p>格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({</span> <span class="p">}).</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;MyComponent&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">defineAsyncComponent</span><span class="p">(()</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">resolve</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;div&gt;I am async!&lt;/div&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">	<span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="单文件局部注册">单文件&ndash;局部注册
+</h4><p>格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;MyComponent&#39;</span> <span class="o">:</span> <span class="nx">defineAsyncComponent</span><span class="p">(()</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">resolve</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;div&gt;I am async!&lt;/div&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">   <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="自定义组件的v-model">自定义组件的v-model
+</h2><h3 id="自定义组件中的v-model-01">自定义组件中的v-model   01
+</h3><p>v-model双向数据绑定，其实是数据绑定(prop)和事件触发(event)的语法糖。
+默认情况下，一个组件上的v-model会把value作为prop，把input事件作为event。
+例：&lt; my-input :value=&ldquo;message&rdquo; @input=&ldquo;val =&gt; {message = val}&quot;&gt;（不好用，不简洁）
+注：@input 一般用于监听事件，只要输入的值变化了就会触发</p>
+<h3 id="updatemodelvalue-02">update:modelValue    02
+</h3><p><strong>update:modelValue</strong>是Vue中用于实现v-model的语法糖，它实际上是一个自定义事件，用于更新父组件中绑定的属性值。
+在子组件中，然后通过$emit触发<strong>update:modelValue</strong>事件来更新父组件中的属性值。
+默认情况下，组件上的v-model使用modelValue做为prop，update:modelValue做为事件，可以给v-model传递一个参数来修改默认的名称    <strong>03</strong>
+注：$event是指当前触发的是什么事件（鼠标事件，键盘事件等），返回事件对象自带的属性集合。
+$event.target则指的是事件触发的目标，即哪一个元素触发了事件，这将直接获取该dom元素
+<strong>多个v-model绑定   04</strong>
+<strong>自定义v-model修饰符</strong>
+添加到组件v-model的修饰符通过 modelModifiers prop 提供给组件，默认为空对象    <strong>05</strong>
+对于带参数的v-model修饰符，生成的prop名字是 参数名+Modifiers    <strong>06</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-03-29
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/vxdev.jpg" loading="lazy" data-key="" data-hash="/post/img/vxdev.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">微信小程序</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/bigdata.jpg" loading="lazy" data-key="" data-hash="/post/img/bigdata.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">数据库</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES6</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/html-css%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/html.jpg" loading="lazy" data-key="" data-hash="/post/img/html.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML&#43;CSS笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es5%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES5笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 清昶
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.34.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+  @font-face {
+    font-family: 'LXGW';
+    src: url('https://qc315056-oss.github.io/font/LXGWWenKai-Regular.ttf') format('truetype');
+  }
+
+  :root {
+    --base-font-family: 'LXGW';
+    --code-font-family: 'LXGW';
+  }
+</style>
+<style>
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  initTocHide()
+</script>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<script>
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  initScrollTop();
+</script>
+
+<div id="particles-js"></div>
+
+<script src=https://qc315056-oss.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://qc315056-oss.github.io/background/particlesjs-config.json",
+    function () {
+      console.log('particles.js loaded - callback');
+    });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+  }
+</style>
+
+<style>
+  .highlight {
+     
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .code-show {
+    max-height: none !important;
+  }
+
+  .code-more-box {
+    width: 100%;
+    padding-top: 78px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .code-more-btn {
+    display: block;
+    margin: auto;
+    width: 44px;
+    height: 22px;
+    background: #f0f0f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 6px;
+    cursor: pointer;
+  }
+
+  .code-more-img {
+    cursor: pointer !important;
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 16px;
+  }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://qc315056-oss.github.io/icons/codeMore.svg"
+  
+  codeMoreBtn.appendChild(img);
+  codeMoreBox.appendChild(codeMoreBtn);
+  codeBlock.appendChild(codeMoreBox)
+    })
+  }
+
+  initCodeMoreBox();
+</script>
+    </body>
+</html>

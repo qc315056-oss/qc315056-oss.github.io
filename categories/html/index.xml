@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>HTML on 清昶-Zakai</title>
+        <link>https://qc315056-oss.github.io/categories/html/</link>
+        <description>Recent content in HTML on 清昶-Zakai</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>清昶</copyright>
+        <lastBuildDate>Sun, 29 Mar 2026 10:15:18 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>HTML&#43;CSS笔记</title>
+        <link>https://qc315056-oss.github.io/p/html-css%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sun, 29 Mar 2026 08:55:22 +0800</pubDate>
+        
+        <guid>https://qc315056-oss.github.io/p/html-css%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://qc315056-oss.github.io/post/img/html.jpg" alt="Featured image of post HTML&#43;CSS笔记" /&gt;&lt;h2 id=&#34;第1章html5标签和属性&#34;&gt;第1章：HTML5标签和属性
+&lt;/h2&gt;&lt;h3 id=&#34;标签标签h1h6&#34;&gt;标签标签&amp;lt;h1&amp;gt;~&amp;lt;h6&amp;gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hn&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;align &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;对齐方式&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;align为可选属性，指定对齐方式，属性值：left、center、right
+&lt;font color=&#34;#92d050&#34;&gt;注意：&lt;/font&gt;
+（1）一个页面中最好只使用一个&amp;lt;h1&amp;gt;标签
+（2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签&lt;/p&gt;
+&lt;h3 id=&#34;段落标签p&#34;&gt;段落标签&amp;lt;p&amp;gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;align &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;对齐方式&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用&amp;lt;p&amp;gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行&lt;/p&gt;
+&lt;h3 id=&#34;水平线标签hr&#34;&gt;水平线标签&amp;lt;hr/&amp;gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hr&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;属性&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;属性值&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;hr属于单标记&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;align&lt;/th&gt;
+          &lt;th&gt;设置对齐方式&lt;/th&gt;
+          &lt;th&gt;left、right、center(默认)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;设置粗细&lt;/td&gt;
+          &lt;td&gt;以px为单位，默认为2px&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;color&lt;/td&gt;
+          &lt;td&gt;设置颜色&lt;/td&gt;
+          &lt;td&gt;英文名称、十六进制、rgb&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;width&lt;/td&gt;
+          &lt;td&gt;设置宽度&lt;/td&gt;
+          &lt;td&gt;像素值、百分比（默认100%）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;换行标签&#34;&gt;换行标签&lt;br/&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;文本格式化标签&#34;&gt;文本格式化标签
+&lt;/h3&gt;&lt;p&gt;均为双标签&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;&lt;/th&gt;
+          &lt;th&gt;加粗&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;ins&amp;gt;&amp;lt;/ins&amp;gt;&lt;/td&gt;
+          &lt;td&gt;下划线&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/td&gt;
+          &lt;td&gt;斜体&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;del&amp;gt;&amp;lt;/del&amp;gt;&lt;/td&gt;
+          &lt;td&gt;删除线&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;cite&amp;gt;&amp;lt;/cite&amp;gt;&lt;/td&gt;
+          &lt;td&gt;斜体，作品标题专用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;time&amp;gt;&amp;lt;/tiem&amp;gt;&lt;/td&gt;
+          &lt;td&gt;标注时间&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;math&amp;gt;&amp;lt;/math&amp;gt;&lt;/td&gt;
+          &lt;td&gt;文本添加底色（默认黄色）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;文本样式标签font&#34;&gt;文本样式标签&amp;lt;font&amp;gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fonr&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;属性&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;“属性值”&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;font&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;face&lt;/th&gt;
+          &lt;th&gt;设置字体&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;size&lt;/td&gt;
+          &lt;td&gt;设置字号，可以取1~7整数值，无单位&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;color&lt;/td&gt;
+          &lt;td&gt;设置颜色&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;特殊字符&#34;&gt;特殊字符
+&lt;/h3&gt;&lt;p&gt;空格—           ©—版权字号—©         ⁿ—上标—$supn;&lt;/p&gt;
+&lt;h3 id=&#34;图像标签&#34;&gt;图像标签&lt;img/&gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;图像url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;单标记&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;alt&lt;/th&gt;
+          &lt;th&gt;设置不能显示时的文本&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;title&lt;/td&gt;
+          &lt;td&gt;鼠标悬停时显示文本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;width&lt;/td&gt;
+          &lt;td&gt;设置宽度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;height&lt;/td&gt;
+          &lt;td&gt;设置高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;align=left、top、middle、bottom&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;top：图像顶端与文本第一行对齐，其他文字位于下方&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;middle：图像中线与文本第一行对齐，其他文字位于下方&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;bottom：图像底部与文本第一行对齐，其他文字位于下方&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;相对路径&#34;&gt;相对路径
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;位于同一文件夹，只需输入名称&lt;/li&gt;
+&lt;li&gt;位于下一级，用/&lt;/li&gt;
+&lt;li&gt;位于上一级，用../&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;无序列表ulliliul&#34;&gt;无序列表&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;disc&lt;/th&gt;
+          &lt;th&gt;•&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;circle&lt;/td&gt;
+          &lt;td&gt;৹&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;square&lt;/td&gt;
+          &lt;td&gt;■&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;ul&amp;gt;用于定义无序列表    &amp;lt;li&amp;gt;嵌套在&amp;lt;ul&amp;gt;内‘&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;有序列表olliliol&#34;&gt;有序列表&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt;
+&lt;/h3&gt;&lt;p&gt;可以用1、2、3，a、b，A、B，İ、İİ&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;start&lt;/th&gt;
+          &lt;th&gt;指定全部起始值&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;value&lt;/td&gt;
+          &lt;td&gt;指定当前起始值&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;reversed&lt;/td&gt;
+          &lt;td&gt;指定顺序为降序&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;定义列表&#34;&gt;定义列表
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;dl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;超链接-a&#34;&gt;超链接 &amp;lt;a&amp;gt;
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;跳转目标&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;弹出方式&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本或图像&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;target：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;_self 在原窗口中打开（默认）&lt;/li&gt;
+&lt;li&gt;_blank 在新窗口中打开&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;锚点链接&#34;&gt;锚点链接
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;标签&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;文本/内容&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;标签&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;结构标签&#34;&gt;结构标签
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&amp;lt;header&amp;gt;&lt;/th&gt;
+          &lt;th&gt;存放logo、标题等&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;nav&amp;gt;&lt;/td&gt;
+          &lt;td&gt;菜单&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;lt;footer&amp;gt;&lt;/td&gt;
+          &lt;td&gt;存放版权声明等&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;页面交互标签&#34;&gt;页面交互标签
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&amp;lt;details&amp;gt;和&amp;lt;summary&amp;gt;标签
+&amp;lt;details&amp;gt;可以让一段内容包含隐藏的信息
+&amp;lt;summary&amp;gt;可以嵌入&amp;lt;details&amp;gt;中，显示隐藏信息&lt;/li&gt;
+&lt;li&gt;&amp;lt;progress&amp;gt;标签
+定义进度条，可配合JS实现动画效果
+value——已完成的进度、max——全部进度&lt;/li&gt;
+&lt;li&gt;&amp;lt;meter&amp;gt;标签
+value——实际数据
+min——数据的最小值、
+max——数据的最大值
+low——衡量标准的最小值（及格分）
+high——衡量标准的最大值（优秀分）
+optimum——大于high，代表越大越好；小于low，代表越小越好&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;第2章css&#34;&gt;第2章：CSS
+&lt;/h2&gt;&lt;p&gt;css优先级：!important&amp;gt;style行内样式&amp;gt;id选择器&amp;gt;class选择器、属性选择器、伪类&amp;gt;标签选择器&amp;gt;通配符选择器*&amp;gt;样式&lt;/p&gt;
+&lt;h3 id=&#34;引入css样式表&#34;&gt;引入CSS样式表
+&lt;/h3&gt;&lt;h4 id=&#34;行内式&#34;&gt;行内式
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;标签&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;属性1：属性值1；属性2：属性值2...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;内容&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;样式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;内嵌式-优先级最低&#34;&gt;内嵌式 优先级最低
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;写入&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;中
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/css&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;选择器&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;属性1：属性值1；属性2：属性值2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;链入式&#34;&gt;链入式
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;路径&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/css rel=&amp;#34;&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;stylesheet&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;导入式&#34;&gt;导入式
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;写入&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;中
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;text/css&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;路径&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;或&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;路径&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;css基础选择器&#34;&gt;CSS基础选择器
+&lt;/h3&gt;&lt;h4 id=&#34;标签选择器&#34;&gt;标签选择器
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;标签&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;类选择器&#34;&gt;类选择器
+&lt;/h4&gt;&lt;p&gt;html中&amp;lt;标签 class=&amp;quot;&amp;hellip;&amp;quot;&amp;gt;&amp;lt;/标签&amp;gt;
+css中&amp;hellip;
+在一个标签内加多个类名，中间用空格隔开&lt;/p&gt;
+&lt;h4 id=&#34;id选择器&#34;&gt;id选择器
+&lt;/h4&gt;&lt;p&gt;html中&amp;lt;标签 id=&amp;quot;&amp;hellip;&amp;quot;&amp;gt;&amp;lt;/标签&amp;gt;
+css中，#&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;字体样式&#34;&gt;字体样式
+&lt;/h3&gt;&lt;h4 id=&#34;font-size字号&#34;&gt;font-size字号
+&lt;/h4&gt;&lt;p&gt;em——倍率单位    px——像素单位   %——百分比单位&lt;/p&gt;
+&lt;h4 id=&#34;font-family字体&#34;&gt;font-family字体
+&lt;/h4&gt;&lt;p&gt;可以同时指定多个字体，中间要用”，“隔开
+中文字体名需要用英文引号引起
+如果名称中包含空格、#等特殊符号，必须用英文引号引起来&lt;/p&gt;
+&lt;h4 id=&#34;font-weight文字粗细&#34;&gt;font-weight文字粗细
+&lt;/h4&gt;&lt;p&gt;normal——标准、bold——粗体、bolder——比粗体更粗、lighter——比粗体更细&lt;/p&gt;
+&lt;h4 id=&#34;font设置综合字体样式&#34;&gt;font设置综合字体样式
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;选择器&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font-style&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;font-weight&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;font-size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;line-height&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;必须&lt;font color=&#34;#92d050&#34;&gt;按以上顺序&lt;/font&gt;书写&lt;/p&gt;
+&lt;h4 id=&#34;font-face规则&#34;&gt;@font-face规则
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font-face&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;字体名称&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;字体路径&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;font-style字体风格&#34;&gt;font-style字体风格
+&lt;/h4&gt;&lt;p&gt;normal：默认值
+italic：斜体&lt;/p&gt;
+&lt;h3 id=&#34;文本外观属性&#34;&gt;文本外观属性
+&lt;/h3&gt;&lt;h4 id=&#34;letter-spacing-字间距-定义字母&#34;&gt;letter-spacing 字间距-定义字母
+&lt;/h4&gt;&lt;p&gt;以px、em为单位，0为基点，正数放大，负数缩小&lt;/p&gt;
+&lt;h4 id=&#34;word-spacing-单词间距-定义单词&#34;&gt;word-spacing 单词间距-定义单词
+&lt;/h4&gt;&lt;p&gt;定义英文单词的间距，对中文字符无效&lt;/p&gt;
+&lt;h4 id=&#34;line-height-行间距&#34;&gt;line-height 行间距
+&lt;/h4&gt;&lt;p&gt;以px、em、%为单位&lt;/p&gt;
+&lt;h4 id=&#34;text-transform-文本转换&#34;&gt;text-transform 文本转换
+&lt;/h4&gt;&lt;p&gt;none——不转化，默认
+capitalize——首字母转换为大写
+uppercase——全部字母转换为大写
+lowercase——全部字母转换为小写&lt;/p&gt;
+&lt;h4 id=&#34;text-decoration文本装饰&#34;&gt;text-decoration文本装饰
+&lt;/h4&gt;&lt;p&gt;none——没有装饰，默认
+underline——设置下划线、line-through——设置删除线 → 可同时设置
+overline——设置上划线&lt;/p&gt;
+&lt;h4 id=&#34;text-align-水平对齐方式&#34;&gt;text-align 水平对齐方式
+&lt;/h4&gt;&lt;p&gt;left（默认）、right、left&lt;/p&gt;
+&lt;h4 id=&#34;text-indent-首行缩进&#34;&gt;text-indent 首行缩进
+&lt;/h4&gt;&lt;p&gt;通常以em为单位，默认2em
+仅适用块元素，对行内元素无效
+[[第6章：网页布局#元素的类型与转换]]&lt;/p&gt;
+&lt;h4 id=&#34;white-space-空格处理&#34;&gt;white-space 空格处理
+&lt;/h4&gt;&lt;p&gt;normal：默认，文本中的空格换行无效，只显示一个空格，满行自动换行
+pre：按照书写格式显示
+nowrap：空格和换行无效，除非使用&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h4 id=&#34;text-shadow-阴影效果&#34;&gt;text-shadow 阴影效果
+&lt;/h4&gt;&lt;p&gt;选择器{text-shadow: h-shadow  v-shadow  blur  color;}
+h-shadow:水平阴影
+v-shadow:垂直阴影距离
+blur:模糊半径&lt;/p&gt;
+&lt;h4 id=&#34;text-overflow-处理溢出的文本&#34;&gt;text-overflow 处理溢出的文本
+&lt;/h4&gt;&lt;p&gt;&lt;font color=&#34;#92d050&#34;&gt;!!!不要忘记定义宽度!!!&lt;/font&gt;
+ellipsis——修剪、显示&amp;quot;&amp;hellip;&amp;quot;
+clip——修剪、不显示&amp;quot;&amp;hellip;&amp;quot;
+格式：(缺一不可)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;为文本元素定义宽度&lt;/li&gt;
+&lt;li&gt;white-space:nowrap——强制不换行&lt;/li&gt;
+&lt;li&gt;overflow:hidden——隐藏溢出文本&lt;/li&gt;
+&lt;li&gt;text-overflow:ellipsis——显示&amp;quot;&amp;hellip;&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;word-wrap属性&#34;&gt;word-wrap属性
+&lt;/h4&gt;&lt;p&gt;normal：默认值，只在允许的断点字换行
+break-word：在长单词或URL内部换行&lt;/p&gt;
+&lt;h4 id=&#34;list-style-type属性&#34;&gt;list-style-type属性
+&lt;/h4&gt;&lt;p&gt;none：不使用列表项目符号
+disc：实心圆形（无序列表）
+square：实心方块（有序列表）&lt;/p&gt;
+&lt;h4 id=&#34;list-style-image属性&#34;&gt;list-style-image属性
+&lt;/h4&gt;&lt;p&gt;为各个列表项设置列表项目图像，通常为&amp;lt;li&amp;gt;标签设置背景图像的方式添加项目图像，属性的值为图像的URL
+[[第4章：盒子模型#背景属性]]&lt;/p&gt;
+&lt;h4 id=&#34;list-style属性&#34;&gt;list-style属性
+&lt;/h4&gt;&lt;p&gt;list-style:列表项目符号 列表项目符号URL 列表项目图像&lt;/p&gt;
+&lt;h2 id=&#34;第3章css选择器&#34;&gt;第3章：CSS选择器
+&lt;/h2&gt;&lt;h3 id=&#34;属性选择器&#34;&gt;属性选择器
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;E[attribute]选择器
+E代指标签名称，attribute代指属性名称&lt;/li&gt;
+&lt;li&gt;E[attribute = value]选择器
+attribute代指属性名称，value代指属性值
+包含属性且指定属性值&lt;/li&gt;
+&lt;li&gt;E[attribute&lt;font color=&#34;#92d050&#34;&gt;^&lt;/font&gt;=value]选择器
+包含属性且指定属性值&lt;font color=&#34;#92d050&#34;&gt;开头&lt;/font&gt;内容&lt;/li&gt;
+&lt;li&gt;E[attribute&lt;font color=&#34;#92d050&#34;&gt;$&lt;/font&gt;=value]选择器
+包含属性且指定属性值&lt;font color=&#34;#92d050&#34;&gt;结尾&lt;/font&gt;内容&lt;/li&gt;
+&lt;li&gt;E[attribute&lt;font color=&#34;#92d050&#34;&gt;*&lt;/font&gt;=value]选择器
+包含属性且属性值包含&lt;font color=&#34;#92d050&#34;&gt;指定&lt;/font&gt;内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关系选择器&#34;&gt;关系选择器
+&lt;/h3&gt;&lt;h4 id=&#34;子元素选择器&#34;&gt;子元素选择器
+&lt;/h4&gt;&lt;p&gt;用来选择父标签的子标签，由&lt;font color=&#34;#92d050&#34;&gt;符号&amp;quot;&amp;gt;&amp;quot;&lt;/font&gt;连接标签名称，使用要保证父标签一定存在&lt;/p&gt;
+&lt;h4 id=&#34;兄弟选择器&#34;&gt;兄弟选择器
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;邻近兄弟选择器
+使用&lt;font color=&#34;#92d050&#34;&gt;&amp;quot;+&amp;ldquo;符号连接&lt;/font&gt;前后两个选择器。选择器中的两个子标签属于同一个父标签，而且被选择的子标签必须&lt;font color=&#34;#92d050&#34;&gt;&lt;em&gt;紧跟&lt;/em&gt;&lt;/font&gt;指定的标签&lt;/li&gt;
+&lt;li&gt;普通兄弟选择器
+使用&lt;font color=&#34;#92d050&#34;&gt;&amp;quot;~&amp;ldquo;符号&lt;/font&gt;连接前后两个选择器。选择器中的两个子标签必须属于同一个父标签，而且被选择的子标签需要&lt;font color=&#34;#92d050&#34;&gt;&lt;em&gt;位于指定标签之后，不必紧跟&lt;/em&gt;&lt;/font&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;结构化伪类选择器&#34;&gt;结构化伪类选择器
+&lt;/h3&gt;&lt;h4 id=&#34;only-child选择器&#34;&gt;:only-child选择器
+&lt;/h4&gt;&lt;p&gt;用于选择父标签中的唯一子标签&lt;/p&gt;
+&lt;h4 id=&#34;first-child选择器和last-child&#34;&gt;:first-child选择器和:last-child
+&lt;/h4&gt;&lt;p&gt;用于选择父标签中第一个/最后一个子标签&lt;/p&gt;
+&lt;h4 id=&#34;nth-childn和nth-last-childn&#34;&gt;:nth-child(n)和:nth-last-child(n)
+&lt;/h4&gt;&lt;p&gt;用于匹配父标签中第一个特定类型的子标签/最后一个特定类型的子标签&lt;/p&gt;
+&lt;h4 id=&#34;nth-of-typen和nth-last-of-typen&#34;&gt;:nth-of-type(n)和:nth-last-of-type(n)
+&lt;/h4&gt;&lt;p&gt;用于匹配父标签中第n个特定类型的子标签/倒数第n个特定类型的子标签
+add奇数 even偶数&lt;/p&gt;
+&lt;h4 id=&#34;target&#34;&gt;:target
+&lt;/h4&gt;&lt;p&gt;用于突出显示当前活动的页面元素
+&lt;font color=&#34;#92d050&#34;&gt;必须和锚点链接结合使用，&amp;rdquo;.&amp;ldquo;前没有内容&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&#34;状态化伪类选择器&#34;&gt;状态化伪类选择器
+&lt;/h3&gt;&lt;p&gt;a:link——设置超链接的默认样式
+a:visited——设置超链接被访问之后的样式
+a:hover——设置超链接指针悬停时的样式
+&lt;u&gt;&lt;em&gt;以上三条一般同时设置&lt;/em&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;visited&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;text-decoration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;}&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;取消超链接下划线样式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;hover&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;text-decoration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;underline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;}&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;悬停时显示下划线&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;伪元素选择器&#34;&gt;伪元素选择器
+&lt;/h3&gt;&lt;h4 id=&#34;before选择器&#34;&gt;:before选择器
+&lt;/h4&gt;&lt;p&gt;用于在被选择的标签的前面插入内容，必须配合content属性&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;标签&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;before&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;内容&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;after&#34;&gt;:after
+&lt;/h4&gt;&lt;p&gt;与before相反，在后面插入内容&lt;/p&gt;
+&lt;h2 id=&#34;第4章盒子模型&#34;&gt;第4章：盒子模型
+&lt;/h2&gt;&lt;h3 id=&#34;div标签&#34;&gt;&amp;lt;div&amp;gt;标签
+&lt;/h3&gt;&lt;p&gt;万能容器标签，块元素&lt;/p&gt;
+&lt;h3 id=&#34;边框属性&#34;&gt;边框属性
+&lt;/h3&gt;&lt;h4 id=&#34;border-style边框样式&#34;&gt;border-style边框样式
+&lt;/h4&gt;&lt;p&gt;border-style：上 右 下 左；
+设置一个，代表四条边
+设置两个，第一个代表上下，第二个代表左右
+设置三个，第一个代表上，第二个代表左右，第三个代表下
+none默认，solid单实线，dashed虚线，dotted点线，double双实线&lt;/p&gt;
+&lt;h4 id=&#34;border-width边框宽度&#34;&gt;border-width边框宽度
+&lt;/h4&gt;&lt;p&gt;border-width：上 右 下 左&lt;/p&gt;
+&lt;h4 id=&#34;border-color边框颜色&#34;&gt;border-color边框颜色
+&lt;/h4&gt;&lt;p&gt;border-color：上 右 下左&lt;/p&gt;
+&lt;h4 id=&#34;border综合设置&#34;&gt;border综合设置
+&lt;/h4&gt;&lt;p&gt;border：宽度 样式 颜色&lt;/p&gt;
+&lt;h4 id=&#34;border-radius圆角边框&#34;&gt;border-radius圆角边框
+&lt;/h4&gt;&lt;p&gt;1个，代表4个半径
+2个，第1个代表左上、右下，第2个代表右上、左下
+3个，第1个代表左上，第2个代表右上、左下，第3个代表右下
+border-radius：50%——设置为圆形&lt;/p&gt;
+&lt;h3 id=&#34;宽度属性和高度属性&#34;&gt;宽度属性和高度属性
+&lt;/h3&gt;&lt;p&gt;绝对单位：px  相对单位：em、rem、vm、vh
+盒子的宽度=width+左右内边距值+左右边框宽度值+左右外边距值
+盒子的高度=height+上下内边距值+上下边框宽度值+上下外边距值&lt;/p&gt;
+&lt;h3 id=&#34;box-shadow属性&#34;&gt;box-shadow属性
+&lt;/h3&gt;&lt;p&gt;box-shadow：值1 值2 值3 值4 颜色值 阴影类型
+值1——水平阴影、值2——垂直阴影、值3——阴影模糊半径
+值4——阴影扩展半径、颜色值——阴影颜色、阴影类型——inset（内）、outset（外，默认）&lt;/p&gt;
+&lt;h3 id=&#34;box-sizing属性&#34;&gt;box-sizing属性
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;content-box：定义的width和height数值不包括border和padding数值&lt;/li&gt;
+&lt;li&gt;border-box：定义的width和height数值包括border和padding数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;背景属性&#34;&gt;背景属性
+&lt;/h3&gt;&lt;h4 id=&#34;设置背景颜色&#34;&gt;设置背景颜色
+&lt;/h4&gt;&lt;p&gt;background-color
+可使用颜色名称的英文单词、十六进制颜色值或RGB颜色值
+background-color属性的默认值为transparent背景透明，设置背景透明的子元素会透出其父元素的背景颜色&lt;/p&gt;
+&lt;h4 id=&#34;设置背景图像&#34;&gt;设置背景图像
+&lt;/h4&gt;&lt;p&gt;background-image&lt;/p&gt;
+&lt;h4 id=&#34;设置背景图像平铺&#34;&gt;设置背景图像平铺
+&lt;/h4&gt;&lt;p&gt;background-repeat
+repeat：默认值，背景图像沿水平和竖直方向平铺
+no-repeat：背景图像不平铺
+repeat-x：背景图像只沿水平方向平铺
+repeat-y：背景图像只沿竖直方向平铺&lt;/p&gt;
+&lt;h4 id=&#34;设置背景图像的位置&#34;&gt;设置背景图像的位置
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background-position&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;属性值1&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;属性值2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;使用不同单位的数值：设置图像左上角的水平和垂直位置&lt;/li&gt;
+&lt;li&gt;使用方位名词：left、center、right、top、bottom&lt;/li&gt;
+&lt;li&gt;使用百分比&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;设置背景图像固定&#34;&gt;设置背景图像固定
+&lt;/h4&gt;&lt;p&gt;前提：内容多于1屏且出项滚动条
+background-attachment
+scroll：设置背景图像随页面一起滚动，默认值
+fixed：用于设置背景图像固定在屏幕上，不随页面滚动&lt;/p&gt;
+&lt;h4 id=&#34;设置背景颜色与背景图像的不透明度&#34;&gt;设置背景颜色与背景图像的不透明度
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;RGBA颜色模式：rgba(r,g,b,alpha)&lt;/li&gt;
+&lt;li&gt;opacity属性：数值为0~1的浮点数值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;设置背景图像的大小&#34;&gt;设置背景图像的大小
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background-size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;属性值1&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;属性值2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性值&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;像素值&lt;/td&gt;
+          &lt;td&gt;第一个值设置宽度，第二个值设置高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;百分比&lt;/td&gt;
+          &lt;td&gt;第一个值设置宽度，第二个值设置高度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cover&lt;/td&gt;
+          &lt;td&gt;会等比例缩放图片，以确保图片完全覆盖容器，并保持图片的长宽比，可能会部分裁剪图片以适应容器大小&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;contain&lt;/td&gt;
+          &lt;td&gt;在保持图片长宽比的前提下尽可能让图片完全显示在容器内，如果容器与图片的比例不同，可能会出现空白区域&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;repeat情况下，cover与上述情况相同，contain容器内至少有一张完整的图，容器留白内容&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;css渐变属性&#34;&gt;CSS渐变属性
+&lt;/h3&gt;&lt;h4 id=&#34;线性渐变&#34;&gt;线性渐变
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background-image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;linear-gradient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;角度,颜色1...颜色n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;角度： to+left/right/top/buttom
+0deg——to top、90deg——to right、180deg——to buttom、270deg——to left&lt;/p&gt;
+&lt;h4 id=&#34;径向渐变&#34;&gt;径向渐变
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;background-image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;radial-gradient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;形状&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;位置,颜色1...颜色n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;形状：circle——圆形、ellipse——椭圆
+位置：at+left/center/right/top/bottom/像素值百分比&lt;/p&gt;
+&lt;h2 id=&#34;第5章表格和表单&#34;&gt;第5章：表格和表单
+&lt;/h2&gt;&lt;h3 id=&#34;表格&#34;&gt;表格
+&lt;/h3&gt;&lt;h4 id=&#34;table定义一个表格的开始和结束&#34;&gt;&amp;lt;table&amp;gt;定义一个表格的开始和结束
+&lt;/h4&gt;&lt;p&gt;border-spacing-设置格与格之间的距离
+左：margin-right:auto   中：margin:0 auto    右：margin-left:auto&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;border&lt;/td&gt;
+          &lt;td&gt;设置表格的边框[[第4章：盒子模型#边框属性]]&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;border-spacing&lt;/td&gt;
+          &lt;td&gt;设置单元格与单元格的距离&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;tr定义一行&#34;&gt;&amp;lt;tr&amp;gt;定义一行
+&lt;/h4&gt;&lt;p&gt;&amp;lt;tr&amp;gt;内外边距属性（padding和margin）
+lineheight-行高   align-水平对齐    valign-垂直对齐
+只能嵌套&amp;lt;td&amp;gt;和&amp;lt;th&amp;gt;&lt;/p&gt;
+&lt;h4 id=&#34;td必须嵌套在tr内&#34;&gt;&amp;lt;td&amp;gt;必须嵌套在&amp;lt;tr&amp;gt;内
+&lt;/h4&gt;&lt;p&gt;text-align-内容水平对齐   vertical-align-内容垂直对齐   colspan-水平合并   rowspan-垂直合并&lt;/p&gt;
+&lt;h4 id=&#34;th定义表头&#34;&gt;&amp;lt;th&amp;gt;定义表头
+&lt;/h4&gt;&lt;p&gt;文本默认加粗居中&lt;/p&gt;
+&lt;h4 id=&#34;表格结构-必须按照这个顺序写&#34;&gt;表格结构 必须按照这个顺序写
+&lt;/h4&gt;&lt;p&gt;&amp;lt;thead&amp;gt;定义表格头部、&amp;lt;tfoot&amp;gt;定义表格页脚、&amp;lt;tbody&amp;gt;定义表格主体&lt;/p&gt;
+&lt;h4 id=&#34;表格边框&#34;&gt;表格边框
+&lt;/h4&gt;&lt;p&gt;border-collapse：
+separate-双线边框、分离边框
+collapse-单线边框、合并边框&lt;/p&gt;
+&lt;h3 id=&#34;表单&#34;&gt;表单
+&lt;/h3&gt;&lt;h4 id=&#34;创建表单&#34;&gt;创建表单
+&lt;/h4&gt;&lt;p&gt;&amp;lt;form&amp;gt;创建表单、action属性-服务器地址、method属性、name属性&lt;/p&gt;
+&lt;h4 id=&#34;表单控件&#34;&gt;表单控件
+&lt;/h4&gt;&lt;h5 id=&#34;input控件&#34;&gt;input控件
+&lt;/h5&gt;&lt;p&gt;单标记&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;input&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;控件类型&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;type：
+text-单行文本                       file-选择文件只能选择，不能上传
+password-密码输入框                submit-提交按钮
+radio-单选按钮，结合name            reset-重置按钮
+checkbox-复选框                    image-图像形式提交按钮，结合src
+button-按钮，value定义按钮名称       search-快速清除
+color-设置颜色                      number -输入数字&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性&lt;/th&gt;
+          &lt;th&gt;属性值&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;type&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;name&lt;/td&gt;
+          &lt;td&gt;由用户自定义&lt;/td&gt;
+          &lt;td&gt;用于区分&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;value&lt;/td&gt;
+          &lt;td&gt;由用户自定义&lt;/td&gt;
+          &lt;td&gt;设置input默认值&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;readonly&lt;/td&gt;
+          &lt;td&gt;readonly&lt;/td&gt;
+          &lt;td&gt;设置input只读&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;disabled&lt;/td&gt;
+          &lt;td&gt;disabled&lt;/td&gt;
+          &lt;td&gt;第一次加载页面时禁用input&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;checked&lt;/td&gt;
+          &lt;td&gt;checked&lt;/td&gt;
+          &lt;td&gt;定义默认选中的单选按钮或复选框&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;maxlength&lt;/td&gt;
+          &lt;td&gt;正整数&lt;/td&gt;
+          &lt;td&gt;限制英文及数字个数&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;autofocus&lt;/td&gt;
+          &lt;td&gt;true/false&lt;/td&gt;
+          &lt;td&gt;是否自动获取焦点（焦点仅有一个，鼠标点击哪里哪里就是焦点）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第6章网页布局&#34;&gt;第6章：网页布局
+&lt;/h2&gt;&lt;h3 id=&#34;元素的浮动&#34;&gt;元素的浮动
+&lt;/h3&gt;&lt;h4 id=&#34;元素的浮动属性&#34;&gt;元素的浮动属性
+&lt;/h4&gt;&lt;p&gt;元素的浮动是指设置了浮动属性的元素会脱离标准文档流的控制而移动到其父元素指定位置的过程
+left-使元素向左浮动、right-使元素向右浮动、none-使元素不浮动，默认值&lt;/p&gt;
+&lt;h4 id=&#34;清除浮动&#34;&gt;清除浮动
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;选择器&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;属性值&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;left-不允许左侧有浮动元素、right-不允许右侧有浮动元素、both-同时清除左右两侧浮动元素的影响&lt;/p&gt;
+&lt;h5 id=&#34;使用空标签清除浮动&#34;&gt;使用空标签清除浮动
+&lt;/h5&gt;&lt;p&gt;在浮动元素后添加空标签，并对空标签应用&amp;quot;clear:both&amp;quot;样式，可清除浮动元素的影响&lt;/p&gt;
+&lt;h5 id=&#34;使用overflow属性清除浮动&#34;&gt;使用overflow属性清除浮动
+&lt;/h5&gt;&lt;p&gt;为元素应用&amp;quot;overflow:hidden&amp;rdquo;，谁有影响给谁加&lt;/p&gt;
+&lt;h5 id=&#34;使用after伪对象清除浮动&#34;&gt;使用after伪对象清除浮动
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;为需要清除浮动的元素伪对象设置&amp;quot;height:0&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;为伪对象设置content:&amp;quot;&amp;quot;;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;overflow属性&#34;&gt;overflow属性
+&lt;/h4&gt;&lt;p&gt;处理溢出内容的显示样式&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性值&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;visible&lt;/td&gt;
+          &lt;td&gt;内容不会被修剪，会呈现在标签框之外，为默认值&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;hidden&lt;/td&gt;
+          &lt;td&gt;溢出内容修剪，被修剪的内容不可见&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;auto&lt;/td&gt;
+          &lt;td&gt;需要时显示滚动条&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;scroll&lt;/td&gt;
+          &lt;td&gt;溢出内容修剪，始终显示滚动条&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;元素的定位&#34;&gt;元素的定位
+&lt;/h3&gt;&lt;h4 id=&#34;元素的定位属性&#34;&gt;元素的定位属性
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;选择器&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;属性值&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;static-静态定位，默认、relative-相对定位、absolute-绝对定位，、fixed-固定定位
+&lt;font color=&#34;#92d050&#34;&gt;子绝父相&lt;/font&gt;&lt;/p&gt;
+&lt;h4 id=&#34;边偏移&#34;&gt;边偏移
+&lt;/h4&gt;&lt;p&gt;必须结合定位使用
+top-定义顶端偏移量、bottom-定义底部偏移量、left-定义左侧偏移量、right-定义右侧偏移量&lt;/p&gt;
+&lt;h4 id=&#34;相对定位&#34;&gt;相对定位
+&lt;/h4&gt;&lt;p&gt;不脱离标准文档流，在不设置偏移量的情况下相当于静态定位&lt;/p&gt;
+&lt;h4 id=&#34;绝对定位&#34;&gt;绝对定位
+&lt;/h4&gt;&lt;p&gt;脱离标准文档流
+定义多个边偏移属性时，如果left和right的值冲突，以left的值为准，如果top和bottom的值冲突，以top的值为准&lt;/p&gt;
+&lt;h4 id=&#34;固定定位&#34;&gt;固定定位
+&lt;/h4&gt;&lt;p&gt;脱离标准文档流
+应用：导航回到页面顶部&lt;/p&gt;
+&lt;h4 id=&#34;z-index层叠等级属性&#34;&gt;z-index层叠等级属性
+&lt;/h4&gt;&lt;p&gt;只能在定位元素上生效，且对父子关系元素生效
+默认状态下z-index属性的值为0&lt;/p&gt;
+&lt;h3 id=&#34;元素的类型与转换&#34;&gt;元素的类型与转换
+&lt;/h3&gt;&lt;h4 id=&#34;元素的类型&#34;&gt;元素的类型
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;块元素：独占一行的元素
+独占一行显示
+可以设置宽高和内外边距
+可以容纳其他块元素和行内元素
+常见的块元素有：h1~h6、p、div、ul、ol、li、table、form、dl等&lt;/li&gt;
+&lt;li&gt;行内元素：和内容一样大的元素
+宽高由内容决定
+单独设置宽高无效
+只能设置水平方向的外边距，内边距可以正常设置
+只能容纳其他行内元素和文本
+常见的行内元素有：strong、b、em、i、del、s、ins、u、a、span、font、label、select、textarea等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;span元素&#34;&gt;&amp;lt;span&amp;gt;元素
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;用来单独定义文本&lt;/li&gt;
+&lt;li&gt;用来处理除&amp;lt;a&amp;gt;以外的元素
+&amp;lt;span&amp;gt;开始标签与&amp;lt;/span&amp;gt;结束标签之间只能包含文本和各种行内标签&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;元素的转换&#34;&gt;元素的转换
+&lt;/h4&gt;&lt;p&gt;inline：块→行内
+block：行内→块
+inline-block：行内，块→行内块&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;综合块元素与行内元素的特点&lt;/li&gt;
+&lt;li&gt;宽高由内容决定，可以设置宽高、行高、内外边距&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;布局类型&#34;&gt;布局类型
+&lt;/h3&gt;&lt;h4 id=&#34;单列布局&#34;&gt;单列布局
+&lt;/h4&gt;&lt;p&gt;定宽不定高&lt;/p&gt;
+&lt;h4 id=&#34;两列布局&#34;&gt;两列布局
+&lt;/h4&gt;&lt;h4 id=&#34;三列布局&#34;&gt;三列布局
+&lt;/h4&gt;&lt;h3 id=&#34;网页模块的命名规范&#34;&gt;网页模块的命名规范
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;相关模块&lt;/th&gt;
+          &lt;th&gt;命名&lt;/th&gt;
+          &lt;th&gt;相关模块&lt;/th&gt;
+          &lt;th&gt;命名&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;头部&lt;/td&gt;
+          &lt;td&gt;header&lt;/td&gt;
+          &lt;td&gt;内容&lt;/td&gt;
+          &lt;td&gt;content/container&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;导航栏&lt;/td&gt;
+          &lt;td&gt;nav&lt;/td&gt;
+          &lt;td&gt;底部&lt;/td&gt;
+          &lt;td&gt;footer&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;侧边栏&lt;/td&gt;
+          &lt;td&gt;sidebar&lt;/td&gt;
+          &lt;td&gt;栏目&lt;/td&gt;
+          &lt;td&gt;column&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;左边、右边、中间&lt;/td&gt;
+          &lt;td&gt;left right center&lt;/td&gt;
+          &lt;td&gt;登陆条&lt;/td&gt;
+          &lt;td&gt;loginbar&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;标志&lt;/td&gt;
+          &lt;td&gt;logo&lt;/td&gt;
+          &lt;td&gt;广告&lt;/td&gt;
+          &lt;td&gt;banner&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;页面主体&lt;/td&gt;
+          &lt;td&gt;main&lt;/td&gt;
+          &lt;td&gt;热点&lt;/td&gt;
+          &lt;td&gt;hot&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;新闻&lt;/td&gt;
+          &lt;td&gt;news&lt;/td&gt;
+          &lt;td&gt;下载&lt;/td&gt;
+          &lt;td&gt;download&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;子导航&lt;/td&gt;
+          &lt;td&gt;subnav&lt;/td&gt;
+          &lt;td&gt;菜单&lt;/td&gt;
+          &lt;td&gt;menu&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;子菜单&lt;/td&gt;
+          &lt;td&gt;submenu&lt;/td&gt;
+          &lt;td&gt;搜索&lt;/td&gt;
+          &lt;td&gt;search&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;友情链接&lt;/td&gt;
+          &lt;td&gt;friEndlink&lt;/td&gt;
+          &lt;td&gt;版权&lt;/td&gt;
+          &lt;td&gt;copyright&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;滚动&lt;/td&gt;
+          &lt;td&gt;scroll&lt;/td&gt;
+          &lt;td&gt;标签页&lt;/td&gt;
+          &lt;td&gt;tab&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;小技巧&lt;/td&gt;
+          &lt;td&gt;tips&lt;/td&gt;
+          &lt;td&gt;提示信息&lt;/td&gt;
+          &lt;td&gt;msg&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;加入我们&lt;/td&gt;
+          &lt;td&gt;joins&lt;/td&gt;
+          &lt;td&gt;指南&lt;/td&gt;
+          &lt;td&gt;title&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;服务&lt;/td&gt;
+          &lt;td&gt;service&lt;/td&gt;
+          &lt;td&gt;注册&lt;/td&gt;
+          &lt;td&gt;regsiter&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;状态&lt;/td&gt;
+          &lt;td&gt;status&lt;/td&gt;
+          &lt;td&gt;投票&lt;/td&gt;
+          &lt;td&gt;vote&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;合作伙伴&lt;/td&gt;
+          &lt;td&gt;partner&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第7章多媒体嵌入&#34;&gt;第7章：多媒体嵌入
+&lt;/h2&gt;&lt;h3 id=&#34;嵌入视频&#34;&gt;嵌入视频
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;video&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;路径&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;controls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;controls&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;video&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;controls用于控制是否显示播放控件&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性&lt;/th&gt;
+          &lt;th&gt;属性值&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;autoaplay&lt;/td&gt;
+          &lt;td&gt;autoplay&lt;/td&gt;
+          &lt;td&gt;自动播放（静音模式下才会自动播放）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;loop&lt;/td&gt;
+          &lt;td&gt;loop&lt;/td&gt;
+          &lt;td&gt;视频结束时重新播放（循环）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;preload&lt;/td&gt;
+          &lt;td&gt;auto/meta/none&lt;/td&gt;
+          &lt;td&gt;预加载&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;muted&lt;/td&gt;
+          &lt;td&gt;muted&lt;/td&gt;
+          &lt;td&gt;静音播放&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;嵌入音频&#34;&gt;嵌入音频
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;audio&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;路径&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;controls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;audio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;autoplay\muted\preload同等&lt;/p&gt;
+&lt;h2 id=&#34;第8章过渡变形和动画&#34;&gt;第8章：过渡、变形和动画
+&lt;/h2&gt;&lt;h3 id=&#34;过渡&#34;&gt;过渡
+&lt;/h3&gt;&lt;h4 id=&#34;transition-property属性&#34;&gt;transition-property属性
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transition-property&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;all&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;none-没有动画     all-所有属性都有动画     property-代表多个属性，之间用逗号分隔
+在设置过渡效果时，必须用transition-duration设置过渡时间&lt;/p&gt;
+&lt;h4 id=&#34;transition-duration属性&#34;&gt;transition-duration属性
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transition-suration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认值为0，time的值为指定单位(s/ms)的时间（1s=1000ms）&lt;/p&gt;
+&lt;h4 id=&#34;transiton-timing-function属性&#34;&gt;transiton-timing-function属性
+&lt;/h4&gt;&lt;p&gt;用于指定过渡效果的速度去曲线
+linear-匀速    ease-慢→快→慢    ease-in-慢→快   ease-out-快→慢   ease-in-out-慢→快→慢&lt;/p&gt;
+&lt;h4 id=&#34;transition-delay&#34;&gt;transition-delay
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transitioin-delay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;默认值是0，负数时，动作会提前执行（跳过time），正数时，动作会延迟执行&lt;/p&gt;
+&lt;h4 id=&#34;transition属性&#34;&gt;transition属性
+&lt;/h4&gt;&lt;p&gt;复合属性&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;duration&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;timing-functioin&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;delay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;必须按照顺序定义&lt;/p&gt;
+&lt;h3 id=&#34;变形&#34;&gt;变形
+&lt;/h3&gt;&lt;p&gt;transform：none|transform-function
+默认值为none，不变形；transform-function用于设置变形
+translate()：移动，基于x轴和y轴
+scale()：缩放，元素的尺寸变化，取值正数、负数
+skew()：倾斜，取值为一个角度值
+rotate()：旋转，取值为一个角度值&lt;/p&gt;
+&lt;h4 id=&#34;平移&#34;&gt;平移
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;translate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;x-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;y-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;用于定义水平（右）和垂直（下）坐标，单位为px和%，为负数时，朝反方向（左或上）移动&lt;/p&gt;
+&lt;h4 id=&#34;缩放&#34;&gt;缩放
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;x-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;y-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;大于1的正数和小于-1的负数用于放大元素，小于1的正数和大于-1的负数用于缩小元素
+若参数值为负数时，元素会翻转显示，如果第二个参数值省略，则默认其等于第一个参数值&lt;/p&gt;
+&lt;h4 id=&#34;倾斜&#34;&gt;倾斜
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;skew&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;x-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;y-value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;单位为deg，可以为正值（左/上）或者负值（右/下），分别代表不同的倾斜方向。如果第二个参数值省略，则默认其等于0&lt;/p&gt;
+&lt;h4 id=&#34;旋转&#34;&gt;旋转
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;rotate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;angle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;angle表示要旋转的角度值，单位为deg
+正数顺时针旋转，负数逆时针方向旋转&lt;/p&gt;
+&lt;h4 id=&#34;更改变换中心&#34;&gt;更改变换中心
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;transform-orgin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;x-axis&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;y-axis&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;z-axis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动画&#34;&gt;动画
+&lt;/h3&gt;&lt;h4 id=&#34;keyframes规则&#34;&gt;@keyframes规则
+&lt;/h4&gt;&lt;p&gt;用于创建动画，animation属性只有配合@keyframes规则才能实现动画效果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;keyframes&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;animaitonname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nt&#34;&gt;keyframes-selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;css-styles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;animationname：当前动画的名称
+keyframes-selector：指定当前关键帧要应用到整个动画的位置，其值可以是一个百分比、from（0%）或者to（100%）&lt;/p&gt;
+&lt;h4 id=&#34;animation-name属性&#34;&gt;animation-name属性
+&lt;/h4&gt;&lt;p&gt;用于定义要应用的动画名称，该动画名称会被@keyframes规则引用&lt;/p&gt;
+&lt;h4 id=&#34;animation-duration属性&#34;&gt;animation-duration属性
+&lt;/h4&gt;&lt;p&gt;animation-duration:time;&lt;/p&gt;
+&lt;h4 id=&#34;animation-timing-function属性&#34;&gt;animation-timing-function属性
+&lt;/h4&gt;&lt;p&gt;animation-timing-function:value;
+linear-匀速    ease-慢→快→慢    ease-in-慢→快   ease-out-快→慢   ease-in-out-慢→快→慢&lt;/p&gt;
+&lt;h4 id=&#34;animation-delay&#34;&gt;animation-delay
+&lt;/h4&gt;&lt;p&gt;负数：提前 正数：延迟&lt;/p&gt;
+&lt;h4 id=&#34;animation-iteration-countnumberinfinite&#34;&gt;animation-iteration-count:number|infinite
+&lt;/h4&gt;&lt;p&gt;定义动画播放次数
+infinite-无限&lt;/p&gt;
+&lt;h4 id=&#34;anmiation-direction属性&#34;&gt;anmiation-direction属性
+&lt;/h4&gt;&lt;p&gt;animation-direction:normal|alternate;
+使用alternate属性，动画会在奇数次（1、3、5）正常播放，在偶数次（2、4）逆向播放
+要想使animation-direction生效，animation-iteration-count属性必须&amp;gt;=2&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

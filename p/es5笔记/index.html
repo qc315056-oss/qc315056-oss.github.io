@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n">
+<title>ES5笔记</title>
+
+<link rel='canonical' href='https://qc315056-oss.github.io/p/es5%E7%AC%94%E8%AE%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="ES5笔记">
+<meta property='og:description' content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n">
+<meta property='og:url' content='https://qc315056-oss.github.io/p/es5%E7%AC%94%E8%AE%B0/'>
+<meta property='og:site_name' content='清昶-Zakai'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T08:32:50&#43;08:00'/><meta property='article:modified_time' content='2026-03-29T10:15:18&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/wordpress.png' />
+<meta name="twitter:title" content="ES5笔记">
+<meta name="twitter:description" content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/wordpress.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b6ae69261be2d4ba.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😁</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">清昶-Zakai</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。该博客主要用于记录个人生活及个人项目</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/347480570'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/qc315056-oss'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#第1节基础">第1节：基础</a>
+      <ol>
+        <li><a href="#引入方式">引入方式</a>
+          <ol>
+            <li><a href="#嵌入式">嵌入式</a></li>
+            <li><a href="#外链式">外链式</a></li>
+          </ol>
+        </li>
+        <li><a href="#常用语句">常用语句</a></li>
+      </ol>
+    </li>
+    <li><a href="#第2节变量">第2节：变量</a>
+      <ol>
+        <li><a href="#变量的命名">变量的命名</a></li>
+        <li><a href="#变量的声明与赋值">变量的声明与赋值</a></li>
+        <li><a href="#数据类型">数据类型</a>
+          <ol>
+            <li><a href="#字符串">字符串</a></li>
+            <li><a href="#数字">数字</a></li>
+            <li><a href="#布尔">布尔</a></li>
+            <li><a href="#空值和未定义">空值和未定义</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第3节运算符与表达式">第3节：运算符与表达式</a>
+      <ol>
+        <li><a href="#算术运算符与算术表达式">算术运算符与算术表达式</a></li>
+        <li><a href="#字符串运算符">字符串运算符</a></li>
+        <li><a href="#比较运算符与比较表达式">比较运算符与比较表达式</a></li>
+        <li><a href="#赋值运算符">赋值运算符</a></li>
+        <li><a href="#逻辑运算符与逻辑表达式">逻辑运算符与逻辑表达式</a></li>
+      </ol>
+    </li>
+    <li><a href="#第4节条件语句">第4节：条件语句</a>
+      <ol>
+        <li><a href="#if语句单向判断语句">if语句：单向判断语句</a></li>
+        <li><a href="#ifelse语句双向判断语句">if&hellip;else&hellip;语句：双向判断语句</a></li>
+        <li><a href="#ifelse-if-else语句嵌套判断语句">if..else if &hellip;else语句：嵌套判断语句</a></li>
+        <li><a href="#switch语句">switch语句</a></li>
+      </ol>
+    </li>
+    <li><a href="#第5节循环语句">第5节：循环语句</a>
+      <ol>
+        <li><a href="#while循环语句">while循环语句</a></li>
+        <li><a href="#dowhile循环语句">do&hellip;while循环语句</a></li>
+        <li><a href="#for循环语句">for循环语句</a></li>
+      </ol>
+    </li>
+    <li><a href="#第6节js数组">第6节：JS数组</a>
+      <ol>
+        <li><a href="#数组的创建">数组的创建</a></li>
+        <li><a href="#数组的读和写">数组的读和写</a></li>
+        <li><a href="#数组的遍历">数组的遍历</a></li>
+      </ol>
+    </li>
+    <li><a href="#第7节函数">第7节：函数</a>
+      <ol>
+        <li><a href="#函数概述">函数概述</a></li>
+        <li><a href="#参数设置">参数设置</a></li>
+        <li><a href="#函数的调用在哪里调用就return到哪里">函数的调用：在哪里调用就return到哪里</a></li>
+        <li><a href="#变量的作用域">变量的作用域</a></li>
+        <li><a href="#匿名函数">匿名函数</a></li>
+        <li><a href="#闭包函数">闭包函数</a></li>
+        <li><a href="#函数的嵌套调用">函数的嵌套调用</a></li>
+        <li><a href="#函数的递归调用使用场景阶乘累加递归">函数的递归调用：使用场景：阶乘、累加、递归</a></li>
+        <li><a href="#对象的定义">对象的定义</a></li>
+        <li><a href="#访问对象成员">访问对象成员</a></li>
+        <li><a href="#利用构造函数创建对象">利用构造函数创建对象</a></li>
+        <li><a href="#自定义构造函数">自定义构造函数</a></li>
+        <li><a href="#对象的遍历">对象的遍历</a></li>
+      </ol>
+    </li>
+    <li><a href="#第8节内置对象">第8节：内置对象</a>
+      <ol>
+        <li><a href="#string对象">String对象</a>
+          <ol>
+            <li><a href="#根据索引返回字符串">根据索引返回字符串</a></li>
+            <li><a href="#字符串截取">字符串截取</a></li>
+            <li><a href="#字符分割">字符分割</a></li>
+            <li><a href="#字符串转换">字符串转换</a></li>
+          </ol>
+        </li>
+        <li><a href="#date对象">Date对象</a></li>
+        <li><a href="#数组对象">数组对象</a>
+          <ol>
+            <li><a href="#concat数组n">concat(数组n)</a></li>
+            <li><a href="#filter">filter</a></li>
+            <li><a href="#join">join</a></li>
+            <li><a href="#indexof">indexOf</a></li>
+            <li><a href="#lastindexof">lastIndexOf</a></li>
+            <li><a href="#map">map</a></li>
+            <li><a href="#reverse">reverse</a></li>
+            <li><a href="#slice">slice</a></li>
+            <li><a href="#fill">fill</a></li>
+            <li><a href="#sort">sort</a></li>
+            <li><a href="#tostring">toString</a></li>
+            <li><a href="#添加或删除数组元素的方法">添加或删除数组元素的方法</a></li>
+          </ol>
+        </li>
+        <li><a href="#math对象">Math对象</a></li>
+        <li><a href="#定时器">定时器</a>
+          <ol>
+            <li><a href="#设置定时器">设置定时器</a></li>
+            <li><a href="#清除定时器">清除定时器</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第9节dom">第9节：DOM</a>
+      <ol>
+        <li><a href="#dom">DOM</a></li>
+        <li><a href="#dom树">DOM树</a></li>
+        <li><a href="#dom树中的界定啊">DOM树中的界定啊</a></li>
+        <li><a href="#节点类型">节点类型</a></li>
+        <li><a href="#节点方法">节点方法</a></li>
+        <li><a href="#获取节点">获取节点</a>
+          <ol>
+            <li><a href="#获取父节点">获取父节点</a></li>
+            <li><a href="#获取子节点">获取子节点</a></li>
+            <li><a href="#获取兄弟节点">获取兄弟节点</a></li>
+            <li><a href="#获取兄弟元素节点">获取兄弟元素节点</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第10节html元素操作">第10节：HTML元素操作</a>
+      <ol>
+        <li><a href="#获取对象的方法">获取对象的方法</a></li>
+        <li><a href="#获取对象的属性">获取对象的属性</a></li>
+        <li><a href="#根据css选择器获取元素">根据CSS选择器获取元素</a></li>
+        <li><a href="#元素属性">元素属性</a>
+          <ol>
+            <li><a href="#attributes">attributes</a></li>
+            <li><a href="#innerhtml">innerHTML</a></li>
+            <li><a href="#innertext属性">innerText属性</a></li>
+            <li><a href="#innerhtml和innertext属性的相同点和不同点">innerHTML和innerText属性的相同点和不同点</a></li>
+            <li><a href="#textcontent属性">textContent属性</a></li>
+            <li><a href="#textcontent属性与innertext属性的相同点与不同点">textContent属性与innerText属性的相同点与不同点</a></li>
+          </ol>
+        </li>
+        <li><a href="#元素方法">元素方法</a></li>
+        <li><a href="#操作元素样式">操作元素样式</a>
+          <ol>
+            <li><a href="#通过style属性操作方式">通过style属性操作方式</a></li>
+            <li><a href="#通过calssname属性操作样式">通过calssName属性操作样式</a></li>
+            <li><a href="#通过classlist属性操作样式">通过classList属性操作样式</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第11节事件">第11节：事件</a>
+      <ol>
+        <li><a href="#注册事件的方式">注册事件的方式</a></li>
+        <li><a href="#事件监听">事件监听</a>
+          <ol>
+            <li><a href="#添加事件监听">添加事件监听</a></li>
+            <li><a href="#移除事件监听使用场景前端优化">移除事件监听（使用场景：前端优化）</a></li>
+          </ol>
+        </li>
+        <li><a href="#事件类型">事件类型</a>
+          <ol>
+            <li><a href="#鼠标事件">鼠标事件</a></li>
+            <li><a href="#键盘事件">键盘事件</a></li>
+            <li><a href="#表单事件">表单事件</a></li>
+          </ol>
+        </li>
+        <li><a href="#事件对象">事件对象</a></li>
+        <li><a href="#event的属性方法">event的属性/方法</a>
+          <ol>
+            <li><a href="#属性">属性</a></li>
+            <li><a href="#方法">方法</a></li>
+          </ol>
+        </li>
+        <li><a href="#etarget和ecurrenttarget">e.target和e.currentTarget</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/es5%E7%AC%94%E8%AE%B0/">
+                
+                    <img src="/post/img/wordpress.png" loading="lazy" alt="Featured image of post ES5笔记" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: hsl(4, 60%, 84%); color: hsl(4, 60%, 15%);">
+                笔记
+            </a>
+        
+            
+            
+            
+            <a href="/categories/es5/" style="background-color: hsl(20, 60%, 84%); color: hsl(20, 60%, 15%);">
+                ES5
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/es5%E7%AC%94%E8%AE%B0/">ES5笔记</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-03-29T08:32:50&#43;08:00'>2026-03-29</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="第1节基础">第1节：基础
+</h2><h3 id="引入方式">引入方式
+</h3><h4 id="嵌入式">嵌入式
+</h4><p>使用&lt;script&gt;包裹js代码</p>
+<h4 id="外链式">外链式
+</h4><p>&lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;</p>
+<h3 id="常用语句">常用语句
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>语句</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>输入</td>
+          <td>prompt()</td>
+          <td>用于浏览器中弹出输入框，用户可以输入内容</td>
+      </tr>
+      <tr>
+          <td>输出</td>
+          <td>alter()</td>
+          <td>用于在浏览器中弹出警告框</td>
+      </tr>
+      <tr>
+          <td>输出</td>
+          <td>document.write()</td>
+          <td>用于在网页中输出内容</td>
+      </tr>
+      <tr>
+          <td>输出</td>
+          <td>console.log()</td>
+          <td>用于在控制台中输出信息</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="第2节变量">第2节：变量
+</h2><h3 id="变量的命名">变量的命名
+</h3><p>值：相当于容器内装的东西，存放数据的容器
+变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值</p>
+<ol>
+<li>变量名不能包含空格、加减号等服啊后，可以用下划线和$</li>
+<li>必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头</li>
+<li>严格区分大小写</li>
+</ol>
+<h3 id="变量的声明与赋值">变量的声明与赋值
+</h3><p>先声明再赋值
+声明的同时赋值
+在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine</p>
+<h3 id="数据类型">数据类型
+</h3><p>基本数据类型</p>
+<ul>
+<li>boolean（布尔型）</li>
+<li>string（字符串）</li>
+<li>number（数字型）</li>
+<li>null（空值）</li>
+<li>undefined（未定义型）</li>
+<li>bigInt
+复杂数据类型：object（对象）、array（数组）</li>
+</ul>
+<h4 id="字符串">字符串
+</h4><p>表示文本的数据类型
+单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引</p>
+<h4 id="数字">数字
+</h4><p>分为整数和浮点数（小数），可以加正负号，表示负数
+NaN是一种数字格式，非数字，数字不成功的标志</p>
+<h4 id="布尔">布尔
+</h4><p>只有两个值，true和false</p>
+<h4 id="空值和未定义">空值和未定义
+</h4><p>null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值
+null一般代表对象为没有，undefined一般代表数值为没有</p>
+<h2 id="第3节运算符与表达式">第3节：运算符与表达式
+</h2><h3 id="算术运算符与算术表达式">算术运算符与算术表达式
+</h3><p>二元运算符（需要两个运算子）：+、-、*、/、%
+一元运算符（需要一个运算子）：++自增、&ndash;自减
+运算符前置：返回计算后结果、先自增/减再运算
+运算符后置：返回计算前结构、先运算后自增/减</p>
+<h3 id="字符串运算符">字符串运算符
+</h3><p>js中，加号“+”可以用于字符串拼接
+显示转换与隐式转换的结果如下：
+显示转换：也就是强制类型抓换，利用相关转换方法完成
+隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换
+转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据</p>
+<h3 id="比较运算符与比较表达式">比较运算符与比较表达式
+</h3><p>其结果返回是一个布尔值
+以x=5来表示：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">比较运算符</th>
+          <th style="text-align: center">描述</th>
+          <th style="text-align: center">比较</th>
+          <th style="text-align: center">返回值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">==</td>
+          <td style="text-align: center">等于</td>
+          <td style="text-align: center">x==5</td>
+          <td style="text-align: center">true</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">===</td>
+          <td style="text-align: center">绝对等于</td>
+          <td style="text-align: center">x===&ldquo;5&rdquo;</td>
+          <td style="text-align: center">false</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">（值和类型）</td>
+          <td style="text-align: center">x===5</td>
+          <td style="text-align: center">true</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">!=</td>
+          <td style="text-align: center">不等于</td>
+          <td style="text-align: center">x!=6</td>
+          <td style="text-align: center">true</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">!==</td>
+          <td style="text-align: center">不绝对等于</td>
+          <td style="text-align: center">x!==&ldquo;5&rdquo;</td>
+          <td style="text-align: center">true</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center">（值和类型有一个不等，或者两个都不相等）</td>
+          <td style="text-align: center">x!==5</td>
+          <td style="text-align: center">false</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>==、!=在比较不同类型的数据时，首先会自动将要比较的数据转换成相同的数据类型，然后再进行比较
+===、!==在比较不同类型的数据时，不会进行数据类型的转换</p>
+<h3 id="赋值运算符">赋值运算符
+</h3><p>=：将右边的表达式的值赋给左边的变量，不仅限于数值
++=：将左边的变量加上右边变量再赋给左边</p>
+<h3 id="逻辑运算符与逻辑表达式">逻辑运算符与逻辑表达式
+</h3><p>逻辑运算符共有三个，分别是”!“（逻辑非），”&amp;&amp;（逻辑与）和”||“（逻辑或）
+&amp;&amp;：只有当两个操作数都为true时，结果才为true，只要有一个为false，结果都为false
+||：只要有一个操作数为true，结果就返回true
+&amp;&amp;：都真才真，有假就假    ||：有真就真，都假才假    !：真变假，假变真</p>
+<h2 id="第4节条件语句">第4节：条件语句
+</h2><h3 id="if语句单向判断语句">if语句：单向判断语句
+</h3><p>只有当指定条件为true时，使用该语句来执行代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">判断条件</span><span class="p">){</span><span class="nx">执行语句</span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果判断条件为真，就执行大括号里面的执行语句，如果为假，就跳过执行语句</p>
+<h3 id="ifelse语句双向判断语句">if&hellip;else&hellip;语句：双向判断语句
+</h3><p>当条件为true时执行代码当条件为false时执行其他代码
+二者择其一执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">判断条件</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">当条件为true时执行的代码</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">当条件为false时执行的代码</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ifelse-if-else语句嵌套判断语句">if..else if &hellip;else语句：嵌套判断语句
+</h3><p>使用该语句来选择多个代码块之一来执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">执行条件1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">执行语句1</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">执行条件2</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">执行语句2</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>else if不限量，但结尾的else只能由一个且必须存在</p>
+<h3 id="switch语句">switch语句
+</h3><p>使用该语句来选择多个代码块之一来执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">switch</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="nx">执行代码块</span>
+</span></span><span class="line"><span class="cl">	<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">2</span><span class="o">:</span> <span class="nx">执行代码块</span>
+</span></span><span class="line"><span class="cl">	<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">default</span><span class="o">:</span> <span class="nx">执行代码块</span><span class="p">(</span><span class="nx">与case1和case2不同时执行的代码</span><span class="err">，</span><span class="nx">结尾一定要写default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第5节循环语句">第5节：循环语句
+</h2><h3 id="while循环语句">while循环语句
+</h3><p>while至少执行0次</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="nx">条件</span><span class="p">){</span><span class="nx">循环体</span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当循环条件满足时，循环体就会执行，循环条件不满足时，整个循环才会结束</p>
+<h3 id="dowhile循环语句">do&hellip;while循环语句
+</h3><p>do&hellip;while至少执行1次
+循环体将会无条件执行一次，再去执行循环判断来决定是否继续执行循环体</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">do</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">执行语句</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nx">循环条件</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="for循环语句">for循环语句
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="nx">语句1</span><span class="p">;</span><span class="nx">语句2</span><span class="p">;</span><span class="nx">语句3</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">循环体</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>语句1是表示初始化语句，语句2是循环条件，语句3是操作表达式(变量++)，各个语句之间使用；分隔</p>
+<h2 id="第6节js数组">第6节：JS数组
+</h2><p>数组是存储多个值的集合，它是由一个或多个元素组成的，各元素直接按使用逗号分隔
+数组中的每个元素由索引和值组成
+索引：也可称为下标，用于识别元素，以数字表示，默认情况下从0开始依次递减
+值：元素的内容，可以是任意类型的数据</p>
+<h3 id="数组的创建">数组的创建
+</h3><ol>
+<li>数组字面量，赋值给数组的值被包含在一对中括号里面，每个值用逗号隔开（var只能用来定义变量，不饿能创建数组）</li>
+<li>用array构造函数创建new Array()方法
+var a = new Array() //没有参数，创建一个空数组
+var b = new Array(5) //声明并初始化一个长度为5的数组
+new Array()与[]的区别：
+使用[]可以创建含有空存储位置的数组，使用new Array() 不可以创建含有空存储位置的数组</li>
+</ol>
+<h3 id="数组的读和写">数组的读和写
+</h3><ul>
+<li>使用[]运算符来访问数组中的元素</li>
+<li>添加/修改数组元素：数组名[索引] = 值（取决于原本是否有值）</li>
+<li>通过数组的length方法得到数组长度 数组名.length;
+修改的数组长度大于数组原长度，多余的数组元素将会被舍弃</li>
+<li>删除数组中某一个索引处的元素，可以使用delete运算符来操作
+delete.数组名[索引]，使用delete删除元素时类似给该元素设置为赋值状态，不会修改数组的长度，也就是它的length属性不变</li>
+</ul>
+<h3 id="数组的遍历">数组的遍历
+</h3><p><font color="#92d050">冒泡排序</font>
+原理：两两相较，比对后根据需要交换位置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span><span class="o">=</span><span class="p">[</span><span class="nx">初始数组</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="o">&gt;</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">			<span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第7节函数">第7节：函数
+</h2><h3 id="函数概述">函数概述
+</h3><ol>
+<li>函数类别有预定义函数和自定义函数</li>
+<li>通过函数可以将计算工资代码即可，无需重复编写</li>
+<li>函数的定义是由function、函数名、参数、函数体四部分组成的
+function是定义函数的关键字
+函数名不能以数字开头，且不能是js中的关键字
+参数是外界传递给函数的值，多个参数之间使用逗号分隔
+函数体是专门用于实现特定功能的主题，由一条或多条语句组成
+若在调用函数后想要得到处理结果，在函数体中可以使用return关键字返回，只能返回一个结果，且return后不能再由任何语句</li>
+</ol>
+<h3 id="参数设置">参数设置
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>含有默认值的参数</th>
+          <th>函数定义：Num(a=3,b)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>调用Num(1,2)</td>
+          <td>1,2</td>
+      </tr>
+      <tr>
+          <td>调用Num(1)</td>
+          <td>1,undefined</td>
+      </tr>
+      <tr>
+          <td>调用Num(,2)</td>
+          <td>写法错误</td>
+      </tr>
+      <tr>
+          <td>调用Num(undefined,2)</td>
+          <td>3,2</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="函数的调用在哪里调用就return到哪里">函数的调用：在哪里调用就return到哪里
+</h3><p>要想在程序中发挥函数的作用，必须得调用这个函数
+函数名称(实参名1,实参名2&hellip;)
+函数声明和函数调用编写的顺序不分前后</p>
+<h3 id="变量的作用域">变量的作用域
+</h3><p>js会根据作用域使用范围的不同，可以将其划分为全局作用域、函数作用域
+全局变量：不在任何函数内声明的变量（显式定义）成为全局变量，它在同一个页面文件中的所有脚本内部都可以使用
+局部变量：在函数体内利用var关键字定义的变量称为局部变量，它仅在该函数体内有效</p>
+<h3 id="匿名函数">匿名函数
+</h3><p>普通函数会在代码执行前被加载到作用域中，匿名函数是代码执行到哪一行才会有定义
+调用：</p>
+<ol>
+<li>调用时使用变量名()</li>
+<li>使用小括号直接包裹匿名函数，相当于自动调用且只能调用一次(function(形参){执行体}(实参);)</li>
+<li>html页面元素单击事件(onclick)</li>
+</ol>
+<h3 id="闭包函数">闭包函数
+</h3><p>闭包是指有权访问另一个函数作用域中的变量的函数
+作用：在函数外部读取函数内部的变量，让变量的值始终保持再内存中，知道页面关闭
+注意：因为闭包会使得函数的变量一直保存在内存中，内存消耗很大，所以闭包的滥用会降低程序的处理速度，造成内存消耗等问题</p>
+<h3 id="函数的嵌套调用">函数的嵌套调用
+</h3><p>在内部定义的函数只能在内部调用，，如果在外部调用，就会出错
+函数嵌套会形成作用域链（作用域同样嵌套），在作用域链中查找相关变量的值，会按照从里到外的顺序进行知道全局作用域</p>
+<h3 id="函数的递归调用使用场景阶乘累加递归">函数的递归调用：使用场景：阶乘、累加、递归
+</h3><p>递归函数用于让一个函数从其内部调用其本身</p>
+<h3 id="对象的定义">对象的定义
+</h3><p>在js中，对象的定义是通过{}语法实现的。对象的成员以键值对的形式存放在{}中，多个成员之间使用逗号隔开
+冒号左边是键名，右边是键值
+语法：对象的定义是通过{}语法实现的
+组成：对象以对象成员构成，对象成员分为属性和方法，多个成员之间使用逗号分隔
+成员：对象的成员以键值对的形式存放在{}中
+一对{}表示对象    属性形式：名：值     方法形式：名：匿名函数
+创建方法1：{}语法，又称为对象的子民阿亮语法
+创建方法2：new Object()
+创建方法3：构造函数</p>
+<h3 id="访问对象成员">访问对象成员
+</h3><p>通过”.“访问对象的成员
+语法：对象.成员→访问属性
+对象.成员（）→访问方法，访问并不存在的成员并赋值那就是在添加对象成员
+可变成员名语法：对象[变量名]=值→访问属性
+对象[变量名]()→访问方法
+原理：用一个函数批量化创建对象 标志：new
+其特点在于这些对象都基于同一个模板创建，同时每个对象又有自己的特征</p>
+<h3 id="利用构造函数创建对象">利用构造函数创建对象
+</h3><p>的过程称为实例化，利用构造函数创建出的对象称为构造函数的实例对象</p>
+<h3 id="自定义构造函数">自定义构造函数
+</h3><p>函数在对象里面叫方法，在对象外面叫函数
+构造函数的命名：单词首字母大写
+在构造函数内部，使用this表示刚刚创建的对象
+注意：构造函数一定要传参
+调用方法：new + 命名</p>
+<h3 id="对象的遍历">对象的遍历
+</h3><p>使用for&hellip;in语法可以遍历对象中所有的成员
+for(var 对象成员名 in 对象){}
+访问对象变量名：所定义变量名
+访问对象成员值：对象名[所定义变量名]
+使用in运算符，判断一个对象中的某个成员是否存在，判断的结果为true表示存在，为false表示不存在</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">age</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="c1">//true
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gender</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="c1">//false
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第8节内置对象">第8节：内置对象
+</h2><h3 id="string对象">String对象
+</h3><p>字符串数据≠String对象
+创建String对象：var txt = new String(&ldquo;string&rdquo;)</p>
+<h4 id="根据索引返回字符串">根据索引返回字符串
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>charAt(索引)</td>
+          <td>根据索引位置返回对应的字符，字符串第一个字符的索引为0</td>
+      </tr>
+      <tr>
+          <td>concat(1个/多个字符串)</td>
+          <td>连接字符串</td>
+      </tr>
+      <tr>
+          <td>replaceAll(字符串1，字符串2)</td>
+          <td>替换所有，与replace()一样，但是是替换所有</td>
+      </tr>
+      <tr>
+          <td>indexOf(所查找字符)</td>
+          <td>获取字符在完整字符串中第一次出现的索引，如果找不到则返回-1</td>
+      </tr>
+      <tr>
+          <td>lastindexOf(所查找字符)</td>
+          <td>获取字符在完整字符串中最后一次出现的索引，如果找不到则返回-1</td>
+      </tr>
+      <tr>
+          <td>replace(字符串1，字符串2)</td>
+          <td>使用字符串</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="字符串截取">字符串截取
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>slice(起始位置索引，结束位置索引)</td>
+          <td>截取从起始位置索引到结束位置索引之间的1个字符串，若省略结束位置索引则表示从起始到结尾（若含有结束位置索引，在截取时则不包括结束位置索引）</td>
+      </tr>
+      <tr>
+          <td>substring(起始位置索引，结束位置索引)</td>
+          <td>截取从起始位置索引到结束位置索引之间的1个字符串，若省略结束位置索引则表示从起始到结尾（若含有结束位置索引，在截取时则不包括结束位置索引）</td>
+      </tr>
+      <tr>
+          <td>substr(起始位置索引，截取长度)</td>
+          <td>从起始位置索引截取，截取长度决定截取几个字符，若省略length则表示从起始索引截取到字符串末尾</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="字符分割">字符分割
+</h4><p>split(分隔符号，分割数量)  把字符分隔为字符串数组</p>
+<h4 id="字符串转换">字符串转换
+</h4><p>只针对英文字母有效
+toLowerCase()   把字符串转换为小写
+toUpperCase()   把字符串转换为大写</p>
+<h3 id="date对象">Date对象
+</h3><p>创建：var d = new Date()  //结果为系统当前时间</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>getFullyear(value)</td>
+          <td>设置年份</td>
+      </tr>
+      <tr>
+          <td>setMouth(value)</td>
+          <td>月份</td>
+      </tr>
+      <tr>
+          <td>setDate(value)</td>
+          <td>月份中的某一天</td>
+      </tr>
+      <tr>
+          <td>setHours(value)</td>
+          <td>小时数</td>
+      </tr>
+      <tr>
+          <td>setMinutes(value)</td>
+          <td>分钟数</td>
+      </tr>
+      <tr>
+          <td>setSeconds(value)</td>
+          <td>秒数</td>
+      </tr>
+      <tr>
+          <td>getDate()</td>
+          <td>从Date对象返回一个月中的某一天（1~31）</td>
+      </tr>
+      <tr>
+          <td>getDay()</td>
+          <td>从Date对象返回一周中的某一天（0~6） 0是星期日</td>
+      </tr>
+      <tr>
+          <td>getFullYear()</td>
+          <td>从Date对象以四位数字返回年份</td>
+      </tr>
+      <tr>
+          <td>getHours()</td>
+          <td>返回Date对象的小时（0~23）</td>
+      </tr>
+      <tr>
+          <td>getMinutes()</td>
+          <td>返回Date对象的分钟（0~59）</td>
+      </tr>
+      <tr>
+          <td>getMouth()</td>
+          <td>从Date对象返回月份（0~11） 0是一月，（对象.getMouth + 1）</td>
+      </tr>
+      <tr>
+          <td>getSeconds()</td>
+          <td>返回Date对象的秒数（0~59）</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="数组对象">数组对象
+</h3><h4 id="concat数组n">concat(数组n)
+</h4><p>连接两个或者更多的数组，并返回结果，这个方法可以连接数组也可以连接非数组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span> <span class="c1">//返回结果[1,2,3,4,5]
+</span></span></span><span class="line"><span class="cl"><span class="nx">a</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]);</span> <span class="c1">//返回结果[1,2,3,4,5]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="filter">filter
+</h4><p>过滤方法，返回符合条件的元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">array</span><span class="p">.</span><span class="nx">filter</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="nx">index</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">条件</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="join">join
+</h4><p>当数组元素为undefined、null或空数组时，对应的元素会被转换为空字符串
+作用：无符号分隔数组元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;1&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;2&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">());</span> <span class="c1">//0,1,2
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="indexof">indexOf
+</h4><p>在数组中查找元素，找得到返回索引，找不到返回-1
+可返回某个指定的字符串值在字符串中首次出现的位置
+注意：查找元素索引时，只有要查找的元素值与数组元素值全等时才算查找成功</p>
+<h4 id="lastindexof">lastIndexOf
+</h4><p>从字符串末尾开始检索</p>
+<h4 id="map">map
+</h4><p>map()方法是将数组中的每个元素调用一个提供的函数，结果作为一个新的数组返回，并没有改变原来的数组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">array</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="o">-</span><span class="nx">数组元素</span><span class="p">,</span><span class="nx">index</span><span class="o">-</span><span class="nx">数组索引</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="reverse">reverse
+</h4><p>用于颠倒数组中元素的顺序。该方法会改变原来的数组，而不会创建新的数组</p>
+<h4 id="slice">slice
+</h4><p>slice(start,end)
+可从已有的数组中返回决定的元素。返回一个新的数组，包含从start到end的arrayObject中的元素。截取的结果不包含终止索引的值</p>
+<h4 id="fill">fill
+</h4><p>fill(填充值,start,end) 用一个固定值填充数组中从起始索引到终止索引的全部元素，不包括终止索引</p>
+<h4 id="sort">sort
+</h4><p>用于对数组的元素进行排序
+补充：sort方法对数字进行排序的方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">数组名</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">b</span><span class="o">-</span><span class="nx">a</span><span class="p">;</span> <span class="c1">//降序
+</span></span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">;</span> <span class="c1">//升序
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="tostring">toString
+</h4><p>把数组转换为逗号分隔的字符串</p>
+<h4 id="添加或删除数组元素的方法">添加或删除数组元素的方法
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法名</th>
+          <th>描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>push(元素1,&hellip;)</td>
+          <td>数组末尾添加一个或多个元素，会修改原数组，返回值为数组的新长度</td>
+      </tr>
+      <tr>
+          <td>unshift(元素1,&hellip;)</td>
+          <td>数组开头添加一个或多个元素，会修改原数组，返回值为数组的新长度</td>
+      </tr>
+      <tr>
+          <td>pop()</td>
+          <td>删除数组的最后一个元素，会修改原数组，若是空数组则返回undefined，返回值为删除的元素</td>
+      </tr>
+      <tr>
+          <td>shift()</td>
+          <td>删除数组的第一个元素，会修改原数组，若是空数组返回undefined，返回值为删除的元素</td>
+      </tr>
+      <tr>
+          <td>splice(开始索引，删除数量，添加元素)</td>
+          <td>从指定索引的删除或添加数组元素，会修改原数组，返回值是一个由被删除的元素组成的新数组</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="math对象">Math对象
+</h3><p>创建：Math属性/方法()
+属性：PI 返回π
+方法 ceil(x)           向上取整
+floor(x)         向下取整
+max(x,y,z&hellip;)   找最大值
+min(x,y,z&hellip;)   找最小值
+random()      生成0~1之间的随机数(包含0不含1)
+round(x)        四舍五入为最近的整数
+Math.random()*(n-m)+m；生成m到n之间的随机数，不包括n
+Math.floor(Math.random()*(n-m+1)+m)；生成m到n之间的随机数
+Math.floor(Math.random()*(n+1))；生成0到n之间的随机整数
+Math.floor(Math.random()*n+1)；生成1到n之间的随机整数</p>
+<h3 id="定时器">定时器
+</h3><h4 id="设置定时器">设置定时器
+</h4><p>setTimeout(function(){},毫秒时间)    在指定时间后调用函数，执行一次（倒计时）
+setInterval(function(){},毫秒时间)     按照周期自动调用函数，执行多次（重复执行）</p>
+<h4 id="清除定时器">清除定时器
+</h4><p>clearTimeout(定时器名称)    清除setTimout()设置的定时器（仅释放内存作用）
+clearInterval(定时器名称)     清除setInterval()设置的定时器（停止执行并释放内存）</p>
+<h2 id="第9节dom">第9节：DOM
+</h2><h3 id="dom">DOM
+</h3><p>文档对象模型
+是一个表示和处理文档的应用程序接口（API），可用于动态访问、更新文档的内容、结构和样式</p>
+<h3 id="dom树">DOM树
+</h3><p>代表整个的HTML文档结构
+DOM HTML指的是DOM中为操作HTML文档提供的属性和方法
+文档表示HTML五年间，文档中的标签称为元素，文档中的所有内容称为节点，一个HTML文件可以看作是所有元素组成的一个节点树，各元素节点之间有级别的划分。元素一定是节点，但节点不一定是元素</p>
+<h3 id="dom树中的界定啊">DOM树中的界定啊
+</h3><ol>
+<li>根节点：&lt;html&gt;标签是整个文档的根节点，有且仅有一个</li>
+<li>子节点：指某个节点的下级节点</li>
+<li>父节点：指某个节点的上级节点</li>
+<li>兄弟节点：同属于一个父节点的两个子节点</li>
+</ol>
+<h3 id="节点类型">节点类型
+</h3><p>元素节点：标签、属性节点：class、id、文本节点：文字</p>
+<h3 id="节点方法">节点方法
+</h3><p>创建节点：document.createElement(&ldquo;标签名&rdquo;)；
+添加节点：appendChild(&ldquo;元素节点&rdquo;)表示将一个节点添加到父节点的所有子节点的末尾
+insertBefore(&ldquo;元素节点&rdquo;,&ldquo;指定子节点&rdquo;)表示将节点添加到父节点中的指定子节点的前面，该方法需要接收两个参数：第一个参数表示要添加的节点，第二个参数表示父节点中的指定子节点
+移除节点：removeChild(&ldquo;子节点&rdquo;)方法将一个父节点的指定子节点溢出
+复制节点：cloneNode(true/false)该方法会返回节点对象的副本。该方法的参数是可选参
+数：默认为false，表示只复制节点本身，不复制节点内部的子节点。如果设置为true，表示复制节点本身及里面所有的子节点</p>
+<h3 id="获取节点">获取节点
+</h3><h4 id="获取父节点">获取父节点
+</h4><p>parentNode属性
+格式：当前节点.parentNode
+任何节点都有父节点，最大父节点body</p>
+<h4 id="获取子节点">获取子节点
+</h4><p>格式：当前节点相关属性，若没有子节点则返回null</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>firstChild</td>
+          <td>获取当前节点的首个子节点</td>
+      </tr>
+      <tr>
+          <td>lastChild</td>
+          <td>获取当前节点的最后一个子节点</td>
+      </tr>
+      <tr>
+          <td>firstElementChild</td>
+          <td>获取当前节点的首个子元素节点</td>
+      </tr>
+      <tr>
+          <td>lastElementChild</td>
+          <td>获取当前节点的最后一个子元素节点</td>
+      </tr>
+      <tr>
+          <td>children</td>
+          <td>获取当前节点的所有子元素节点集合</td>
+      </tr>
+      <tr>
+          <td>childNodes</td>
+          <td>获取当前节点的所有子节点集合</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>前四条属性：注意：搞清楚节点和元素节点的区别，每个元素节点与相邻的元素节点之间都夹着文本节点</p>
+<h4 id="获取兄弟节点">获取兄弟节点
+</h4><p>格式：当前节点.相关属性，若没有兄弟节点，返回null</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>previousSibling属性</td>
+          <td>获取当前节点的上一个兄弟节点</td>
+      </tr>
+      <tr>
+          <td>nextSibling属性</td>
+          <td>获取当前节点的下一个兄弟节点</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="获取兄弟元素节点">获取兄弟元素节点
+</h4><p>格式：当前节点.相关属性 如果没有兄弟节点，返回null</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>nextElementSibling属性</td>
+          <td>返回当前元素的下一个兄弟元素节点</td>
+      </tr>
+      <tr>
+          <td>previousElementSibling属性</td>
+          <td>返回当前元素的上一个兄弟元素节点</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="第10节html元素操作">第10节：HTML元素操作
+</h2><h3 id="获取对象的方法">获取对象的方法
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>document.getElementById(&ldquo;属性值&rdquo;)</td>
+          <td>返回单个元素</td>
+      </tr>
+      <tr>
+          <td>document.getElement<font color="#92d050">s</font>ByName(&ldquo;属性值)</td>
+          <td>仅针对含有name属性的input元素使用</td>
+      </tr>
+      <tr>
+          <td>document.getElement<font color="#92d050">s</font>ByTagName(&ldquo;标签名&rdquo;)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>document.getElement<font color="#92d050">s</font>ByClassName(&ldquo;属性值&rdquo;)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>后三条：返回的结果不是单个元素对象而是一个伪数组</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="获取对象的属性">获取对象的属性
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>document.body</td>
+          <td>返回文档的body元素</td>
+      </tr>
+      <tr>
+          <td>document.documentElement</td>
+          <td>返回文档的HTML元素</td>
+      </tr>
+      <tr>
+          <td>document.forms</td>
+          <td>返回文档中所有form元素结合</td>
+      </tr>
+      <tr>
+          <td>document.images</td>
+          <td>返回所有image集合</td>
+      </tr>
+      <tr>
+          <td>document.title</td>
+          <td>返回当前文档的标题</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="根据css选择器获取元素">根据CSS选择器获取元素
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>document.querySelector(&ldquo;CSS选择器&rdquo;)</td>
+          <td>返回指定选择器的第一个元素对象</td>
+      </tr>
+      <tr>
+          <td>document.querySelectorAll(&ldquo;CSS选择器&rdquo;)</td>
+          <td>返回指定选择器的所有元素对象集合</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="元素属性">元素属性
+</h3><p>针对写在标签上的属性进行操作</p>
+<h4 id="attributes">attributes
+</h4><p>返回一个元素的属性集合</p>
+<h4 id="innerhtml">innerHTML
+</h4><p>返回结果包含HTML标签，并保留空格和换行
+格式：元素.innerHTML = &ldquo;HTML内容&rdquo; //设置内容
+元素.innerHTML;                         //获取内容
+当获取内容得到的结果是集合时，先通过索引访问集合内部的元素，再通过元素访问innerHTML属性</p>
+<h4 id="innertext属性">innerText属性
+</h4><p>获取的时候会去除HTML标签和多余的空格（会保留一个）、换行，在设置的时候会进行特殊字符转义
+格式：元素.innerText = &ldquo;文本内容&rdquo;  //设置内容
+元素.innerText;                      //获取内容</p>
+<h4 id="innerhtml和innertext属性的相同点和不同点">innerHTML和innerText属性的相同点和不同点
+</h4><p>相同点：都可以设置或获取元素开始标签和结束标签之间的内容
+不同点：innerHTML属性获取的元素内容包含HTML标签；innerText属性获取的元素内容不包含HTML标签</p>
+<h4 id="textcontent属性">textContent属性
+</h4><p>保留空格和换行
+格式：元素.textContent= &ldquo;文本内容&rdquo;  //设置内容
+元素.textContent;                     //获取内容</p>
+<h4 id="textcontent属性与innertext属性的相同点与不同点">textContent属性与innerText属性的相同点与不同点
+</h4><p>相同点：都可以用来设置或获取元素的文本内容，并且返回的时候都会去除HTML标签，都
+可以获取display:none隐藏的内容
+不同点：textContent属性还可以设置或获取占位隐藏元素的文本内容
+通过给元素的visibility样式属性设置hidden值，即可实现占位隐藏
+display:none不占位</p>
+<h3 id="元素方法">元素方法
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>方法</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>setAttribute(&ldquo;属性名&rdquo;,属性值)</td>
+          <td>设置/改变指定属性的值</td>
+      </tr>
+      <tr>
+          <td>getAttribute(&ldquo;属性名&rdquo;)</td>
+          <td>获取指定元素的属性值</td>
+      </tr>
+      <tr>
+          <td>renameAttribute(&ldquo;属性名)</td>
+          <td>从元素中删除指定的属性</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="操作元素样式">操作元素样式
+</h3><h4 id="通过style属性操作方式">通过style属性操作方式
+</h4><p>元素.style.样式属性名=&ldquo;样式属性值&rdquo;   //设置样式
+元素.style.样式属性名;                        //获取样式
+注意：样式属性名的书写需要去掉css样式名里的连字符，并将连字符后面的单词首字母大写</p>
+<h4 id="通过calssname属性操作样式">通过calssName属性操作样式
+</h4><p>当为元素对象设置多个样式时，可以通过className来更改元素的类名，从而更改样式
+元素.className = &ldquo;类名&rdquo;           //设置类名
+元素.className;                        //获取类名
+注意：可以通过”类名 类名“的形似添加多个类名</p>
+<h4 id="通过classlist属性操作样式">通过classList属性操作样式
+</h4><p>通过classList属性获取类名，格式：元素.classList.属性/方法()
+classList属性返回一个对象。class是对象是一个伪数组，伪数组中的每一项对应一个类名，可以通过数组索引访问类名
+classList对象常用的属性和方法：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th style="text-align: left">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>length</td>
+          <td style="text-align: left">获取类名的数量</td>
+      </tr>
+      <tr>
+          <td>add(&ldquo;class1&rdquo;,&ldquo;class2&rdquo;)</td>
+          <td style="text-align: left">为元素添加一个或多个类名</td>
+      </tr>
+      <tr>
+          <td>remove(&ldquo;class1&rdquo;,&ldquo;class2&rdquo;)</td>
+          <td style="text-align: left">移除元素的一个或多个类名</td>
+      </tr>
+      <tr>
+          <td>toggle(&ldquo;class&rdquo;,true/false)</td>
+          <td style="text-align: left">为元素切换class类名，第二个参数时可选参数，设为true表示添加，设为false表示移除，不设置有则删除，无则添加</td>
+      </tr>
+      <tr>
+          <td>contains(&ldquo;class&rdquo;)</td>
+          <td style="text-align: left">判断元素中指定的类名是否存在，返回布尔值</td>
+      </tr>
+      <tr>
+          <td>item(&ldquo;索引&rdquo;)</td>
+          <td style="text-align: left">获取元素中索引对应的类名，索引从0开始</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="第11节事件">第11节：事件
+</h2><p>事件时用户或者浏览器执行的某种动作
+时间的三要素：事件源、事件类型、事件驱动程序</p>
+<h3 id="注册事件的方式">注册事件的方式
+</h3><ol>
+<li>在标签中注册事件&lt;标签 onclick=&rdquo;&quot;&gt;</li>
+<li>在js中注册事件，页面元素对象.onclick = function(){}</li>
+</ol>
+<h3 id="事件监听">事件监听
+</h3><h4 id="添加事件监听">添加事件监听
+</h4><p>使用addEventListener()
+通过事件监听可以给一个事件类型注册多个事件处理函数
+格式：所获取元素.addEventListener(&ldquo;事件类型&rdquo;,事件处理函数)</p>
+<h4 id="移除事件监听使用场景前端优化">移除事件监听（使用场景：前端优化）
+</h4><p>所获取元素.removeEventLiatener(&ldquo;事件类型&rdquo;,事件处理函数)
+注意：事件类型必须和添加事件监听时的事件类型保持一致
+事件处理函数必须和添加事件监听时是同一个函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tset</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">元素</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span><span class="nx">hanshu</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">元素</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span><span class="nx">hanshu</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">hanshu</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;12345&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">不写remove时</span><span class="err">，</span><span class="nx">函数可以写在add里面</span>
+</span></span><span class="line"><span class="cl"><span class="nx">元素</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span><span class="kd">function</span> <span class="nx">hanshu</span><span class="p">(){});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="事件类型">事件类型
+</h3><h4 id="鼠标事件">鼠标事件
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>事件</th>
+          <th>说明</th>
+          <th>事件</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>onclick</td>
+          <td>点击鼠标左键触发</td>
+          <td>oncontextmenu</td>
+          <td>点击鼠标右键触发</td>
+      </tr>
+      <tr>
+          <td>ondbclick</td>
+          <td>鼠标双击触发</td>
+          <td>onmouseover</td>
+          <td>鼠标经过触发</td>
+      </tr>
+      <tr>
+          <td>onmouseout</td>
+          <td>鼠标离开触发</td>
+          <td>onfocus</td>
+          <td>获得鼠标焦点触发</td>
+      </tr>
+      <tr>
+          <td>onblur</td>
+          <td>失去鼠标焦点触发</td>
+          <td>onousemove</td>
+          <td>鼠标移动触发</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="键盘事件">键盘事件
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>事件</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>onKeyup</td>
+          <td>某个键盘按键被松开时触发</td>
+      </tr>
+      <tr>
+          <td>onKeydown</td>
+          <td>某个键盘按键被按下时触发</td>
+      </tr>
+      <tr>
+          <td>onKeypress</td>
+          <td>某个键盘按键被按下时触发（不识别功能键）</td>
+      </tr>
+      <tr>
+          <td>常用功能键和字符键</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>e.keyCode</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>键位</th>
+          <th>码值</th>
+          <th>键位</th>
+          <th>码值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Backspace</td>
+          <td>8</td>
+          <td>Tab</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Enter</td>
+          <td>13</td>
+          <td>Space</td>
+          <td>32</td>
+      </tr>
+      <tr>
+          <td>ESC</td>
+          <td>27</td>
+          <td>Shift</td>
+          <td>16</td>
+      </tr>
+      <tr>
+          <td>Ctrl</td>
+          <td>17</td>
+          <td>Alt</td>
+          <td>18</td>
+      </tr>
+      <tr>
+          <td>Delete</td>
+          <td>46</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="表单事件">表单事件
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>事件</th>
+          <th>说明</th>
+          <th>事件</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>onsubmit</td>
+          <td>form绑定提交事件</td>
+          <td>onfocus</td>
+          <td>聚焦</td>
+      </tr>
+      <tr>
+          <td>on blur</td>
+          <td>失焦</td>
+          <td>onchange</td>
+          <td>表单内容改变</td>
+      </tr>
+      <tr>
+          <td>oninput</td>
+          <td>表单输入事件</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="事件对象">事件对象
+</h3><p>event就是事件对象
+在DOM中发生事件时，所有相关信息，都会被收集并存储在一个名为event的对象中
+获取时间对象：所获取元素.事件类型= function(e){} //事件监听形式</p>
+<h3 id="event的属性方法">event的属性/方法
+</h3><h4 id="属性">属性
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>属性</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>type</td>
+          <td>返回事件类型（e.type）</td>
+      </tr>
+      <tr>
+          <td>target</td>
+          <td>返回所操作的元素</td>
+      </tr>
+      <tr>
+          <td>concelable</td>
+          <td>表示是否可以取消事件的默认行为</td>
+      </tr>
+      <tr>
+          <td>currentTarget</td>
+          <td>当前事件处理程序所在的元素（事件源）</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="方法">方法
+</h4><p>preventDefault()
+取消事件的默认行为，只有concelable才可以调用这个方法
+可以用于：
+&lt;a&gt;href属性跳转
+&lt;form&gt;表单内提交按钮(type = &ldquo;submit&rdquo;)，点击自动向后台提交表单数据
+&lt;input&gt;输入框按Enter键换行，对提交按钮Enter键，会触发表单提交</p>
+<h3 id="etarget和ecurrenttarget">e.target和e.currentTarget
+</h3><p>this：表示注册的目标对象
+e.target：表示实际事件发生的实际目标
+e.currentTarget：始终与this相同，表示注册的目标对象
+target不一定是事件源，操作谁，谁就是target</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-03-29
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/vue/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/vue.jpg" loading="lazy" data-key="" data-hash="/post/img/vue.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vue</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/vxdev.jpg" loading="lazy" data-key="" data-hash="/post/img/vxdev.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">微信小程序</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/bigdata.jpg" loading="lazy" data-key="" data-hash="/post/img/bigdata.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">数据库</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/es6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/wordpress.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ES6</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/html-css%E7%AC%94%E8%AE%B0/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/html.jpg" loading="lazy" data-key="" data-hash="/post/img/html.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HTML&#43;CSS笔记</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 清昶
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.34.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+  @font-face {
+    font-family: 'LXGW';
+    src: url('https://qc315056-oss.github.io/font/LXGWWenKai-Regular.ttf') format('truetype');
+  }
+
+  :root {
+    --base-font-family: 'LXGW';
+    --code-font-family: 'LXGW';
+  }
+</style>
+<style>
+  #TableOfContents>ul,
+  ol {
+
+    ul,
+    ol {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function initTocHide() {
+    
+    let toc = document.querySelector(".widget--toc");
+    if (!toc) {
+      return;
+    }
+    
+    window.addEventListener('scroll', function () {
+      
+      let openUl = document.querySelectorAll(".open");
+      if (openUl.length > 0) {
+        openUl.forEach((ul) => {
+          ul.classList.remove("open")
+        })
+      }
+      
+      let currentLi = document.querySelector(".active-class");
+      if (!currentLi) {
+        return
+      }
+      
+      if (currentLi.children.length > 1) {
+        currentLi.children[1].classList.add("open")
+      }
+      
+      let ul = currentLi.parentElement;
+      do {
+        ul.classList.add("open");
+        ul = ul.parentElement.parentElement
+      } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+    });
+  }
+  initTocHide()
+</script>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<style>
+  #backTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
+  }
+</style>
+<script>
+  
+  function initScrollTop() {
+    let rightSideBar = document.querySelector(".right-sidebar");
+    if (!rightSideBar) {
+      return;
+    }
+    
+    let btn = document.createElement("div");
+    btn.id = "backTopBtn";
+    btn.onclick = backToTop
+    rightSideBar.appendChild(btn)
+    
+    window.onscroll = function () {
+      
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  }
+
+  
+  function backToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  initScrollTop();
+</script>
+
+<div id="particles-js"></div>
+
+<script src=https://qc315056-oss.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://qc315056-oss.github.io/background/particlesjs-config.json",
+    function () {
+      console.log('particles.js loaded - callback');
+    });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+  }
+</style>
+
+<style>
+  .highlight {
+     
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .code-show {
+    max-height: none !important;
+  }
+
+  .code-more-box {
+    width: 100%;
+    padding-top: 78px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .code-more-btn {
+    display: block;
+    margin: auto;
+    width: 44px;
+    height: 22px;
+    background: #f0f0f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-top: 6px;
+    cursor: pointer;
+  }
+
+  .code-more-img {
+    cursor: pointer !important;
+    display: block;
+    margin: auto;
+    width: 22px;
+    height: 16px;
+  }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://qc315056-oss.github.io/icons/codeMore.svg"
+  
+  codeMoreBtn.appendChild(img);
+  codeMoreBox.appendChild(codeMoreBtn);
+  codeBlock.appendChild(codeMoreBox)
+    })
+  }
+
+  initCodeMoreBox();
+</script>
+    </body>
+</html>
