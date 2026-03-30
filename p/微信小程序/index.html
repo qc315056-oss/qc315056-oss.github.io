@@ -15,7 +15,209 @@
 <meta name="twitter:description" content="基本 开发小程序之前首先删除模板中的冗余代码。 pages文件夹 app.js app.json app.wxss &lt; view &gt; 模块 相当于div &lt; text &gt; 文本 相当于p &lt; input &gt; 输入框 type属性：键盘类型 定义样式（同CSS一致，但是不能用 * 表示所有） id class 标签 微信小程序的通用单位：rpx 公共样式要写在app.wxss里 json文件：对页面效果进行设置 js怎么写 在组件上绑定事件要用bind 单击事件tap 获取value改变事件change JS中的数据想要显示在wxml中——数据绑定：{{变量名}}，且需要将数据定已在JS文件的data中 只是在JS文件中作为逻辑处理的数据，不需要定义在data中 更新data中的数据值要使用setData()，不能直接赋值 JS中处理逻辑时需要使用本页面中的内容，前面要加this. 方法书写格式： 方法名:function(){} 在wxss中使用page就相当于操作body，是对页面整体来进行样式处理 布局处理的相关代码含义 display:flex; 表示使用flex布局 flex-direction:column; 表示沿垂直方向从上到下排列 flex-direction:row; 表示沿水平方向从左到右排列 flex:1; 表示页面中的view平分整个页面的高度 flex-basis:数字%; 表示元素占用的比例 以下3行代码可以使文字水平垂直居中： align-items:center; 表示文字水平居中 justify-content:center; 表示文字垂直居中 display:flex; 字号的单位：pt data-自定义属性名=&ldquo;自定义属性值&rdquo; 通过event获取对应的值 event.target.dataset.自定义属性名 更新2个单位： vw：相对屏幕宽度 vh：相对屏幕高度 "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/vxdev.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>
+    <div class="👍"></div>
+  </div>
+</div>
 
+<style>
+  .loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+  }
+
+  .🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  .🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+  }
+
+  .👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+  }
+
+  .👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+  }
+
+  .👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+  }
+
+  .👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  .👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  .👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+
+  @keyframes tap-upper-1 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
+  }
+
+  @keyframes tap-upper-2 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
+  }
+
+  @keyframes tap-upper-3 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
+  }
+
+  @keyframes tap-upper-4 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
+  }
+</style>
+
+<script>
+  function initLoading() {
+    let loading = document.querySelector(".loading");
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      setTimeout(() => {
+        loading.style.display = "none"
+      }, 2000)
+    });
+  }
+
+  initLoading();
+</script>
     </head>
     <body class="
     article-page

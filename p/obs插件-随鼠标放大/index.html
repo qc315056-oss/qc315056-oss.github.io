@@ -15,7 +15,209 @@
 <meta name="twitter:description" content="由于原版插件obs-zoom-to-mouse 作者已经于2023年暂停更新，该插件使用时感到非常困难，以及放大动画效果不太如人意，于是在原版插件的基础上进行了一些更改。\n代码修改 核心修改：将zoom in的target从鼠标改成了提前开始计算的虚拟窗口 将原版插件大概500行左右的on_timer方法改为以下内容\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 function on_timer() if crop_filter_info ~= nil and zoom_target ~= nil then local smoothing = zoom_speed if zoom_state == ZoomState.ZoomingOut or zoom_state == ZoomState.ZoomingIn then -- 动画中实时更新目标，让缩放过程能跟上鼠标的变化 if zoom_state == ZoomState.ZoomingIn and use_auto_follow_mouse then zoom_target = get_target_position(zoom_info) end -- 弹性移动 crop_filter_info.x = crop_filter_info.x + (zoom_target.crop.x - crop_filter_info.x) * smoothing crop_filter_info.y = crop_filter_info.y + (zoom_target.crop.y - crop_filter_info.y) * smoothing crop_filter_info.w = crop_filter_info.w + (zoom_target.crop.w - crop_filter_info.w) * smoothing crop_filter_info.h = crop_filter_info.h + (zoom_target.crop.h - crop_filter_info.h) * smoothing set_crop_settings(crop_filter_info) -- 判断是否到位：如果位置和大小的差距都小于 0.5 像素，就认为到达了 local dist_pos = math.abs(crop_filter_info.x - zoom_target.crop.x) local dist_size = math.abs(crop_filter_info.w - zoom_target.crop.w) if dist_pos &lt; 0.5 and dist_size &lt; 0.5 then if zoom_state == ZoomState.ZoomingIn then zoom_state = ZoomState.ZoomedIn if use_auto_follow_mouse then is_following_mouse = true log(&#34;丝滑放大到位&#34;) end else zoom_state = ZoomState.None is_timer_running = false obs.timer_remove(on_timer) log(&#34;丝滑还原完毕&#34;) end end else -- 放大后的平滑跟随逻辑 if is_following_mouse then zoom_target = get_target_position(zoom_info) -- 这里也改成弹性跟随，让鼠标移动时镜头感更柔和 crop_filter_info.x = crop_filter_info.x + (zoom_target.crop.x - crop_filter_info.x) * follow_speed crop_filter_info.y = crop_filter_info.y + (zoom_target.crop.y - crop_filter_info.y) * follow_speed set_crop_settings(crop_filter_info) end end end end 使用方法 在obs中添加脚本 导入改好的脚本 设置脚本 设置缩放快捷键，在搜索框中输入toggle 最终效果演示 "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/obs.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>
+    <div class="👍"></div>
+  </div>
+</div>
 
+<style>
+  .loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+  }
+
+  .🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  .🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+  }
+
+  .👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+  }
+
+  .👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+  }
+
+  .👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+  }
+
+  .👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  .👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  .👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+
+  @keyframes tap-upper-1 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
+  }
+
+  @keyframes tap-upper-2 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
+  }
+
+  @keyframes tap-upper-3 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
+  }
+
+  @keyframes tap-upper-4 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
+  }
+</style>
+
+<script>
+  function initLoading() {
+    let loading = document.querySelector(".loading");
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      setTimeout(() => {
+        loading.style.display = "none"
+      }, 2000)
+    });
+  }
+
+  initLoading();
+</script>
     </head>
     <body class="
     article-page

@@ -15,7 +15,209 @@
 <meta name="twitter:description" content="第1章：HTML5标签和属性 标签标签&lt;h1&gt;~&lt;h6&gt; 1 &lt;hn align =&#34;对齐方式&#34;&gt;文本&lt;/hn&gt; align为可选属性，指定对齐方式，属性值：left、center、right 注意： （1）一个页面中最好只使用一个&lt;h1&gt;标签 （2）切勿为了设置文字加粗或更改恩子的大小而使用标题标签\n段落标签&lt;p&gt; 1 &lt;p align =&#34;对齐方式&#34;&gt;文本&lt;/p&gt; 用&lt;p&gt;来定义段落，段落中的文本会根据浏览器窗口大小自动换行\n水平线标签&lt;hr/&gt; 1 &lt;hr 属性=&#34;属性值&#34;/&gt; hr属于单标记\nalign 设置对齐方式 left、right、center(默认) size 设置粗细 以px为单位，默认为2px color 设置颜色 英文名称、十六进制、rgb width 设置宽度 像素值、百分比（默认100%） 换行标签 文本格式化标签 均为双标签\n&lt;strong&gt;&lt;/strong&gt; 加粗 &lt;ins&gt;&lt;/ins&gt; 下划线 &lt;em&gt;&lt;/em&gt; 斜体 &lt;del&gt;&lt;/del&gt; 删除线 &lt;cite&gt;&lt;/cite&gt; 斜体，作品标题专用 &lt;time&gt;&lt;/tiem&gt; 标注时间 &lt;math&gt;&lt;/math&gt; 文本添加底色（默认黄色） 文本样式标签&lt;font&gt; 1 &lt;fonr 属性=“属性值”&gt;文本&lt;/font&gt; face 设置字体 size 设置字号，可以取1~7整数值，无单位 color 设置颜色 特殊字符 空格—\u00a0©—版权字号—© ⁿ—上标—$supn;\n图像标签 1 &lt;img src=&#34;图像url&#34;&gt; 单标记\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/html.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>
+    <div class="👍"></div>
+  </div>
+</div>
 
+<style>
+  .loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+  }
+
+  .🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  .🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+  }
+
+  .👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+  }
+
+  .👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+  }
+
+  .👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+  }
+
+  .👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  .👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  .👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+
+  @keyframes tap-upper-1 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
+  }
+
+  @keyframes tap-upper-2 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
+  }
+
+  @keyframes tap-upper-3 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
+  }
+
+  @keyframes tap-upper-4 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
+  }
+</style>
+
+<script>
+  function initLoading() {
+    let loading = document.querySelector(".loading");
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      setTimeout(() => {
+        loading.style.display = "none"
+      }, 2000)
+    });
+  }
+
+  initLoading();
+</script>
     </head>
     <body class="
     article-page

@@ -15,7 +15,209 @@
 <meta name="twitter:description" content="let和const作用域 let关键字 作用：声明变量 特点：所声明的变量，只在let命令所在的代码块内（块级作用域）有效 const关键字 作用：声明一个只读的常量 特点：一旦声明，常量的值就不能改变 注意：const一旦声明变量，就必须立即初始化，不能留到以后赋值 var关键字的几个特点 存在变量提升 （变量提升：变量可以在声明之前使用，值为undefined） 没有暂时性死区 （暂时性死区：let/const命令会使区块形成封闭的作用域，若在声明之前使用变量，就会报错） 可以重复声明 let const和var之间的区别 创建了块级作用域 let和const具有块级作用域 var不存在块级作用域 变量提升 var存在变量提升 let和const不存在变量提升，即在变量只能在声明之后使用，否则会报错 添加属性 浏览器的全局对象是window，Node的全局对象是global var是声明的变量为全局变量，并且会将该变量添加为全局对象的属性，但是let和const不会 重复声明、 var声明变量时，可以重复声明变量，后声明的同名变量会覆盖之前声明的变量 const和let不允许重复声明变量 暂时性死区 使用let、const命令声明变量之前，该变量都是不可用的 使用var声明的变量不存在暂时性死区 初始值设置 在变量声明时，var和let可以不用设置初始值 const声明变量必须设置初始值 指针指向 let创建的变量是可以更改指针指向（即可以重新赋值） 但const声明的变量时不允许改变指针的指向 区别 var let const 是否有块级作用域 × √ √ 是否存在变量提升 √ × × 是否添加全局属性 √ × × 能否重复声明变量 √ × × 是否存在暂时性死区 × √ √ 是否必须设置初始值 × × √ 能否改变指针指向 √ √ × 局部作用域 局部作用域分为块级作用域和函数作用域\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/wordpress.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>
+    <div class="👍"></div>
+  </div>
+</div>
 
+<style>
+  .loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+  }
+
+  .🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  .🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+  }
+
+  .👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+  }
+
+  .👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+  }
+
+  .👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+  }
+
+  .👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  .👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  .👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+
+  @keyframes tap-upper-1 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
+  }
+
+  @keyframes tap-upper-2 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
+  }
+
+  @keyframes tap-upper-3 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
+  }
+
+  @keyframes tap-upper-4 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
+  }
+</style>
+
+<script>
+  function initLoading() {
+    let loading = document.querySelector(".loading");
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      setTimeout(() => {
+        loading.style.display = "none"
+      }, 2000)
+    });
+  }
+
+  initLoading();
+</script>
     </head>
     <body class="
     article-page

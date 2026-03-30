@@ -15,7 +15,209 @@
 <meta name="twitter:description" content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/wordpress.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+  <div class="🤚">
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="👉"></div>
+    <div class="🌴"></div>
+    <div class="👍"></div>
+  </div>
+</div>
 
+<style>
+  .loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+  }
+
+  .🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  .🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+  }
+
+  .👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+  }
+
+  .👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+  }
+
+  .👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+  }
+
+  .👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+  }
+
+  .👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+  }
+
+  .👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+  }
+
+  @keyframes tap-upper-1 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
+  }
+
+  @keyframes tap-upper-2 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
+  }
+
+  @keyframes tap-upper-3 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
+  }
+
+  @keyframes tap-upper-4 {
+
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
+  }
+</style>
+
+<script>
+  function initLoading() {
+    let loading = document.querySelector(".loading");
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      setTimeout(() => {
+        loading.style.display = "none"
+      }, 2000)
+    });
+  }
+
+  initLoading();
+</script>
     </head>
     <body class="
     article-page
