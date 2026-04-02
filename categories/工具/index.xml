@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright>
-        <lastBuildDate>Mon, 30 Mar 2026 08:49:10 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 02 Apr 2026 10:16:17 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>OBS插件 随鼠标放大</title>
         <link>https://qc315056-oss.github.io/p/obs%E6%8F%92%E4%BB%B6-%E9%9A%8F%E9%BC%A0%E6%A0%87%E6%94%BE%E5%A4%A7/</link>
         <pubDate>Sun, 29 Mar 2026 18:22:47 +0800</pubDate>
@@ -134,7 +134,7 @@
 &lt;li&gt;设置缩放快捷键，在搜索框中输入toggle
 &lt;img src=&#34;img/setting4.png&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;最终效果演示
-&lt;video style=&#34;width: 350px; margin:0 auto; display:block;&#34; controls&gt;
+&lt;video style=&#34;width: 400px; margin:0 auto; display:block;&#34; controls&gt;
 &lt;source src=&#34;img/演示.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/li&gt;
 &lt;/ol&gt;

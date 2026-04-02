@@ -10,7 +10,7 @@
 <meta property='og:description' content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/es5%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='清昶-Zakai'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T08:32:50&#43;08:00'/><meta property='article:modified_time' content='2026-03-29T10:15:18&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/wordpress.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T08:32:50&#43;08:00'/><meta property='article:modified_time' content='2026-04-02T10:16:17&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/wordpress.png' />
 <meta name="twitter:title" content="ES5笔记">
 <meta name="twitter:description" content="第1节：基础 引入方式 嵌入式 使用&lt;script&gt;包裹js代码\n外链式 &lt;script src=&quot;&quot;&gt;&lt;/srcipt&gt;\n常用语句 类型 语句 描述 输入 prompt() 用于浏览器中弹出输入框，用户可以输入内容 输出 alter() 用于在浏览器中弹出警告框 输出 document.write() 用于在网页中输出内容 输出 console.log() 用于在控制台中输出信息 第2节：变量 变量的命名 值：相当于容器内装的东西，存放数据的容器 变量：存放信息的容器，由变量名和变量值组成通过变量名访问变量值\n变量名不能包含空格、加减号等服啊后，可以用下划线和$ 必须以字母或下划线开头，中间可以是数字、字母和下划线，除了数字都能开头 严格区分大小写 变量的声明与赋值 先声明再赋值 声明的同时赋值 在一个var语句中，额可以声明一个或多个变量，月可以为变量赋值，未赋值的变量初始化未undefine\n数据类型 基本数据类型\nboolean（布尔型） string（字符串） number（数字型） null（空值） undefined（未定义型） bigInt 复杂数据类型：object（对象）、array（数组） 字符串 表示文本的数据类型 单引可以套双引，双引可以套单引；但双引不可以套双引，单引不可以套单引\n数字 分为整数和浮点数（小数），可以加正负号，表示负数 NaN是一种数字格式，非数字，数字不成功的标志\n布尔 只有两个值，true和false\n空值和未定义 null表示一个变量被赋予一个空值，undefined表示该变量尚未被赋值 null一般代表对象为没有，undefined一般代表数值为没有\n第3节：运算符与表达式 算术运算符与算术表达式 二元运算符（需要两个运算子）：+、-、*、/、% 一元运算符（需要一个运算子）：++自增、&ndash;自减 运算符前置：返回计算后结果、先自增/减再运算 运算符后置：返回计算前结构、先运算后自增/减\n字符串运算符 js中，加号“+”可以用于字符串拼接 显示转换与隐式转换的结果如下： 显示转换：也就是强制类型抓换，利用相关转换方法完成 隐式转换：当操作的两个数据类型不同时，js会按照既定规则进行自动转换 转换规则：当操作的两个数据类型不同时，观察数据之间的符号如果为加号“+”，则转换为字符串数据（累加），如果为其他算术运算符，则转换为数字型数据\n比较运算符与比较表达式 其结果返回是一个布尔值 以x=5来表示：\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/wordpress.png' />
@@ -209,10 +209,9 @@
   function initLoading() {
     let loading = document.querySelector(".loading");
     document.addEventListener('DOMContentLoaded', function () {
-      
       setTimeout(() => {
         loading.style.display = "none"
-      }, 2000)
+      }, 2500)
     });
   }
 
@@ -647,13 +646,6 @@
             
             <a href="/categories/%E7%AC%94%E8%AE%B0/" style="background-color: hsl(4, 60%, 84%); color: hsl(4, 60%, 15%);">
                 笔记
-            </a>
-        
-            
-            
-            
-            <a href="/categories/es5/" style="background-color: hsl(20, 60%, 84%); color: hsl(20, 60%, 15%);">
-                ES5
             </a>
         
     </header>
@@ -1938,7 +1930,7 @@ target不一定是事件源，操作谁，谁就是target</p>
 
 
         <span>
-            最后更新于 2026-03-29
+            最后更新于 2026-04-02
         </span>
     </section></footer>
 
@@ -1954,6 +1946,25 @@ target不一定是事件源，操作谁，谁就是target</p>
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/ajax/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/img/AJAX.png" loading="lazy" data-key="" data-hash="/post/img/AJAX.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ajax</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="has-image">
@@ -2026,25 +2037,6 @@ target不一定是事件源，操作谁，谁就是target</p>
 
         <div class="article-details">
             <h2 class="article-title">ES6</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/html-css%E7%AC%94%E8%AE%B0/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/html.jpg" loading="lazy" data-key="" data-hash="/post/img/html.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">HTML&#43;CSS笔记</h2>
         </div>
     </a>
 </article>

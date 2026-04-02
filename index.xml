@@ -7,6 +7,194 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright><atom:link href="https://qc315056-oss.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ajax</title>
+        <link>https://qc315056-oss.github.io/p/ajax/</link>
+        <pubDate>Thu, 02 Apr 2026 10:04:07 +0800</pubDate>
+        
+        <guid>https://qc315056-oss.github.io/p/ajax/</guid>
+        <description>&lt;img src="https://qc315056-oss.github.io/post/img/AJAX.png" alt="Featured image of post Ajax" /&gt;&lt;h2 id=&#34;实现ajax的基本步骤&#34;&gt; 实现AJAX的基本步骤
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;（1）创建XMLHTTPRequest对象,即创建一个异步调用对象&lt;/strong&gt;
+在js中有内置的构造函数XMLHttpRequest()来创建 ajax 对象。
+&lt;strong&gt;例：new XMLHttpRequest()&lt;/strong&gt;
+创建 ajax 对象以后，我们就可以使用 ajax 对象的方法发送请求和接受响应。Ajax的一个最大的特点是&lt;strong&gt;无需刷新页面便可向服务器传输或读写数据&lt;/strong&gt;，这一特点主要得益于XMLHTTPRequest对象。
+&lt;strong&gt;XMLHttpRequest&lt;/strong&gt; &lt;strong&gt;对象方法描述&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;方法&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;abort()&lt;/td&gt;
+          &lt;td&gt;停止当前请求&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;getAllResponseHeaders()&lt;/td&gt;
+          &lt;td&gt;把HTTP请求的所有响应首部作为键/值对返回&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;getResponseHeader(&amp;ldquo;header&amp;rdquo;)&lt;/td&gt;
+          &lt;td&gt;返回指定首部的串值&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;open(&amp;ldquo;method&amp;rdquo;,&amp;ldquo;URL&amp;rdquo;,[asyncFlag],&lt;br&gt;[&amp;ldquo;userName&amp;rdquo;],[&amp;ldquo;password&amp;rdquo;)&lt;/td&gt;
+          &lt;td&gt;建立对服务器的调用。method参数可以是GET、POST或PUT。url参数可以是相对URL或绝对URL。这个方法还包括3个可选的参数，是否异步，用户名，密码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;send(content)&lt;/td&gt;
+          &lt;td&gt;向服务器发送请求&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;setRequestHeader(&amp;ldquo;header&amp;rdquo;, &amp;ldquo;value&amp;rdquo;)&lt;/td&gt;
+          &lt;td&gt;把指定首部设置为所提供的值。在设置任何首部之前必须先调用open()。设置header并和请求一起发送(post&amp;rsquo;方法一定要）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;XMLHttpRequest&lt;/strong&gt; &lt;strong&gt;对象属性描述（用于和服务器交换数据）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;属性&lt;/td&gt;
+          &lt;td&gt;描述&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/td&gt;
+          &lt;td&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;onreadystatechange&lt;/td&gt;
+          &lt;td&gt;状态改变的事件触发器，每个状态改变时都会触发这个事件处理器，通常会调用一个JavaScript函数&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;readyState&lt;/td&gt;
+          &lt;td&gt;请求的状态。有5个可取值：0= 未初始化，1=正在加载，2 =已加载，3=交互中，4 =完成&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;responseText&lt;/td&gt;
+          &lt;td&gt;服务器的响应，返回数据的文本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;responseXML&lt;/td&gt;
+          &lt;td&gt;服务器的响应，返回数据的兼容DOM的XML文档对象，这个对象可以解析为一个DOM对象&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;responseBody&lt;/td&gt;
+          &lt;td&gt;服务器返回的主题（非文本格式）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;responseStream&lt;/td&gt;
+          &lt;td&gt;服务器返回的数据流&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;status&lt;/td&gt;
+          &lt;td&gt;服务器的HTTP状态码（如：404=“文件末找到”、200=&amp;ldquo;成功”，等等）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;statusText&lt;/td&gt;
+          &lt;td&gt;服务器返回的状态文本信息，HTTP状态码的相应文本（OK或NotFound（未找到）等等）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;创建一个新的http请求&#34;&gt;创建一个新的HTTP请求
+&lt;/h2&gt;&lt;p&gt;创建了XMLHttpRequest对象之后，&lt;strong&gt;必须为对象创建HTTP请求&lt;/strong&gt;，用于说明XMLHttpRequest对象要从哪里获取数据，通常可以是URL中的数据，也可以是本地文件中的数据。
+创建HTTP请求可以使用XMLHttpRequest对象的&lt;strong&gt;open()&lt;/strong&gt; 方法。
+语法：&lt;strong&gt;XMLHttpRequest.open(method,URL,flag,name,password);&lt;/strong&gt;
+参数：
+&lt;strong&gt;method&lt;/strong&gt;：该参数用于指定HTTP的请求方法，一共有&lt;strong&gt;get、post&lt;/strong&gt;、head、put、delete五种方法。
+&lt;strong&gt;URL&lt;/strong&gt;：该参数用于指定HTTP请求的URL地址，可以是绝对URL，也可以是相对URL。
+&lt;strong&gt;flag&lt;/strong&gt;：该参数为可选，值为布尔型。该参数用于指定是否使用异步方式。true表示异步、false表示同步，默认为true。
+&lt;strong&gt;name&lt;/strong&gt;：该参数为可选参数，用于输入用户名。如果服务器需要验证，则必须使用该参数。
+&lt;strong&gt;password&lt;/strong&gt;：该参数为可选，用于输入密码。若服务器需要验证，则必须使用该参数
+例：
+&lt;strong&gt;访问URL数据：&lt;/strong&gt;
+xmlHttpRequest.open(&amp;ldquo;get&amp;rdquo;, &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;http://www.aspxfans.com/BookSupport/JavaScript/ajax.htm%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.aspxfans.com/BookSupport/JavaScript/ajax.htm&#34;&lt;/a&gt; ,true);
+&lt;strong&gt;访问本地文件数据：&lt;/strong&gt;
+xmlHttpRequest.open(&amp;ldquo;get&amp;rdquo;, &amp;ldquo;ajax.htm&amp;rdquo; ,true);&lt;/p&gt;
+&lt;h2 id=&#34;设置响应http请求状态变化的函数&#34;&gt;设置响应HTTP请求状态变化的函数
+&lt;/h2&gt;&lt;p&gt;创建完HTTP请求之后，应该就可以将HTTP请求发送给Web服务器了。从创建XMLHttpRequest对象开始，到发送数据、接收数据、XMLHttpRequest对象一共会经历以下5中状态。
+&lt;strong&gt;未初始化状态&lt;/strong&gt;
+在创建完XMLHttpRequest对象时，对象处于未初始化状态。
+此时XMLHttpRequest对象的readyState属性值为&lt;strong&gt;0&lt;/strong&gt;。
+&lt;strong&gt;初始化状态&lt;/strong&gt;
+在创建完XMLHttpRequest对象后使用open()方法创建了HTTP请求时，该对象处于初始化状态。
+此时XMLHttpRequest对象的readyState属性值为&lt;strong&gt;1&lt;/strong&gt;。
+&lt;strong&gt;发送数据状态&lt;/strong&gt;
+在初始化XMLHttpRequest对象后，使用send()方法发送数据时，该对象处于发送数据状态。
+此时XMLHttpRequest对象的readyState属性值为&lt;strong&gt;2&lt;/strong&gt;。
+&lt;strong&gt;接收数据状态&lt;/strong&gt;
+服务器接收数据并进行处理完毕后向客户端返回结果。此时XMLHttpRequest对象处于接收数据状态。
+XMLHttpRequest对象的readyState属性值为&lt;strong&gt;3&lt;/strong&gt;。
+&lt;strong&gt;完成状态&lt;/strong&gt;
+XMLHttpRequest对象接收数据完毕后，进入完成状态。
+此时XMLHttpRequest对象的readyState属性值为&lt;strong&gt;4&lt;/strong&gt;。
+&lt;strong&gt;只有在XMLHttpRequest对象完成了以上5个步骤之后，才可以获取从服务器端返回的数据。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置获取服务器返回数据的语句&#34;&gt;设置获取服务器返回数据的语句
+&lt;/h2&gt;&lt;p&gt;如果XMLHttpRequest对象的readyState属性值等于4，表示异步调用过程完毕，这时可以通过XMLHttpRequest对象的responseText属性或responseXml属性来获取数据。
+注意：
+（1）异步调用过程完毕，并不代表异步调用成功。如果要判断异步调用是否成功，还要判断
+XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用成功。
+（2）如果HTML文件不是在Web服务器上运行，而是在本地运行，则xmlHttpRequest.status的返回值为0。因此，如果该文件在本地运行，则应该加上xmlHttpRequest.status == 0的判断。&lt;/p&gt;
+&lt;h2 id=&#34;发送http请求&#34;&gt;发送HTTP请求
+&lt;/h2&gt;&lt;p&gt;发送HTTP请求可以使用XMLHttpRequest对象的send()方法。
+语法：&lt;strong&gt;XMLHttpRequest.send(data);&lt;/strong&gt;
+参数：
+&lt;strong&gt;data&lt;/strong&gt;：可选参数，如果请求的数据不需要参数可以使用null来替代。参数格式与在URL中传递参数的格式类似。&lt;/p&gt;
+&lt;h2 id=&#34;使用javascript和dom实现局部刷新&#34;&gt;使用JavaScript和DOM实现局部刷新
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;language&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ajaxHttpRequestFunc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;；&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//创建xMLHttpRequest对象，即一个用于保存异步调用对象的变量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ActiveXobject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//IE浏览器的创建方式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Activexobject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Microsoft.XMLHTTP&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xMLHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Netscape浏览器中的创建方式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;XMLHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;onreadystatechange&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//设置响应http请求状态变化的事件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;（&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;请求过程&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readyState&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;readystate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//判断异步调用是否成功，若成功开始局部更新数据
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;状态码为&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;（&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;异步调用返回的数据为：&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;responseText&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;myDiv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;innerHTML&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;responseText&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;；&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//局部刷新数据到页面
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//如果异步调用未成功，弹出警告框，并显示错误状态码
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;					&lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;error:HTTP状态码为:&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://www.runoob.com/try/ajax/ajax_info.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;xmlHttpRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;；&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//发送请求
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>OBS插件 随鼠标放大</title>
         <link>https://qc315056-oss.github.io/p/obs%E6%8F%92%E4%BB%B6-%E9%9A%8F%E9%BC%A0%E6%A0%87%E6%94%BE%E5%A4%A7/</link>
         <pubDate>Sun, 29 Mar 2026 18:22:47 +0800</pubDate>
@@ -133,7 +321,7 @@
 &lt;li&gt;设置缩放快捷键，在搜索框中输入toggle
 &lt;img src=&#34;img/setting4.png&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;最终效果演示
-&lt;video style=&#34;width: 350px; margin:0 auto; display:block;&#34; controls&gt;
+&lt;video style=&#34;width: 400px; margin:0 auto; display:block;&#34; controls&gt;
 &lt;source src=&#34;img/演示.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/li&gt;
 &lt;/ol&gt;
