@@ -10,7 +10,7 @@
 <meta property='og:description' content="基本 开发小程序之前首先删除模板中的冗余代码。 pages文件夹 app.js app.json app.wxss &lt; view &gt; 模块 相当于div &lt; text &gt; 文本 相当于p &lt; input &gt; 输入框 type属性：键盘类型 定义样式（同CSS一致，但是不能用 * 表示所有） id class 标签 微信小程序的通用单位：rpx 公共样式要写在app.wxss里 json文件：对页面效果进行设置 js怎么写 在组件上绑定事件要用bind 单击事件tap 获取value改变事件change JS中的数据想要显示在wxml中——数据绑定：{{变量名}}，且需要将数据定已在JS文件的data中 只是在JS文件中作为逻辑处理的数据，不需要定义在data中 更新data中的数据值要使用setData()，不能直接赋值 JS中处理逻辑时需要使用本页面中的内容，前面要加this. 方法书写格式： 方法名:function(){} 在wxss中使用page就相当于操作body，是对页面整体来进行样式处理 布局处理的相关代码含义 display:flex; 表示使用flex布局 flex-direction:column; 表示沿垂直方向从上到下排列 flex-direction:row; 表示沿水平方向从左到右排列 flex:1; 表示页面中的view平分整个页面的高度 flex-basis:数字%; 表示元素占用的比例 以下3行代码可以使文字水平垂直居中： align-items:center; 表示文字水平居中 justify-content:center; 表示文字垂直居中 display:flex; 字号的单位：pt data-自定义属性名=&ldquo;自定义属性值&rdquo; 通过event获取对应的值 event.target.dataset.自定义属性名 更新2个单位： vw：相对屏幕宽度 vh：相对屏幕高度 ">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/'>
 <meta property='og:site_name' content='清昶-Zakai'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T09:51:37&#43;08:00'/><meta property='article:modified_time' content='2026-03-29T10:15:18&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/vxdev.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-29T09:51:37&#43;08:00'/><meta property='article:modified_time' content='2026-04-06T08:10:47&#43;08:00'/><meta property='og:image' content='https://qc315056-oss.github.io/post/img/vxdev.jpg' />
 <meta name="twitter:title" content="微信小程序">
 <meta name="twitter:description" content="基本 开发小程序之前首先删除模板中的冗余代码。 pages文件夹 app.js app.json app.wxss &lt; view &gt; 模块 相当于div &lt; text &gt; 文本 相当于p &lt; input &gt; 输入框 type属性：键盘类型 定义样式（同CSS一致，但是不能用 * 表示所有） id class 标签 微信小程序的通用单位：rpx 公共样式要写在app.wxss里 json文件：对页面效果进行设置 js怎么写 在组件上绑定事件要用bind 单击事件tap 获取value改变事件change JS中的数据想要显示在wxml中——数据绑定：{{变量名}}，且需要将数据定已在JS文件的data中 只是在JS文件中作为逻辑处理的数据，不需要定义在data中 更新data中的数据值要使用setData()，不能直接赋值 JS中处理逻辑时需要使用本页面中的内容，前面要加this. 方法书写格式： 方法名:function(){} 在wxss中使用page就相当于操作body，是对页面整体来进行样式处理 布局处理的相关代码含义 display:flex; 表示使用flex布局 flex-direction:column; 表示沿垂直方向从上到下排列 flex-direction:row; 表示沿水平方向从左到右排列 flex:1; 表示页面中的view平分整个页面的高度 flex-basis:数字%; 表示元素占用的比例 以下3行代码可以使文字水平垂直居中： align-items:center; 表示文字水平居中 justify-content:center; 表示文字垂直居中 display:flex; 字号的单位：pt data-自定义属性名=&ldquo;自定义属性值&rdquo; 通过event获取对应的值 event.target.dataset.自定义属性名 更新2个单位： vw：相对屏幕宽度 vh：相对屏幕高度 "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://qc315056-oss.github.io/post/img/vxdev.jpg' />
@@ -478,13 +478,6 @@
                 笔记
             </a>
         
-            
-            
-            
-            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="background-color: hsl(86, 60%, 84%); color: hsl(86, 60%, 15%);">
-                微信小程序
-            </a>
-        
     </header>
     
 
@@ -593,7 +586,7 @@ vh：相对屏幕高度</li>
 
 
         <span>
-            最后更新于 2026-03-29
+            最后更新于 2026-04-06
         </span>
     </section></footer>
 

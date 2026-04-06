@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>工具 on 清昶-Zakai</title>
-        <link>https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
-        <description>Recent content in 工具 on 清昶-Zakai</description>
+        <title>个人项目 on 清昶-Zakai</title>
+        <link>https://qc315056-oss.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/</link>
+        <description>Recent content in 个人项目 on 清昶-Zakai</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright>
-        <lastBuildDate>Thu, 02 Apr 2026 10:16:17 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Apr 2026 08:10:47 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>OBS插件 随鼠标放大</title>
         <link>https://qc315056-oss.github.io/p/obs%E6%8F%92%E4%BB%B6-%E9%9A%8F%E9%BC%A0%E6%A0%87%E6%94%BE%E5%A4%A7/</link>
         <pubDate>Sun, 29 Mar 2026 18:22:47 +0800</pubDate>

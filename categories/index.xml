@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright>
-        <lastBuildDate>Thu, 02 Apr 2026 10:16:17 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Apr 2026 08:10:47 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>笔记</title>
         <link>https://qc315056-oss.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Thu, 02 Apr 2026 10:04:07 +0800</pubDate>
@@ -16,27 +16,11 @@
         <description></description>
         </item>
         <item>
-        <title>工具</title>
-        <link>https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+        <title>个人项目</title>
+        <link>https://qc315056-oss.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Sun, 29 Mar 2026 18:22:47 +0800</pubDate>
         
-        <guid>https://qc315056-oss.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>微信小程序</title>
-        <link>https://qc315056-oss.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
-        <pubDate>Sun, 29 Mar 2026 09:51:37 +0800</pubDate>
-        
-        <guid>https://qc315056-oss.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>MySQL</title>
-        <link>https://qc315056-oss.github.io/categories/mysql/</link>
-        <pubDate>Sun, 29 Mar 2026 09:30:28 +0800</pubDate>
-        
-        <guid>https://qc315056-oss.github.io/categories/mysql/</guid>
+        <guid>https://qc315056-oss.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/</guid>
         <description></description>
         </item>
         <item>
@@ -45,22 +29,6 @@
         <pubDate>Fri, 27 Mar 2026 10:11:23 +0800</pubDate>
         
         <guid>https://qc315056-oss.github.io/categories/hugo/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Stack</title>
-        <link>https://qc315056-oss.github.io/categories/stack/</link>
-        <pubDate>Fri, 27 Mar 2026 10:11:23 +0800</pubDate>
-        
-        <guid>https://qc315056-oss.github.io/categories/stack/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>博客搭建</title>
-        <link>https://qc315056-oss.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
-        <pubDate>Thu, 26 Mar 2026 12:15:20 +0800</pubDate>
-        
-        <guid>https://qc315056-oss.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
         <description></description>
         </item>
         
