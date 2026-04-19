@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright>
-        <lastBuildDate>Mon, 13 Apr 2026 10:37:04 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Apr 2026 16:27:30 +0800</lastBuildDate><atom:link href="https://qc315056-oss.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>FocusForge</title>
+        <link>https://qc315056-oss.github.io/p/focusforge/</link>
+        <pubDate>Sun, 19 Apr 2026 16:11:52 +0800</pubDate>
+        
+        <guid>https://qc315056-oss.github.io/p/focusforge/</guid>
+        <description>&lt;img src="https://qc315056-oss.github.io/post/img/FocusForge.png" alt="Featured image of post FocusForge" /&gt;&lt;p&gt;纯小白个人练手！！孟菲斯风格的番茄闹钟（ui设计由gemini来完成）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;主要功能&#34;&gt;主要功能
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;自定义专注/休息的时间（目前仅支持分钟的格式）&lt;/li&gt;
+&lt;li&gt;循环计时，专注时间结束后自动切换到休息时间&lt;/li&gt;
+&lt;li&gt;localStorage本地化，保留个人设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;游戏化设计&#34;&gt;游戏化设计
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;每完成一次专注获得25经验值&lt;/li&gt;
+&lt;li&gt;经验值累计到一定数量后自动升级&lt;/li&gt;
+&lt;li&gt;每3级切换一套主体色（本来想弄的更花哨一点但是受限于本人能力）
+（本来想做成Habitica那种体系的但是实现起来很困难遂放弃）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;链接&#34;&gt;链接
+&lt;/h2&gt;&lt;p&gt;想玩的话链接在下面&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://qc315056-oss.github.io/FocusForge/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://qc315056-oss.github.io/FocusForge/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Ajax</title>
         <link>https://qc315056-oss.github.io/p/ajax/</link>
         <pubDate>Thu, 02 Apr 2026 10:04:07 +0800</pubDate>
