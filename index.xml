@@ -7263,7 +7263,8 @@ target不一定是事件源，操作谁，谁就是target&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u orgin main
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在push过程中遭遇网络问题，借助Gemini使用ssh成功上传&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;HTTP传不上去，后改用SSH上传成功&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;发现我每次传仓库都没办法用HTTP（生气了）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;自动部署&#34;&gt;自动部署
