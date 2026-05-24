@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://qc315056-oss.github.io/p/obs%E6%8F%92%E4%BB%B6-%E9%9A%8F%E9%BC%A0%E6%A0%87%E6%94%BE%E5%A4%A7/'>
 
-<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="OBS插件 随鼠标放大">
+<link rel="stylesheet" href="/scss/style.min.e59c9eeeb219586b44ba4606aee66911c0537848f4b2858d0d55d2d0b8f09d0f.css"><meta property='og:title' content="OBS插件 随鼠标放大">
 <meta property='og:description' content="由于原版插件obs-zoom-to-mouse 作者已经于2023年暂停更新，该插件使用时感到非常困难，以及放大动画效果不太如人意，于是在原版插件的基础上进行了一些更改。\n代码修改 核心修改：将zoom in的target从鼠标改成了提前开始计算的虚拟窗口 将原版插件大概500行左右的on_timer方法改为以下内容\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 function on_timer() if crop_filter_info ~= nil and zoom_target ~= nil then local smoothing = zoom_speed if zoom_state == ZoomState.ZoomingOut or zoom_state == ZoomState.ZoomingIn then -- 动画中实时更新目标，让缩放过程能跟上鼠标的变化 if zoom_state == ZoomState.ZoomingIn and use_auto_follow_mouse then zoom_target = get_target_position(zoom_info) end -- 弹性移动 crop_filter_info.x = crop_filter_info.x + (zoom_target.crop.x - crop_filter_info.x) * smoothing crop_filter_info.y = crop_filter_info.y + (zoom_target.crop.y - crop_filter_info.y) * smoothing crop_filter_info.w = crop_filter_info.w + (zoom_target.crop.w - crop_filter_info.w) * smoothing crop_filter_info.h = crop_filter_info.h + (zoom_target.crop.h - crop_filter_info.h) * smoothing set_crop_settings(crop_filter_info) -- 判断是否到位：如果位置和大小的差距都小于 0.5 像素，就认为到达了 local dist_pos = math.abs(crop_filter_info.x - zoom_target.crop.x) local dist_size = math.abs(crop_filter_info.w - zoom_target.crop.w) if dist_pos &lt; 0.5 and dist_size &lt; 0.5 then if zoom_state == ZoomState.ZoomingIn then zoom_state = ZoomState.ZoomedIn if use_auto_follow_mouse then is_following_mouse = true log(&#34;丝滑放大到位&#34;) end else zoom_state = ZoomState.None is_timer_running = false obs.timer_remove(on_timer) log(&#34;丝滑还原完毕&#34;) end end else -- 放大后的平滑跟随逻辑 if is_following_mouse then zoom_target = get_target_position(zoom_info) -- 这里也改成弹性跟随，让鼠标移动时镜头感更柔和 crop_filter_info.x = crop_filter_info.x + (zoom_target.crop.x - crop_filter_info.x) * follow_speed crop_filter_info.y = crop_filter_info.y + (zoom_target.crop.y - crop_filter_info.y) * follow_speed set_crop_settings(crop_filter_info) end end end end 使用方法 在obs中添加脚本 导入改好的脚本 设置脚本 设置缩放快捷键，在搜索框中输入toggle 最终效果演示 ">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/obs%E6%8F%92%E4%BB%B6-%E9%9A%8F%E9%BC%A0%E6%A0%87%E6%94%BE%E5%A4%A7/'>
 <meta property='og:site_name' content='清昶-Zakai'>
@@ -392,6 +392,27 @@
             </a>
         </li>
         
+        
+        <li >
+            <a href='/categories/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
         <li class="menu-bottom-section">
             <ol class="menu">
 
@@ -682,22 +703,28 @@
             
                 
 <article class="has-image">
-    <a href="/p/focusforge/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/FocusForge.png" loading="lazy" data-key="" data-hash="/post/img/FocusForge.png"/>
-                
-            </div>
-        
+  <a href="/p/focusforge/">
 
-        <div class="article-details">
-            <h2 class="article-title">FocusForge</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/FocusForge.png" loading="lazy" data-key=""
+        data-hash="/post/img/FocusForge.png" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">FocusForge</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-04-19T16:11:52&#43;08:00'>2026-04-19</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
         </div>
     </div>

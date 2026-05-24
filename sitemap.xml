@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://qc315056-oss.github.io/categories/</loc>
-    <lastmod>2026-04-20T10:30:46+08:00</lastmod>
-  </url><url>
     <loc>https://qc315056-oss.github.io/p/focusforge/</loc>
     <lastmod>2026-04-19T16:27:30+08:00</lastmod>
   </url><url>
@@ -60,9 +57,10 @@
     <lastmod>2026-03-26T10:34:41+08:00</lastmod>
   </url><url>
     <loc>https://qc315056-oss.github.io/tags/</loc>
+    <lastmod>2026-05-25T02:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://qc315056-oss.github.io/cats-tags/</loc>
-    <lastmod>2026-03-28T15:26:56+08:00</lastmod>
+    <loc>https://qc315056-oss.github.io/categories/</loc>
+    <lastmod>2026-05-25T02:30:34+08:00</lastmod>
   </url><url>
     <loc>https://qc315056-oss.github.io/search/</loc>
     <lastmod>2026-03-26T10:34:41+08:00</lastmod>

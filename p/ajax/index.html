@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://qc315056-oss.github.io/p/ajax/'>
 
-<link rel="stylesheet" href="/scss/style.min.344e685363a82b10a9da64bd14025aa3ef0fb9e5c00d7b89777bf826f49884b9.css"><meta property='og:title' content="Ajax">
+<link rel="stylesheet" href="/scss/style.min.e59c9eeeb219586b44ba4606aee66911c0537848f4b2858d0d55d2d0b8f09d0f.css"><meta property='og:title' content="Ajax">
 <meta property='og:description' content="\u00a0实现AJAX的基本步骤 （1）创建XMLHTTPRequest对象,即创建一个异步调用对象 在js中有内置的构造函数XMLHttpRequest()来创建 ajax 对象。 例：new XMLHttpRequest() 创建 ajax 对象以后，我们就可以使用 ajax 对象的方法发送请求和接受响应。Ajax的一个最大的特点是无需刷新页面便可向服务器传输或读写数据，这一特点主要得益于XMLHTTPRequest对象。 XMLHttpRequest 对象方法描述\n方法 描述 abort() 停止当前请求 getAllResponseHeaders() 把HTTP请求的所有响应首部作为键/值对返回 getResponseHeader(&ldquo;header&rdquo;) 返回指定首部的串值 open(&ldquo;method&rdquo;,&ldquo;URL&rdquo;,[asyncFlag],\n[&ldquo;userName&rdquo;],[&ldquo;password&rdquo;) 建立对服务器的调用。method参数可以是GET、POST或PUT。url参数可以是相对URL或绝对URL。这个方法还包括3个可选的参数，是否异步，用户名，密码 send(content) 向服务器发送请求 setRequestHeader(&ldquo;header&rdquo;, &ldquo;value&rdquo;) 把指定首部设置为所提供的值。在设置任何首部之前必须先调用open()。设置header并和请求一起发送(post&rsquo;方法一定要） XMLHttpRequest 对象属性描述（用于和服务器交换数据） 属性 描述 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- onreadystatechange 状态改变的事件触发器，每个状态改变时都会触发这个事件处理器，通常会调用一个JavaScript函数 readyState 请求的状态。有5个可取值：0= 未初始化，1=正在加载，2 =已加载，3=交互中，4 =完成 responseText 服务器的响应，返回数据的文本 responseXML 服务器的响应，返回数据的兼容DOM的XML文档对象，这个对象可以解析为一个DOM对象 responseBody 服务器返回的主题（非文本格式） responseStream 服务器返回的数据流 status 服务器的HTTP状态码（如：404=“文件末找到”、200=&ldquo;成功”，等等） statusText 服务器返回的状态文本信息，HTTP状态码的相应文本（OK或NotFound（未找到）等等） 创建一个新的HTTP请求 创建了XMLHttpRequest对象之后，必须为对象创建HTTP请求，用于说明XMLHttpRequest对象要从哪里获取数据，通常可以是URL中的数据，也可以是本地文件中的数据。 创建HTTP请求可以使用XMLHttpRequest对象的open() 方法。 语法：XMLHttpRequest.open(method,URL,flag,name,password); 参数： method：该参数用于指定HTTP的请求方法，一共有get、post、head、put、delete五种方法。 URL：该参数用于指定HTTP请求的URL地址，可以是绝对URL，也可以是相对URL。 flag：该参数为可选，值为布尔型。该参数用于指定是否使用异步方式。true表示异步、false表示同步，默认为true。 name：该参数为可选参数，用于输入用户名。如果服务器需要验证，则必须使用该参数。 password：该参数为可选，用于输入密码。若服务器需要验证，则必须使用该参数 例： 访问URL数据： xmlHttpRequest.open(&ldquo;get&rdquo;, &ldquo;http://www.aspxfans.com/BookSupport/JavaScript/ajax.htm\" ,true); 访问本地文件数据： xmlHttpRequest.open(&ldquo;get&rdquo;, &ldquo;ajax.htm&rdquo; ,true);\n">
 <meta property='og:url' content='https://qc315056-oss.github.io/p/ajax/'>
 <meta property='og:site_name' content='清昶-Zakai'>
@@ -392,6 +392,27 @@
             </a>
         </li>
         
+        
+        <li >
+            <a href='/categories/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
         <li class="menu-bottom-section">
             <ol class="menu">
 
@@ -741,98 +762,128 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
             
                 
 <article class="has-image">
-    <a href="/p/vue/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/vue.jpg" loading="lazy" data-key="" data-hash="/post/img/vue.jpg"/>
-                
-            </div>
-        
+  <a href="/p/vue/">
 
-        <div class="article-details">
-            <h2 class="article-title">Vue</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/vue.jpg" loading="lazy" data-key=""
+        data-hash="/post/img/vue.jpg" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">Vue</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-03-29T09:56:18&#43;08:00'>2026-03-29</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
                 
 <article class="has-image">
-    <a href="/p/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/vxdev.jpg" loading="lazy" data-key="" data-hash="/post/img/vxdev.jpg"/>
-                
-            </div>
-        
+  <a href="/p/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
 
-        <div class="article-details">
-            <h2 class="article-title">微信小程序</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/vxdev.jpg" loading="lazy" data-key=""
+        data-hash="/post/img/vxdev.jpg" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">微信小程序</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-03-29T09:51:37&#43;08:00'>2026-03-29</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
                 
 <article class="has-image">
-    <a href="/p/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/bigdata.jpg" loading="lazy" data-key="" data-hash="/post/img/bigdata.jpg"/>
-                
-            </div>
-        
+  <a href="/p/%E6%95%B0%E6%8D%AE%E5%BA%93/">
 
-        <div class="article-details">
-            <h2 class="article-title">数据库</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/bigdata.jpg" loading="lazy" data-key=""
+        data-hash="/post/img/bigdata.jpg" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">数据库</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-03-29T09:30:28&#43;08:00'>2026-03-29</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
                 
 <article class="has-image">
-    <a href="/p/es6/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/wordpress.png" loading="lazy" data-key="" data-hash="/post/img/wordpress.png"/>
-                
-            </div>
-        
+  <a href="/p/es6/">
 
-        <div class="article-details">
-            <h2 class="article-title">ES6</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/wordpress.png" loading="lazy" data-key=""
+        data-hash="/post/img/wordpress.png" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">ES6</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-03-29T09:09:36&#43;08:00'>2026-03-29</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
                 
 <article class="has-image">
-    <a href="/p/html-css%E7%AC%94%E8%AE%B0/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/img/html.jpg" loading="lazy" data-key="" data-hash="/post/img/html.jpg"/>
-                
-            </div>
-        
+  <a href="/p/html-css%E7%AC%94%E8%AE%B0/">
 
-        <div class="article-details">
-            <h2 class="article-title">HTML&#43;CSS笔记</h2>
-        </div>
-    </a>
+    
+    <div class="article-image">
+      
+      <img src="/post/img/html.jpg" loading="lazy" data-key=""
+        data-hash="/post/img/html.jpg" />
+      
+    </div>
+    
+
+    <div class="article-details">
+      <h2 class="article-title">HTML&#43;CSS笔记</h2>
+      
+      
+      <footer class="article-time">
+        <time datetime='2026-03-29T08:55:22&#43;08:00'>2026-03-29</time>
+      </footer>
+      
+    </div>
+  </a>
 </article>
-
             
         </div>
     </div>
