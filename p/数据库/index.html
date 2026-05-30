@@ -747,217 +747,217 @@
 </h3><h4 id="整数类型">整数类型
 </h4><p>又称数值型类型，主要用来存储数字</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">类型名称</th>
-          <th style="text-align: center">说明</th>
-          <th style="text-align: center">存储需求</th>
-          <th style="text-align: center">取整范围（有符号数）</th>
-          <th style="text-align: center">取整范围（无符号数）</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">tinyint</td>
-          <td style="text-align: center">很小的整数</td>
-          <td style="text-align: center">1个字节</td>
-          <td style="text-align: center">-128~127</td>
-          <td style="text-align: center">0~255</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">smallint</td>
-          <td style="text-align: center">小的整数</td>
-          <td style="text-align: center">2个字节</td>
-          <td style="text-align: center">-32768~32767</td>
-          <td style="text-align: center">0~65535</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">mediumint</td>
-          <td style="text-align: center">中等大小的整数</td>
-          <td style="text-align: center">3个字节</td>
-          <td style="text-align: center">-8388608~8388607</td>
-          <td style="text-align: center">0~16777215</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">int(integhr)</td>
-          <td style="text-align: center">普通大小的整数</td>
-          <td style="text-align: center">4个字节</td>
-          <td style="text-align: center">-2147483648~2147483647</td>
-          <td style="text-align: center">0~4294967295</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">bigint</td>
-          <td style="text-align: center">大整数</td>
-          <td style="text-align: center">8个字节</td>
-          <td style="text-align: center">-9223372036854775808~9223372036854775807</td>
-          <td style="text-align: center">0~18446744073709551615</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">类型名称</th>
+					<th style="text-align: center">说明</th>
+					<th style="text-align: center">存储需求</th>
+					<th style="text-align: center">取整范围（有符号数）</th>
+					<th style="text-align: center">取整范围（无符号数）</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">tinyint</td>
+					<td style="text-align: center">很小的整数</td>
+					<td style="text-align: center">1个字节</td>
+					<td style="text-align: center">-128~127</td>
+					<td style="text-align: center">0~255</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">smallint</td>
+					<td style="text-align: center">小的整数</td>
+					<td style="text-align: center">2个字节</td>
+					<td style="text-align: center">-32768~32767</td>
+					<td style="text-align: center">0~65535</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">mediumint</td>
+					<td style="text-align: center">中等大小的整数</td>
+					<td style="text-align: center">3个字节</td>
+					<td style="text-align: center">-8388608~8388607</td>
+					<td style="text-align: center">0~16777215</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">int(integhr)</td>
+					<td style="text-align: center">普通大小的整数</td>
+					<td style="text-align: center">4个字节</td>
+					<td style="text-align: center">-2147483648~2147483647</td>
+					<td style="text-align: center">0~4294967295</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">bigint</td>
+					<td style="text-align: center">大整数</td>
+					<td style="text-align: center">8个字节</td>
+					<td style="text-align: center">-9223372036854775808~9223372036854775807</td>
+					<td style="text-align: center">0~18446744073709551615</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="小数类型">小数类型
 </h4><p>使用浮点数和定点数来表示小数</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">类型名称</th>
-          <th style="text-align: center">说明</th>
-          <th style="text-align: center">存储要求</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">float</td>
-          <td style="text-align: center">单精度浮点数</td>
-          <td style="text-align: center">4个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">double</td>
-          <td style="text-align: center">双精度浮点数</td>
-          <td style="text-align: center">8个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">decimal(m,d)</td>
-          <td style="text-align: center">压缩的严格定点数</td>
-          <td style="text-align: center">m+2个字节</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">类型名称</th>
+					<th style="text-align: center">说明</th>
+					<th style="text-align: center">存储要求</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">float</td>
+					<td style="text-align: center">单精度浮点数</td>
+					<td style="text-align: center">4个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">double</td>
+					<td style="text-align: center">双精度浮点数</td>
+					<td style="text-align: center">8个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">decimal(m,d)</td>
+					<td style="text-align: center">压缩的严格定点数</td>
+					<td style="text-align: center">m+2个字节</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="时间日期类型">时间日期类型
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">类型名称</th>
-          <th style="text-align: center">日期格式</th>
-          <th style="text-align: center">存储需求</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">year</td>
-          <td style="text-align: center">YYYY</td>
-          <td style="text-align: center">1个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">time</td>
-          <td style="text-align: center">HH:MM:SS</td>
-          <td style="text-align: center">3个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">date</td>
-          <td style="text-align: center">YYY-MM-DD</td>
-          <td style="text-align: center">3个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">datetime</td>
-          <td style="text-align: center">YYYY-MM-DD HH:MM:SS</td>
-          <td style="text-align: center">8个字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">timestamp</td>
-          <td style="text-align: center">YYY-MM-DD HH:MM:SS</td>
-          <td style="text-align: center">4个字节</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">类型名称</th>
+					<th style="text-align: center">日期格式</th>
+					<th style="text-align: center">存储需求</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">year</td>
+					<td style="text-align: center">YYYY</td>
+					<td style="text-align: center">1个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">time</td>
+					<td style="text-align: center">HH:MM:SS</td>
+					<td style="text-align: center">3个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">date</td>
+					<td style="text-align: center">YYY-MM-DD</td>
+					<td style="text-align: center">3个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">datetime</td>
+					<td style="text-align: center">YYYY-MM-DD HH:MM:SS</td>
+					<td style="text-align: center">8个字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">timestamp</td>
+					<td style="text-align: center">YYY-MM-DD HH:MM:SS</td>
+					<td style="text-align: center">4个字节</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="字符串类型">字符串类型
 </h4><p>用来存储字符串数据，还可以存储图片、声音等二进制数据</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">类型名称</th>
-          <th style="text-align: center">说明</th>
-          <th style="text-align: center">存储要求</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">char(m)</td>
-          <td style="text-align: center">定长非二进制字符串</td>
-          <td style="text-align: center">m字节，1&lt;=m&lt;=255</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">varchar(m)</td>
-          <td style="text-align: center">变长非二进制字符串</td>
-          <td style="text-align: center">l+1字节，且l&lt;=m和1&lt;=m&lt;=255</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">tinytext</td>
-          <td style="text-align: center">非常小的非二进制字符串</td>
-          <td style="text-align: center">l+1字节，且l&lt;2⁸</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">text</td>
-          <td style="text-align: center">小的非二进制字符串</td>
-          <td style="text-align: center">l+2字节，且l&lt;2¹⁶</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">mediumtext</td>
-          <td style="text-align: center">中等大小的非二进制字符串</td>
-          <td style="text-align: center">l+3字节，且l&lt;2²⁴</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">longtext</td>
-          <td style="text-align: center">大的非二进制字符串</td>
-          <td style="text-align: center">l+4字节，且l&lt;2³²</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">enum</td>
-          <td style="text-align: center">枚举类型，只能有一个枚举字符串值</td>
-          <td style="text-align: center">1或2个字节，取决于枚举值的数目（最大值为65535）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">set</td>
-          <td style="text-align: center">一个设置，字符串对象可以有零个或多个set成员</td>
-          <td style="text-align: center">1、2、3、4或8个字节，取决于集合成员的数量（最多64个成员）</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">类型名称</th>
+					<th style="text-align: center">说明</th>
+					<th style="text-align: center">存储要求</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">char(m)</td>
+					<td style="text-align: center">定长非二进制字符串</td>
+					<td style="text-align: center">m字节，1&lt;=m&lt;=255</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">varchar(m)</td>
+					<td style="text-align: center">变长非二进制字符串</td>
+					<td style="text-align: center">l+1字节，且l&lt;=m和1&lt;=m&lt;=255</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">tinytext</td>
+					<td style="text-align: center">非常小的非二进制字符串</td>
+					<td style="text-align: center">l+1字节，且l&lt;2⁸</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">text</td>
+					<td style="text-align: center">小的非二进制字符串</td>
+					<td style="text-align: center">l+2字节，且l&lt;2¹⁶</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">mediumtext</td>
+					<td style="text-align: center">中等大小的非二进制字符串</td>
+					<td style="text-align: center">l+3字节，且l&lt;2²⁴</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">longtext</td>
+					<td style="text-align: center">大的非二进制字符串</td>
+					<td style="text-align: center">l+4字节，且l&lt;2³²</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">enum</td>
+					<td style="text-align: center">枚举类型，只能有一个枚举字符串值</td>
+					<td style="text-align: center">1或2个字节，取决于枚举值的数目（最大值为65535）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">set</td>
+					<td style="text-align: center">一个设置，字符串对象可以有零个或多个set成员</td>
+					<td style="text-align: center">1、2、3、4或8个字节，取决于集合成员的数量（最多64个成员）</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="二进制类型">二进制类型
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">类型名称</th>
-          <th style="text-align: center">说明</th>
-          <th style="text-align: center">存储要求</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">bit</td>
-          <td style="text-align: center">位字段类型</td>
-          <td style="text-align: center">大约(m+7)/8字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">binary(m)</td>
-          <td style="text-align: center">固定长度二进制字符串</td>
-          <td style="text-align: center">m字节</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">varbinary(m)</td>
-          <td style="text-align: center">可变长度二进制字符串</td>
-          <td style="text-align: center">l+1字节，且l&lt;=m</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">tinyblob</td>
-          <td style="text-align: center">非常小的blob</td>
-          <td style="text-align: center">l+1字节，且l&lt;2⁸</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">blob</td>
-          <td style="text-align: center">小blob</td>
-          <td style="text-align: center">l+2字节，且l&lt;2¹⁶</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">mediumblob</td>
-          <td style="text-align: center">中等大小的blob</td>
-          <td style="text-align: center">l+3字节，且l&lt;2²⁴</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">longblob</td>
-          <td style="text-align: center">非常大的blob</td>
-          <td style="text-align: center">l+4字节，且l&lt;2³²</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">类型名称</th>
+					<th style="text-align: center">说明</th>
+					<th style="text-align: center">存储要求</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">bit</td>
+					<td style="text-align: center">位字段类型</td>
+					<td style="text-align: center">大约(m+7)/8字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">binary(m)</td>
+					<td style="text-align: center">固定长度二进制字符串</td>
+					<td style="text-align: center">m字节</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">varbinary(m)</td>
+					<td style="text-align: center">可变长度二进制字符串</td>
+					<td style="text-align: center">l+1字节，且l&lt;=m</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">tinyblob</td>
+					<td style="text-align: center">非常小的blob</td>
+					<td style="text-align: center">l+1字节，且l&lt;2⁸</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">blob</td>
+					<td style="text-align: center">小blob</td>
+					<td style="text-align: center">l+2字节，且l&lt;2¹⁶</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">mediumblob</td>
+					<td style="text-align: center">中等大小的blob</td>
+					<td style="text-align: center">l+3字节，且l&lt;2²⁴</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">longblob</td>
+					<td style="text-align: center">非常大的blob</td>
+					<td style="text-align: center">l+4字节，且l&lt;2³²</td>
+			</tr>
+	</tbody>
 </table></div>
 <h3 id="创建数据表在这之前很重要的一步是选择数据库">创建数据表（在这之前很重要的一步是选择数据库）
 </h3><div class="highlight"><div class="chroma">
@@ -1641,58 +1641,58 @@ BETWEEN、IN</li>
 </ol>
 <h4 id="使用正则匹配实现条件查询">使用正则匹配实现条件查询
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">符号模式</th>
-          <th style="text-align: center">含义描述</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">^</td>
-          <td style="text-align: center">必须以……开头</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">$</td>
-          <td style="text-align: center">必须以……结尾</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">.</td>
-          <td style="text-align: center">任意字符（除空格(-n)外）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">[&hellip;]</td>
-          <td style="text-align: center">字符集合，匹配所包含的任意一个字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">[^&hellip;]</td>
-          <td style="text-align: center">非字符合集，匹配未包含的任意字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">p1|p2|p3</td>
-          <td style="text-align: center">匹配p1或p2或p3</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">*</td>
-          <td style="text-align: center">0到无限</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">+</td>
-          <td style="text-align: center">1到无限</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">{n}</td>
-          <td style="text-align: center">n是非负整数，批评日前面子表达式n次</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">{n,m}</td>
-          <td style="text-align: center">m和n均为非负整数，其中n&lt;=m，最少匹配n次且最多匹配m次</td>
-      </tr>
-      <tr>
-          <td style="text-align: center"></td>
-          <td style="text-align: center"></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">符号模式</th>
+					<th style="text-align: center">含义描述</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">^</td>
+					<td style="text-align: center">必须以……开头</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">$</td>
+					<td style="text-align: center">必须以……结尾</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">.</td>
+					<td style="text-align: center">任意字符（除空格(-n)外）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">[&hellip;]</td>
+					<td style="text-align: center">字符集合，匹配所包含的任意一个字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">[^&hellip;]</td>
+					<td style="text-align: center">非字符合集，匹配未包含的任意字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">p1|p2|p3</td>
+					<td style="text-align: center">匹配p1或p2或p3</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">*</td>
+					<td style="text-align: center">0到无限</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">+</td>
+					<td style="text-align: center">1到无限</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">{n}</td>
+					<td style="text-align: center">n是非负整数，批评日前面子表达式n次</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">{n,m}</td>
+					<td style="text-align: center">m和n均为非负整数，其中n&lt;=m，最少匹配n次且最多匹配m次</td>
+			</tr>
+			<tr>
+					<td style="text-align: center"></td>
+					<td style="text-align: center"></td>
+			</tr>
+	</tbody>
 </table></div>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1744,34 +1744,34 @@ BETWEEN、IN</li>
 </div><h3 id="聚合函数">聚合函数
 </h3><p>常用聚合函数：</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">函数名</th>
-          <th style="text-align: center">函数作用</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">count()</td>
-          <td style="text-align: center">返回某列的行数</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">max()</td>
-          <td style="text-align: center">返回某列数值中的最大值</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">min()</td>
-          <td style="text-align: center">返回某列数值中的最小值</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">sum()</td>
-          <td style="text-align: center">返回某列数值的累加和</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">avg()</td>
-          <td style="text-align: center">返回某列数值的平均值</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">函数名</th>
+					<th style="text-align: center">函数作用</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">count()</td>
+					<td style="text-align: center">返回某列的行数</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">max()</td>
+					<td style="text-align: center">返回某列数值中的最大值</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">min()</td>
+					<td style="text-align: center">返回某列数值中的最小值</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">sum()</td>
+					<td style="text-align: center">返回某列数值的累加和</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">avg()</td>
+					<td style="text-align: center">返回某列数值的平均值</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="count函数">count函数
 </h4><p>count(*|column)表示计算总行数，口号中写*或列名。count(column)返回行数时不包括值为null的行，count(*)返回行数时包括值为null的行</p>

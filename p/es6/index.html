@@ -751,58 +751,58 @@ let创建的变量是可以更改指针指向（即可以重新赋值）
 但const声明的变量时不允许改变指针的指向</li>
 </ol>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">区别</th>
-          <th style="text-align: center">var</th>
-          <th style="text-align: center">let</th>
-          <th style="text-align: center">const</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">是否有块级作用域</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">√</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">是否存在变量提升</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">×</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">是否添加全局属性</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">×</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">能否重复声明变量</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">×</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">是否存在暂时性死区</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">√</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">是否必须设置初始值</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">×</td>
-          <td style="text-align: center">√</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">能否改变指针指向</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">√</td>
-          <td style="text-align: center">×</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">区别</th>
+					<th style="text-align: center">var</th>
+					<th style="text-align: center">let</th>
+					<th style="text-align: center">const</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">是否有块级作用域</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">√</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">是否存在变量提升</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">×</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">是否添加全局属性</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">×</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">能否重复声明变量</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">×</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">是否存在暂时性死区</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">√</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">是否必须设置初始值</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">×</td>
+					<td style="text-align: center">√</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">能否改变指针指向</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">√</td>
+					<td style="text-align: center">×</td>
+			</tr>
+	</tbody>
 </table></div>
 <h3 id="局部作用域">局部作用域
 </h3><p>局部作用域分为块级作用域和函数作用域</p>
@@ -1159,22 +1159,22 @@ es6：</p>
 </h4><p>es5：replace()：只能替换第一次出现的字符串
 es6：replaceAll()：一次性替换所有匹配的字符串，返回一个新字符串，不改变原字符串。该方法的第二个参数是一个字符串，表示替换的文本，其中可以使用一些特殊字符串</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>特殊符号</th>
-          <th>描述</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>$`</td>
-          <td>匹配结果前面的文本</td>
-      </tr>
-      <tr>
-          <td>$'</td>
-          <td>匹配结果后面的文本</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>特殊符号</th>
+					<th>描述</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>$`</td>
+					<td>匹配结果前面的文本</td>
+			</tr>
+			<tr>
+					<td>$'</td>
+					<td>匹配结果后面的文本</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="根据索引返回对应字符">根据索引返回对应字符
 </h4><p>es5：charAt()
@@ -1456,25 +1456,25 @@ Object.is(NaN, NaN) // true</p>
 proto是对象的一个属性，用于访问该对象的原型（即它的父级对象—prototype）。</p>
 <p>例：</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>const obj = {};</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>console.log(obj.<strong>proto</strong>); // 输出 obj 的原型（通常是 Object.prototype）</td>
-      </tr>
-      <tr>
-          <td>标准明确规定，只有浏览器必须部署这个属性，其他运行环境不一定需要部署，而且新的代码最好认为这个属性是不存在的；因此，无论从语义的角度，还是从兼容性的角度，都不要使用这个属性。而是使用下面的方法代替：</td>
-      </tr>
-      <tr>
-          <td><strong>Object.setPrototypeOf()</strong></td>
-      </tr>
-      <tr>
-          <td><strong>Object.getPrototypeOf()</strong></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>const obj = {};</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>console.log(obj.<strong>proto</strong>); // 输出 obj 的原型（通常是 Object.prototype）</td>
+			</tr>
+			<tr>
+					<td>标准明确规定，只有浏览器必须部署这个属性，其他运行环境不一定需要部署，而且新的代码最好认为这个属性是不存在的；因此，无论从语义的角度，还是从兼容性的角度，都不要使用这个属性。而是使用下面的方法代替：</td>
+			</tr>
+			<tr>
+					<td><strong>Object.setPrototypeOf()</strong></td>
+			</tr>
+			<tr>
+					<td><strong>Object.getPrototypeOf()</strong></td>
+			</tr>
+	</tbody>
 </table></div>
 <p>Object.setPrototypeOf方法
 <strong>作用：</strong> 设置一个对象的原型对象（prototype），返回参数对象本身。
@@ -1596,121 +1596,121 @@ entries()：遍历键值对</li>
 </ol>
 <h4 id="常用字符"> 常用字符：
 </h4><div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: center">常用匹配字符</th>
-          <th style="text-align: center">含义</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">[0-9]</td>
-          <td style="text-align: center">匹配单数组0-9</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">[a-z]</td>
-          <td style="text-align: center">匹配单个小写字母</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">[A-Z]</td>
-          <td style="text-align: center">匹配单个大写字母</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">\s</td>
-          <td style="text-align: center">匹配所有空白字符，如空格、换行等</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">\n</td>
-          <td style="text-align: center">匹配所有换行字符</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">\b</td>
-          <td style="text-align: center">匹配边界如字符之间的空格</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">\d</td>
-          <td style="text-align: center">用于匹配‌单个数字字符</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: center">常用匹配字符</th>
+					<th style="text-align: center">含义</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">[0-9]</td>
+					<td style="text-align: center">匹配单数组0-9</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">[a-z]</td>
+					<td style="text-align: center">匹配单个小写字母</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">[A-Z]</td>
+					<td style="text-align: center">匹配单个大写字母</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">\s</td>
+					<td style="text-align: center">匹配所有空白字符，如空格、换行等</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">\n</td>
+					<td style="text-align: center">匹配所有换行字符</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">\b</td>
+					<td style="text-align: center">匹配边界如字符之间的空格</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">\d</td>
+					<td style="text-align: center">用于匹配‌单个数字字符</td>
+			</tr>
+	</tbody>
 </table></div>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th><strong>特殊字符</strong></th>
-          <th><strong>含义</strong></th>
-          <th><strong>示例用法</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>^</td>
-          <td>1. 匹配开始位置<br><br>2.     用在[]中是表示 非</td>
-          <td>1. <code>/^http/</code> 匹配http开头的字符串 2. <code>/[^a-zA-Z]/</code> 匹配非字母</td>
-      </tr>
-      <tr>
-          <td>$</td>
-          <td>匹配结尾位置</td>
-          <td><code>/.com$/</code>匹配以.com结尾的字符串</td>
-      </tr>
-      <tr>
-          <td>|</td>
-          <td>表示 或</td>
-          <td><code>/a | b/</code> 匹配a或者b</td>
-      </tr>
-      <tr>
-          <td>.</td>
-          <td>匹配换行符\n之外的任何单个字符</td>
-          <td><code>/./</code>匹配换行符之外的其他字符</td>
-      </tr>
-      <tr>
-          <td>[]</td>
-          <td>中括号表示要匹配的字符</td>
-          <td><code>/[aeiou]/</code>匹配字母aeiou中的一个</td>
-      </tr>
-      <tr>
-          <td>()</td>
-          <td><code>小括号表示一个分组</code></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>{}</td>
-          <td>大括号表示匹配次数</td>
-          <td>{n}匹配n次<br><br>{n,}匹配最少n次<br><br>{n,m}匹配n-m次</td>
-      </tr>
-      <tr>
-          <td>+</td>
-          <td>匹配前面的子表达式一次或多次</td>
-          <td><code>/[0-9]+/</code>匹配一个数字或多个数字</td>
-      </tr>
-      <tr>
-          <td>*</td>
-          <td>匹配前面的子表达式零个或多个</td>
-          <td><code>/[0-9]*/</code>匹配0个数字或多个数字</td>
-      </tr>
-      <tr>
-          <td>?</td>
-          <td>1.匹配前面的子表达式零次或一次 2.匹配一个标签</td>
-          <td>1.<code>/[0-9]?/</code><br><br>2.<code>/&lt;.*?&gt;/``匹配一个标签如&lt;p&gt;</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th><strong>特殊字符</strong></th>
+					<th><strong>含义</strong></th>
+					<th><strong>示例用法</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>^</td>
+					<td>1. 匹配开始位置<br><br>2.     用在[]中是表示 非</td>
+					<td>1. <code>/^http/</code> 匹配http开头的字符串 2. <code>/[^a-zA-Z]/</code> 匹配非字母</td>
+			</tr>
+			<tr>
+					<td>$</td>
+					<td>匹配结尾位置</td>
+					<td><code>/.com$/</code>匹配以.com结尾的字符串</td>
+			</tr>
+			<tr>
+					<td>|</td>
+					<td>表示 或</td>
+					<td><code>/a | b/</code> 匹配a或者b</td>
+			</tr>
+			<tr>
+					<td>.</td>
+					<td>匹配换行符\n之外的任何单个字符</td>
+					<td><code>/./</code>匹配换行符之外的其他字符</td>
+			</tr>
+			<tr>
+					<td>[]</td>
+					<td>中括号表示要匹配的字符</td>
+					<td><code>/[aeiou]/</code>匹配字母aeiou中的一个</td>
+			</tr>
+			<tr>
+					<td>()</td>
+					<td><code>小括号表示一个分组</code></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>{}</td>
+					<td>大括号表示匹配次数</td>
+					<td>{n}匹配n次<br><br>{n,}匹配最少n次<br><br>{n,m}匹配n-m次</td>
+			</tr>
+			<tr>
+					<td>+</td>
+					<td>匹配前面的子表达式一次或多次</td>
+					<td><code>/[0-9]+/</code>匹配一个数字或多个数字</td>
+			</tr>
+			<tr>
+					<td>*</td>
+					<td>匹配前面的子表达式零个或多个</td>
+					<td><code>/[0-9]*/</code>匹配0个数字或多个数字</td>
+			</tr>
+			<tr>
+					<td>?</td>
+					<td>1.匹配前面的子表达式零次或一次 2.匹配一个标签</td>
+					<td>1.<code>/[0-9]?/</code><br><br>2.<code>/&lt;.*?&gt;/``匹配一个标签如&lt;p&gt;</code></td>
+			</tr>
+	</tbody>
 </table></div>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th><strong>常用修饰符</strong></th>
-          <th><strong>含义</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>/i  不区分大小写</td>
-          <td>将匹配设置为不区分大小写<br><br>例：在搜索时 A 和 a 没有区别</td>
-      </tr>
-      <tr>
-          <td>/g  全局匹配</td>
-          <td>查找所有的匹配项，返回的结果可以是多个<br><br>如果不加/g最多只会匹配一个</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th><strong>常用修饰符</strong></th>
+					<th><strong>含义</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>/i  不区分大小写</td>
+					<td>将匹配设置为不区分大小写<br><br>例：在搜索时 A 和 a 没有区别</td>
+			</tr>
+			<tr>
+					<td>/g  全局匹配</td>
+					<td>查找所有的匹配项，返回的结果可以是多个<br><br>如果不加/g最多只会匹配一个</td>
+			</tr>
+	</tbody>
 </table></div>
 <h4 id="匹配特殊字符本身时需要转义共有一下几个">匹配特殊字符本身时需要转义，共有一下几个：
 </h4><p>* . ? + $ ^ [ ] ( ) { } | \ /</p>
