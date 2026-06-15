@@ -257,16 +257,14 @@
   }
 </style>
 
+
+
 <script>
-  window.addEventListener('load', function () {
-    const loading = document.querySelector(".loading");
-    if (loading) {
-      setTimeout(() => {
-        loading.style.opacity = "0";
-        loading.style.visibility = "hidden";
-      }, 300);
-    }
-  });
+  window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(() => {
+      document.querySelector(".loading")?.remove()
+    }, 500)
+  })
 </script>
     </head>
     <body class="
@@ -2478,18 +2476,6 @@ concat()和slice()任选一个来执行浅拷贝即可！</p>
   }
   initTocHide()
 </script>
-<style>
-  #backTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    z-index: 99;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    background-image: url('https://qc315056-oss.github.io/icons/backTop.svg');
-  }
-</style>
 <style>
   #backTopBtn {
     display: none;
