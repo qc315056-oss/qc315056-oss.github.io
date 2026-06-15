@@ -38,7 +38,6 @@
     height: 100%;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-     
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -207,14 +206,61 @@
       transform: rotate(50deg) scale(1);
     }
   }
+
+  .pointer {
+    --width: 4rem;
+    --height: 4rem;
+    position: fixed;
+    top: calc(var(--height) / -2);
+    left: calc(var(--width) / -2);
+    width: var(--width);
+    height: var(--height);
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .pointer div {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15rem;
+    border-color: #6fbf8c;
+  }
+
+  .pointer div:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-top-style: solid;
+    border-left-style: solid;
+  }
+
+  .pointer div:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-top-style: solid;
+    border-right-style: solid;
+  }
+
+  .pointer div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-bottom-style: solid;
+    border-left-style: solid;
+  }
+
+  .pointer div:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    border-bottom-style: solid;
+    border-right-style: solid;
+  }
 </style>
 
 <script>
-  
   window.addEventListener('load', function () {
     const loading = document.querySelector(".loading");
     if (loading) {
-      
       setTimeout(() => {
         loading.style.opacity = "0";
         loading.style.visibility = "hidden";
@@ -1005,6 +1051,54 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
         document.head.appendChild(customFont);
     }());
 </script>
+<div class="pointer">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<script>
+  (function () {
+    const pointer = {
+      container: document.querySelector(".pointer"),
+      current_target: null,
+      init() {
+        window.addEventListener("mousemove", this.move.bind(this))
+        this.bind_targets_events()
+      },
+      move(e) {
+        let x = e.clientX
+        let y = e.clientY
+        if (this.current_target) {
+          const rect = this.current_target.getBoundingClientRect()
+          const center_x = rect.left + rect.width / 2
+          const center_y = rect.top + rect.height / 2
+          x = center_x + (x - center_x) * 0.1
+          y = center_y + (y - center_y) * 0.1
+        }
+        this.container.style.transform = `translate(${x}px, ${y}px)`
+      },
+      bind_targets_events() {
+        document.querySelectorAll("a, button, .article-title, ._target").forEach(ele => {
+          ele.addEventListener("mouseenter", () => {
+            this.current_target = ele
+            const rect = ele.getBoundingClientRect()
+            this.container.style.setProperty("--width", rect.width + window.innerWidth / 50 + "px")
+            this.container.style.setProperty("--height", rect.height + window.innerWidth / 50 + "px")
+          })
+          ele.addEventListener("mouseleave", () => {
+            this.current_target = null
+            this.container.style.setProperty("--width", "4rem")
+            this.container.style.setProperty("--height", "4rem")
+          })
+        })
+      }
+    }
+    pointer.init()
+  })()
+</script>
+
 <style>
   @font-face {
     font-family: 'LXGW';
@@ -1033,30 +1127,24 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
 
 <script>
   function initTocHide() {
-    
     let toc = document.querySelector(".widget--toc");
     if (!toc) {
       return;
     }
-    
     window.addEventListener('scroll', function () {
-      
       let openUl = document.querySelectorAll(".open");
       if (openUl.length > 0) {
         openUl.forEach((ul) => {
           ul.classList.remove("open")
         })
       }
-      
       let currentLi = document.querySelector(".active-class");
       if (!currentLi) {
         return
       }
-      
       if (currentLi.children.length > 1) {
         currentLi.children[1].classList.add("open")
       }
-      
       let ul = currentLi.parentElement;
       do {
         ul.classList.add("open");
@@ -1091,20 +1179,16 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
   }
 </style>
 <script>
-  
   function initScrollTop() {
     let rightSideBar = document.querySelector(".right-sidebar");
     if (!rightSideBar) {
       return;
     }
-    
     let btn = document.createElement("div");
     btn.id = "backTopBtn";
     btn.onclick = backToTop
     rightSideBar.appendChild(btn)
-    
     window.onscroll = function () {
-      
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         btn.style.display = "block";
       } else {
@@ -1113,7 +1197,6 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
     };
   }
 
-  
   function backToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -1144,7 +1227,6 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
 
 <style>
   .highlight {
-     
     max-height: 300px;
     overflow: hidden;
   }
@@ -1192,28 +1274,21 @@ XMLHttpRequest对象的status属性值，当属性值为200才表示异步调用
       return;
     }
     codeBlocks.forEach(codeBlock => {
-      
       if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
         return;
       }
-      
-      
       let codeMoreBox = document.createElement('div');
       codeMoreBox.classList.add('code-more-box');
-      
       let codeMoreBtn = document.createElement('span');
       codeMoreBtn.classList.add('code-more-btn');
       codeMoreBtn.addEventListener('click', () => {
         codeBlock.classList.add('code-show');
         codeMoreBox.style.display = 'none';
-        
         window.dispatchEvent(new Event('resize'))
       })
-      
       let img = document.createElement('img');
       img.classList.add('code-more-img');
       img.src = "https://qc315056-oss.github.io/icons/codeMore.svg"
-  
   codeMoreBtn.appendChild(img);
   codeMoreBox.appendChild(codeMoreBtn);
   codeBlock.appendChild(codeMoreBox)
