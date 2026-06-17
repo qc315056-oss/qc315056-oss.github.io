@@ -29,7 +29,7 @@
 <style>
   .loading {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -257,14 +257,19 @@
   }
 </style>
 
-
-
 <script>
-  window.addEventListener('DOMContentLoaded', function () {
-    setTimeout(() => {
-      document.querySelector(".loading")?.remove()
-    }, 500)
-  })
+  (function () {
+    if (!sessionStorage.getItem('visited')) {
+      let loading = document.querySelector(".loading")
+      loading.style.display = "flex"
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+          loading.style.display = "none"
+        }, 1500)
+      })
+      sessionStorage.setItem('visited', 'true')
+    }
+  })()
 </script>
     </head>
     <body class="
