@@ -7,6 +7,39 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>清昶</copyright><atom:link href="https://qc315056-oss.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>密文破译网页小游戏</title>
+        <link>https://qc315056-oss.github.io/p/%E5%AF%86%E6%96%87%E7%A0%B4%E8%AF%91%E7%BD%91%E9%A1%B5%E5%B0%8F%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Tue, 30 Jun 2026 16:58:54 +0800</pubDate>
+        
+        <guid>https://qc315056-oss.github.io/p/%E5%AF%86%E6%96%87%E7%A0%B4%E8%AF%91%E7%BD%91%E9%A1%B5%E5%B0%8F%E6%B8%B8%E6%88%8F/</guid>
+        <description>&lt;img src="https://qc315056-oss.github.io/post/img/cipher.png" alt="Featured image of post 密文破译网页小游戏" /&gt;&lt;h1 id=&#34;密文破译&#34;&gt;密文破译
+&lt;/h1&gt;&lt;p&gt;一个网页小游戏&lt;/p&gt;
+&lt;h2 id=&#34;技术栈&#34;&gt;技术栈
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;前端： Vue 3+ Vite&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后端： Express + MySQL（TiDB）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;部署： GitHub Pages + Vercel&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;玩法&#34;&gt;玩法
+&lt;/h2&gt;&lt;p&gt;关卡内会提供密码手册、密码本、加密讯息以及一个用于方便解密的表格笔记，请借助密码手册对加密讯息进行破解&lt;/p&gt;
+&lt;h2 id=&#34;密码类型&#34;&gt;密码类型
+&lt;/h2&gt;&lt;p&gt;目前已包含列换位密码、凯撒密码、简单题换密码，后续会加入更多类型&lt;/p&gt;
+&lt;h2 id=&#34;网址&#34;&gt;网址
+&lt;/h2&gt;&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://qc315056-oss.github.io/ciphergame/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;密文破译&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;推荐挂着梯子游玩（因为Vercel国内访问很慢 &lt;br/&gt;
+以及因为服务器的原因，进入页面后请耐心等待，加载非常慢&lt;/p&gt;
+&lt;h2 id=&#34;预览游玩&#34;&gt;预览游玩
+&lt;/h2&gt;  &lt;iframe src=&#34;https://qc315056-oss.github.io/ciphergame/&#34; width=&#34;100%&#34; height=&#34;600&#34; style=&#34;border:1px solid
+  #ddd;border-radius:4px;&#34;&gt;&lt;/iframe&gt;</description>
+        </item>
+        <item>
         <title>页面加入磁力光标</title>
         <link>https://qc315056-oss.github.io/p/%E9%A1%B5%E9%9D%A2%E5%8A%A0%E5%85%A5%E7%A3%81%E5%8A%9B%E5%85%89%E6%A0%87/</link>
         <pubDate>Mon, 15 Jun 2026 15:51:27 +0800</pubDate>
